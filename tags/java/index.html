@@ -9,21 +9,21 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>Posts | 瞻鹤的博客</title>
-    <meta property="og:title" content="Posts - 瞻鹤的博客">
+    <title>JAVA | 瞻鹤的博客</title>
+    <meta property="og:title" content="JAVA - 瞻鹤的博客">
     <meta property="og:type" content="article">
         
         
     <meta name="Keywords" content="golang,go语言,go语言笔记,瞻鹤,ACM,ICPC,博客, pwn">
-    <meta name="description" content="Posts">
+    <meta name="description" content="JAVA">
         
     <meta name="author" content="瞻鹤">
-    <meta property="og:url" content="https://1006487432.github.io/post/">
+    <meta property="og:url" content="https://1006487432.github.io/tags/java/">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml" href="https://1006487432.github.io/post/index.xml" title="瞻鹤的博客" />
+    <link rel="alternate" type="application/rss+xml" href="https://1006487432.github.io/tags/java/index.xml" title="瞻鹤的博客" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -50,7 +50,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="current" href="https://1006487432.github.io/">Home</a>
+                    <a class="" href="https://1006487432.github.io/">Home</a>
                     
                     <a  href="https://1006487432.github.io/post/notes/" title="笔记">笔记</a>
                     
@@ -72,23 +72,48 @@
                     
 <div class="res-cons">
     
+    <h3 class="archive-title">
+        
+        <span>3</span>
+        
+        <span>1</span>
+        
+        <span class="keyword">JAVA</span>
+        articles
+    </h3>
+    
+
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://1006487432.github.io/post/notes/" title="算法和数据结构" target="_blank">算法和数据结构</a>
+                <a href="https://1006487432.github.io/post/notes/javafirst/" target="_blank">Javafirst</a>
             </h1>
         </header>
         
+  <time datetime="2023-08-17T06:54:43Z" class="post-meta meta-date dt-published">
+    2023-08-17
+  </time>
+
 
 
         <div class="post-content">
-            ……
+            【从0开始学JAVA】 类个，我的对象在哪里？ 由于本人是从C开始学习的编程菜鸟，虽然接触过一点cpp(对现在的我来说也许只是c + stl库？只是为了写算法题方便一些&hellip;)，所以我打算先学JAVA的特点和思想————面向对象编程。 （至于安装JAVA可以看我*兄弟的博客*)
+类个，总而言之，先给自己NEW一个对象吧 面向对象
+面向对象(Object Oriented)是软件开发方法，一种编程范式。面向对象的概念和应用已超越了程序设计和软件开发，扩展到如数据库系统、交互式界面、应用结构、应用平台、分布式系统、网络管理结构、CAD技术、人工智能等领域。面向对象是一种对现实世界理解和抽象的方法，是计算机编程技术发展到一定阶段后的产物。 面向对象是相对于面向过程来讲的，面向对象方法，把相关的数据和方法组织为一个整体来看待，从更高的层次来进行系统建模，更贴近事物的自然运行模式。 ————来自*百度百科;
+面向对象有三大基本特征： 封装 继承 多态 面向对象的编程思想就是把事物看作一个整体，从事物的特征（属性）和行为（方法）两个方面进行描述。 面向对象是找对象、创建对象、使用对象、维护对象的关系的过程 类 和 对象是什么？
+抛开对象不谈，我还是有对象的。 类(Class) 是具有相同特性（数据元素）和行为（功能）的对象的抽象。
+定义类：就是定义类的成员，包括成员变量和成员方法 类的成员: 成员属性：对象事物的属性； 成员方法：对象事物的方法(捏造对象的方法，处理对象行为的方法等等) 该类对象中每一个对象都具有类的成员属性，都可以使用类的成员方法。 有点类似C语言中的结构体，成员属性就是结构体中函数的变量，成员方法就是结构体中包含的函数，而每一个对象都是一个结构体。
+1 2 3 4 public class 类名{ //成员变量 //成员方法 } 1 2 3 4 5 struct human { int age；//成员变量 int (*)sleep()//成员方法 } 对象(Object) 的含义是指具体的某一个事物，即在现实生活中能够看得见摸得着的事物。 在JAVA这类静态语言中，类是对象的抽象，对象是类的实例化。
+创建对象
+类名 对象名 = new 类名() 调用对象
+对象名.成员变量 对象名.方法(参数列表) 面向对象的编程方法，首先我们要找到对象，思考对象具有什么属性，然后创建一个对象。
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 public class human { int age; String name; public human() { // 没有参数的构造方法 // 构造对象的方法，方法名与类名要相同 name = &#34;李华&#34;; age = 18; }// 构造一个名为李华，年龄为18岁的对象 public human(String human_name, int human_age) { // 有参数的构造方法 this.……
+            <p class="readmore"><a href="https://1006487432.github.io/post/notes/javafirst/" target="_blank">Continue reading</a></p>
         </div>
-        <p class="readmore"><a href="https://1006487432.github.io/post/notes/" target="_blank">Continue reading</a></p>
     </article>
     
-    
+
     
 
 

@@ -74,6 +74,8 @@
     
     <h3 class="archive-title">
         
+        <span>3</span>
+        
         <span>1</span>
         
         <span class="keyword">Algorithm</span>
@@ -81,6 +83,56 @@
     </h3>
     
 
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://1006487432.github.io/post/notes/%E5%B7%AE%E5%88%86/" target="_blank">差分</a>
+            </h1>
+        </header>
+        
+  <time datetime="2023-08-17T06:18:58Z" class="post-meta meta-date dt-published">
+    2023-08-17
+  </time>
+
+
+
+        <div class="post-content">
+            【数组】 差分 前缀和 与 差分 我在前面的两篇博客里面简要介绍了一下一维、二维数组的前缀和的一些知识点，提到前缀和，那很自然地就会提到差分的概念。 首先我们回顾一下前缀和：原数组a[n]和依据原数组构造出的新数组s[n]，s[n]是a[n]的前缀和数组。 俗话说，有来有往，阴阳交汇，分久必合、合久必分&hellip;&hellip; 总而言之，我们看到了新数组s[n]是原数组a[n]的前缀和数组，但我们都知道，事物之间的影响总是交互的，所以我们必然会想到原数组a[n]是新数组s[n]的什么？只是前缀和数组的原数组吗？
+现在让我们先把注意力投向求前缀和数组的公式：
+s[n] = s[n-1] + a[n]; 现在让我们抛开s[n]相对于a[n]前缀和的身份不谈，我们有一个普通s[n]，它的每一项s[n]都基于上一向s[n-1]的值 再加上一个常数a[n]。 这个常数a[n]正是数组s[n]与s[n-1]的差值。 那么我们变换公式：a[n] = s[n] - s[n-1]。 由此我们得到一个新但旧的数组即原数组，a[n]，称为s[n]数组的差分数组。
+结论：s[n]是原数组a[n]的前缀和数组、a[n]是原数组s[n]的差分数组。
+差分数组的用处 差分数组和前缀和数组的用途相似，都是面对以区间为单位进行操作的需求。 差分将对区间进行的增减操作由O(n)优化为O(1)。 以下给出一道题目：
+题目描述： 输入一个长度为 n的整数序列。接下来输入 m个操作，每个操作包含三个整数 l,r,c，表示将序列中 [l,r]之间的每个数加上 c。 请你输出进行完所有操作后的序列。 我们需要对一个区间进行加减操作，如果按照朴素思想，我们需要从左端点遍历都右端点，时间复杂度为O(n)。进行m次操作的时间复杂度就是O(mn)。 而对差分数组进行操作，再求一遍前缀和的时间复杂度是O(m+n) 如图，对查分数组的某一个元素+1，则原数组从这个元素开始的元素都会加一。 因此，再让区间外的第一个元素减一就能实现这个区间内的元素加一，以此类推。
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 { #include &lt;iostream&gt; #define N 100010 using namespace std; int f[N]; int s[N]; int main() { int n,m; cin &gt;&gt; n &gt;&gt; m; for(int i = 1; i &lt;= n; i++) { cin &gt;&gt; f[i]; s[i] = f[i] - f[i-1]; } while(m--) { int l,r,c; cin &gt;&gt; l &gt;&gt; r &gt;&gt; c; s[l] += c; s[r+1] -= c; } for(int i =1 ; i &lt;= n; i++) { f[i] = f[i-1] + s[i]; cout &lt;&lt; f[i] &lt;&lt; &#39; &#39;; } } } 二维差分 同样地，二维数组也有差分。其目的仍然是对区间(子矩阵)进行操作。 在一维数组中，我们改变原数组的某一元素，会改变前缀和数组一段区间的值。 同样，在二维数组中，我们改变原数组的某一元素，会改变前缀和数组一个子矩阵的值。 首先，二维数组前缀和的几何意义是，从矩阵左上角到该元素的元素和。 如图中的前缀和数组的(i,j)元素表示的是原数组绿色部分的元素和。 那么我们给这个原数组中元素加上一个1，前缀和数组在下图中的黄色部分都会加上一个1（该元素到矩阵右下角）。 现在我们要让蓝色部分加上一个值X，但显然这样操作仍会对黄色部分加上值X。那么我们再让黄色区域减去这个X即可，同一维的是一个道理，注意重复的地方要加上一个X。 例题 2536.……
+            <p class="readmore"><a href="https://1006487432.github.io/post/notes/%E5%B7%AE%E5%88%86/" target="_blank">Continue reading</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://1006487432.github.io/post/notes/sum/" target="_blank">前缀和</a>
+            </h1>
+        </header>
+        
+  <time datetime="2023-08-17T05:13:33Z" class="post-meta meta-date dt-published">
+    2023-08-17
+  </time>
+
+
+
+        <div class="post-content">
+            前缀和 给出一个数列：
+1 2 3 4 5 6 7 8 9 它的前缀和：
+1 3 6 10 15 21 28 36 45 前缀和即：从第一个元素到该元素之和
+通常我们会在数组中触及到这类知识。 假设给出原数组 a[5] = {1,2,3,4,5}，我们可以得到前缀和数组，假设为S[5] = {1,3,6,10,15}。 那么可以得到： S[n] = S[n-1] + a[n]，即求前缀和的公式。
+那么前缀和数组有什么用呢？ 以下给出一道经典前缀和问题：
+首先我们先从朴素思想开始考虑，求m次区间和的时间复杂度是O(mn^2^)
+while(m--) { int l , r; cin &gt;&gt; l &gt;&gt; r; int sum = 0; for(int i = l; i &lt;= r; i++) { sum += num[i];(假设下标从1开始） } cout &lt;&lt; sum &lt;&lt; endl; } 我们会发现，我们没求一次区间和，就要循环一次，那么有没有一种方法可以让O(n)的求和变为O(1)的时间复杂度呢？ 答案就是使用前缀和。对区间[l,r]，通过对求前缀和过程的分析可以的出，区间和为s[r]-s[l-1]。因此我们可以通过一次运算求出原数组任意一段数据的和。……
+            <p class="readmore"><a href="https://1006487432.github.io/post/notes/sum/" target="_blank">Continue reading</a></p>
+        </div>
+    </article>
     
     <article class="post">
         <header>
@@ -160,6 +212,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://1006487432.github.io/post/notes/javafirst/" title="Javafirst" target="_blank">Javafirst</a>
+    </li>
+    
+    <li>
         <a href="https://1006487432.github.io/post/notes/%E5%B7%AE%E5%88%86/" title="差分" target="_blank">差分</a>
     </li>
     
@@ -188,6 +244,8 @@
 <div class="tagcloud">
     
     <a href="https://1006487432.github.io/tags/algorithm/">Algorithm</a>
+    
+    <a href="https://1006487432.github.io/tags/java/">JAVA</a>
     
 </div>
     </section>
