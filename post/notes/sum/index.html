@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+
+    <title>Sum | 瞻鹤的博客</title>
+    <meta property="og:title" content="Sum - 瞻鹤的博客">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2023-08-17T13:13:33&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2023-08-17T13:13:33&#43;08:00'>
+        
+    <meta name="Keywords" content="golang,go语言,go语言笔记,瞻鹤,ACM,ICPC,博客, pwn">
+    <meta name="description" content="Sum">
+        
+    <meta name="author" content="瞻鹤">
+    <meta property="og:url" content="https://1006487432.github.io/post/notes/sum/">
+    <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+    
+        <link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+    
+    
+    
+    
+</head>
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://1006487432.github.io/">
+                        瞻鹤的博客
+                    </a>
+                
+                <p class="description">仰天一笑，快意平生</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://1006487432.github.io/">Home</a>
+                    
+                    <a  href="https://1006487432.github.io/post/notes/" title="笔记">笔记</a>
+                    
+                    <a  href="https://1006487432.github.io/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://1006487432.github.io/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">Table of Contents</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#那么前缀和数组有什么用呢">那么前缀和数组有什么用呢？</a></li>
+    <li><a href="#题目">题目</a>
+      <ul>
+        <li><a href="#前缀和结合哈希表">前缀和结合哈希表</a></li>
+        <li><a href="#前缀乘积">前缀乘积</a></li>
+        <li><a href="#httpsleetcodecnproblemssubarray-sum-equals-k"><a href="https://leetcode.cn/problems/subarray-sum-equals-k/">https://leetcode.cn/problems/subarray-sum-equals-k/</a></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if (leftPos < 220) {
+                postToc.css({ "width": leftPos - 10, "margin-left": (0 - leftPos) })
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+
+        if ($("#TableOfContents").children().length < 1) {
+            $(".post-toc").remove();
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">Sum</h1>
+        </header>
+        
+  <time datetime="2023-08-17T05:13:33Z" class="post-meta meta-date dt-published">
+    2023-08-17
+  </time>
+
+
+
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">&nbsp;|
+                <span id="busuanzi_value_page_pv"></span> <span>reads</span>
+            </span>
+        </div>
+        
+        
+        <div class="post-content">
+            <h1 id="前缀和"><strong>前缀和</strong></h1>
+<p>给出一个数列：</p>
+<pre><code>1 2 3 4 5 6 7 8 9 
+</code></pre>
+<p>它的前缀和：</p>
+<pre><code>1 3 6 10 15 21 28 36 45
+</code></pre>
+<p>前缀和即：从第一个元素到该元素之和</p>
+<p>通常我们会在数组中触及到这类知识。
+假设给出<strong>原数组</strong> a[5] = {1,2,3,4,5}，我们可以得到前缀和数组，假设为S[5] = {1,3,6,10,15}。
+那么可以得到： S[n] = S[n-1] + a[n]，即求前缀和的公式。</p>
+<h2 id="那么前缀和数组有什么用呢">那么前缀和数组有什么用呢？</h2>
+<p>以下给出一道经典前缀和问题：</p>
+<p>首先我们先从朴素思想开始考虑，求m次区间和的时间复杂度是O(mn^2^)</p>
+<pre tabindex="0"><code>while(m--)
+{
+  int l , r;
+  cin &gt;&gt; l &gt;&gt; r;
+  int sum = 0;
+  for(int i = l; i &lt;= r; i++)
+  {
+      sum += num[i];(假设下标从1开始）
+  }
+  cout &lt;&lt; sum &lt;&lt; endl;
+}
+</code></pre><p>我们会发现，我们没求一次区间和，就要循环一次，那么有没有一种方法可以让O(n)的求和变为O(1)的时间复杂度呢？
+答案就是使用前缀和。对区间[l,r]，通过对求前缀和过程的分析可以的出，区间和为s[r]-s[l-1]。因此我们可以通过一次运算求出原数组任意一段数据的和。</p>
+<p>以下为代码：</p>
+<!-- raw HTML omitted -->
+<pre tabindex="0"><code>#include&lt;iostream&gt;
+#define N 100010
+using namespace std;
+int nums[N];
+int s[N];
+int main()
+{
+    int n,m;
+    cin &gt;&gt; n &gt;&gt; m;
+    for(int i = 0; i &lt; n; i++)
+    {    
+        cin &gt;&gt; nums[i+1];
+        s[i+1] = s[i] + nums[i+1];//求前缀和
+    }
+    while(m--)
+    {
+        int l,r;
+        cin &gt;&gt; l &gt;&gt; r;
+        cout &lt;&lt; s[r]-s[l-1] &lt;&lt; endl;//
+    }
+    return 0;
+}
+</code></pre><!-- raw HTML omitted -->
+<h2 id="题目">题目</h2>
+<h3 id="前缀和结合哈希表">前缀和结合哈希表</h3>
+<p><a href="https://leetcode.cn/problems/subarray-sum-equals-k/">https://leetcode.cn/problems/subarray-sum-equals-k/</a></p>
+<pre><code>在数组中：
+1.子数组
+子数组的定义：一个或连续多个数组中的元素组成一个子数组(子数组最少包含一个元素)
+
+2.子序列
+子序列的定义：子序列就是在原来序列中找出一部分组成的序列（子序列不一定连续）
+</code></pre>
+<p>如果使用for嵌套循环暴力枚举O(n^2^)的方法必然会超时。
+那么分析题意，可知求区间和为k的区间个数,即 s[i] - s[j] == k
+同样，如果对前缀和数组进行枚举同样是O(n^2^)的时间复杂度,会超时。
+我们用哈希表存储前缀和数组，结合公式s[i] - s[j] == k的变形s[j] = s[i] - k就可以实现O(n)的时间复杂度的解法。
+即：对每一个前缀和数组元素s[i],利用哈希表查找s[i] - k是否存在，存在则找到了一个或n个符合题意的区间。
+以下为代码</p>
+<!-- raw HTML omitted -->
+<pre tabindex="0"><code>class Solution {
+public:
+    int subarraySum(vector&lt;int&gt;&amp; nums, int k) {
+        unordered_map&lt;int, int&gt; mp;
+        mp[0] = 1;
+        int sum = 0;
+        int ans = 0;
+        for(int i = 0; i &lt; nums.size(); i++)
+        {
+            sum += nums[i];
+            if(mp.find(sum - k) != mp.end())//
+                ans += mp[sum - k];
+            mp[sum]++;
+        }
+        return ans;
+    }
+};
+</code></pre><!-- raw HTML omitted -->
+<h3 id="前缀乘积">前缀乘积</h3>
+<h3 id="httpsleetcodecnproblemssubarray-sum-equals-k"><a href="https://leetcode.cn/problems/subarray-sum-equals-k/">https://leetcode.cn/problems/subarray-sum-equals-k/</a></h3>
+<p>最先想到的是遍历求乘积，也就是O(n^2^)的暴力算法，但这不符合题目的要求。
+那么我们需要对算法进行优化，从朴素思想出发，遍历求乘积时，从0到n-1累乘，中间跳过i，那么天然地由i分为左右两个区间，根据乘法的结合律，得出answer[i] = i左侧元素的乘积*i右侧元素的乘积。
+那么我们只需要提前将每一个i左侧、右侧元素的乘积算出来，就可以实现O(n)时间复杂度的算法。</p>
+<!-- raw HTML omitted -->
+<pre tabindex="0"><code>class Solution {
+public:
+    vector&lt;int&gt; productExceptSelf(vector&lt;int&gt;&amp; nums) {
+        int n = nums.size();
+        vector&lt;int&gt; answer(n);
+        vector&lt;int&gt; l(n);
+        vector&lt;int&gt; r(n);
+        l[0] = 1;
+        r[n - 1] = 1;
+        for(int i = 1; i &lt; n; i++)
+            l[i] = l[i-1]*nums[i-1];
+        for(int i = n - 2; i &gt;= 0; i--)
+            r[i] = r[i+1]*nums[i+1];
+        for(int i = 0; i &lt; n; i++)
+            answer[i] = l[i]*r[i];
+        return answer;
+    }
+};
+</code></pre><!-- raw HTML omitted -->
+
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>Author: </strong><a rel="author" href="https://1006487432.github.io/">瞻鹤</a></li>
+        <li style="word-break:break-all"><strong>Link: </strong><a href="https://1006487432.github.io/post/notes/sum/">https://1006487432.github.io/post/notes/sum/</a></li>
+        <li><strong>License: </strong>This work is under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>. Kindly fulfill the requirements of the aforementioned License when adapting or creating a derivative of this work.</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/notes/bsgs/">BSGS</a></li>
+        
+        <li><a href="/archives/">归档</a></li>
+        
+        <li><a href="/search/">搜索</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            No tags
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+    
+    
+
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2023 <a href="https://1006487432.github.io/">瞻鹤的博客 By 瞻鹤</a>
+        
+    </div>
+    <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+        </div>
+    </div>
+</footer>
+
+
+    
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script><script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+<style type="text/css">
+div.highlight {
+    position: relative;
+    margin: 1em 0px;
+}
+
+.copy-code {
+    display: none;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(78, 78, 78, 0.8);
+    border-radius: var(--radius);
+    padding: 0 5px;
+    font: inherit;
+    user-select: none;
+    cursor: pointer;
+    border: 0;
+    --radius: 8px;
+}
+
+div.highlight:hover .copy-code,pre:hover .copy-code {
+    display: block;
+}
+
+</style>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://1006487432.github.io/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://1006487432.github.io/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">Latest articles</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://1006487432.github.io/post/notes/%E5%B7%AE%E5%88%86/" title="差分" target="_blank">差分</a>
+    </li>
+    
+    <li>
+        <a href="https://1006487432.github.io/post/notes/sum/" title="Sum" target="_blank">Sum</a>
+    </li>
+    
+    <li>
+        <a href="https://1006487432.github.io/post/notes/bsgs/" title="BSGS" target="_blank">BSGS</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/categories/'>Categories</a></h3>
+<ul class="widget-list">
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/tags/'>Tags</a></h3>
+<div class="tagcloud">
+    
+    <a href="https://1006487432.github.io/tags/algorithm/">Algorithm</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">Links</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="https://www.cnblogs.com/he-zhan/" title="瞻鹤的博客园">瞻鹤的博客园</a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">Meta</h3>
+        <ul class="widget-list">
+            <li><a href="https://1006487432.github.io/index.xml">RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
