@@ -141,7 +141,11 @@
         <li><a href="#gin框架安装">Gin框架安装</a></li>
       </ul>
     </li>
-    <li><a href="#gin框架的简单使用">Gin框架的简单使用</a></li>
+    <li><a href="#gin框架的简单使用">Gin框架的简单使用</a>
+      <ul>
+        <li><a href="#从url获得参数">从URL获得参数</a></li>
+      </ul>
+    </li>
     <li><a href="#参考资料">参考资料:</a></li>
   </ul>
 </nav>
@@ -307,8 +311,134 @@
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">---</span> 
 </span></span></code></pre></td></tr></table>
 </div>
+</div><p>当需要注册的路由太多时，可以采用注册路由组的方法：</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>test <span style="color:#000;font-weight:bold">:=</span> router.<span style="color:#900;font-weight:bold">Group</span>(<span style="color:#d14">&#34;/video&#34;</span>)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		test.<span style="color:#900;font-weight:bold">GET</span>(<span style="color:#d14">&#34;/1&#34;</span>, <span style="color:#000;font-weight:bold">func</span>(c <span style="color:#000;font-weight:bold">*</span>gin.Context) {<span style="color:#998;font-style:italic">//访问/video/1以此类推
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>			c.<span style="color:#900;font-weight:bold">JSON</span>(http.StatusOK, gin.H{<span style="color:#d14">&#34;msg&#34;</span>: <span style="color:#d14">&#34;访问路由组成功&#34;</span>})
+</span></span><span style="display:flex;"><span>		})
+</span></span><span style="display:flex;"><span>		test.<span style="color:#900;font-weight:bold">GET</span>(<span style="color:#d14">&#34;/2&#34;</span>, <span style="color:#000;font-weight:bold">func</span>(c <span style="color:#000;font-weight:bold">*</span>gin.Context) {
+</span></span><span style="display:flex;"><span>			c.<span style="color:#900;font-weight:bold">JSON</span>(http.StatusOK, gin.H{<span style="color:#d14">&#34;msg&#34;</span>: <span style="color:#d14">&#34;访问路由组成功&#34;</span>})
+</span></span><span style="display:flex;"><span>		})
+</span></span><span style="display:flex;"><span>		test.<span style="color:#900;font-weight:bold">GET</span>(<span style="color:#d14">&#34;/3&#34;</span>, <span style="color:#000;font-weight:bold">func</span>(c <span style="color:#000;font-weight:bold">*</span>gin.Context) {
+</span></span><span style="display:flex;"><span>			c.<span style="color:#900;font-weight:bold">JSON</span>(http.StatusOK, gin.H{<span style="color:#d14">&#34;msg&#34;</span>: <span style="color:#d14">&#34;访问路由组成功&#34;</span>})
+</span></span><span style="display:flex;"><span>		})
+</span></span><span style="display:flex;"><span>		test.<span style="color:#900;font-weight:bold">GET</span>(<span style="color:#d14">&#34;/4&#34;</span>, <span style="color:#000;font-weight:bold">func</span>(c <span style="color:#000;font-weight:bold">*</span>gin.Context) {
+</span></span><span style="display:flex;"><span>			c.<span style="color:#900;font-weight:bold">JSON</span>(http.StatusOK, gin.H{<span style="color:#d14">&#34;msg&#34;</span>: <span style="color:#d14">&#34;访问路由组成功&#34;</span>})
+</span></span><span style="display:flex;"><span>		})
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="从url获得参数">从URL获得参数</h3>
+<p>从url获得参数有GET和POST两种方法，具体区别见<a href="https://zhuanlan.zhihu.com/p/275695831">http请求中get和post方法的区别 - 知乎 (zhihu.com)</a>，下面用代码展示两种方法的使用:</p>
+<ul>
+<li>通过上下文对象c *gin.Context的方法获得值</li>
+</ul>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#998;font-style:italic">//GET方法：
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//URL /path?id=1234&amp;name=Manu&amp;value= 
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//GET方法使用Query获得值，Query(key string) (value string)
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>       c.<span style="color:#900;font-weight:bold">Query</span>(<span style="color:#d14">&#34;id&#34;</span>) <span style="color:#000;font-weight:bold">==</span> <span style="color:#d14">&#34;1234&#34;</span>
+</span></span><span style="display:flex;"><span>       c.<span style="color:#900;font-weight:bold">Query</span>(<span style="color:#d14">&#34;name&#34;</span>) <span style="color:#000;font-weight:bold">==</span> <span style="color:#d14">&#34;Manu&#34;</span>
+</span></span><span style="display:flex;"><span>       c.<span style="color:#900;font-weight:bold">Query</span>(<span style="color:#d14">&#34;value&#34;</span>) <span style="color:#000;font-weight:bold">==</span> <span style="color:#d14">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>       c.<span style="color:#900;font-weight:bold">Query</span>(<span style="color:#d14">&#34;wtf&#34;</span>) <span style="color:#000;font-weight:bold">==</span> <span style="color:#d14">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//也可以使用DefaultQuery(key string, defaultValue string) string  如果值为空则返回defaultValue的值
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//QueryArray(key string) (values []string)
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//QueryMap(key string) (dicts map[string]string)
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">---</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//POST方法
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>	name <span style="color:#000;font-weight:bold">:=</span> c.<span style="color:#900;font-weight:bold">PostForm</span>(<span style="color:#d14">&#34;name&#34;</span>)
+</span></span><span style="display:flex;"><span>	price <span style="color:#000;font-weight:bold">:=</span> c.<span style="color:#900;font-weight:bold">DefaultPostForm</span>(<span style="color:#d14">&#34;price&#34;</span>, <span style="color:#d14">&#34;100&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//c.PostForm(key string)(value string)
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//同样有GET类似的方法，参数和返回值一样
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>可以通过参数绑定获取参数
+<ul>
+<li>参数绑定利用反射机制，自动提取querystring，form表单，json，xml等参数到结构体中，可以极大提升开发效率。</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">type</span> Teacher <span style="color:#000;font-weight:bold">struct</span> {
+</span></span><span style="display:flex;"><span>	Name   <span style="color:#458;font-weight:bold">string</span> <span style="color:#d14">`form:&#34;Name&#34; json:&#34;Name&#34; binding:&#34;required&#34;`</span>
+</span></span><span style="display:flex;"><span>	Email  <span style="color:#458;font-weight:bold">string</span> <span style="color:#d14">`form:&#34;Email&#34; json:&#34;Email&#34; binding:&#34;required&#34;`</span>
+</span></span><span style="display:flex;"><span>	Wechat <span style="color:#458;font-weight:bold">string</span> <span style="color:#d14">`form:&#34;Wechat&#34; json:&#34;Wechat&#34; binding:&#34;required&#34;`</span>
+</span></span><span style="display:flex;"><span>	id     <span style="color:#458;font-weight:bold">int</span>    <span style="color:#d14">`form:&#34;id&#34; json:&#34;id&#34; binding:&#34;-&#34;`</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//在变量后面加上 `form:&#34;Name&#34; json:&#34;Name&#34; binding:&#34;required&#34;`， form为表单， json为json格式的数据，binding和参数验证有关，当值为required为需要验证不能传空值，为-时不需要验证；相较于form，会优先选择json格式，json:“”中的值必须与前端参数的name一致
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">test</span>(context <span style="color:#000;font-weight:bold">*</span>gin.Context){
+</span></span><span style="display:flex;"><span>  	 <span style="color:#000;font-weight:bold">var</span> information Teacher
+</span></span><span style="display:flex;"><span>   	 err <span style="color:#000;font-weight:bold">:=</span> context.<span style="color:#900;font-weight:bold">ShouldBind</span>(<span style="color:#000;font-weight:bold">&amp;</span>information) <span style="color:#998;font-style:italic">//根据req的content type 自动推断如何绑定,form/json/xml等格式
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>	<span style="color:#000;font-weight:bold">if</span>  err <span style="color:#000;font-weight:bold">!=</span> <span style="color:#000;font-weight:bold">nil</span> {
+</span></span><span style="display:flex;"><span>		context.<span style="color:#900;font-weight:bold">JSON</span>(<span style="color:#099">400</span>, gin.H{<span style="color:#d14">&#34;error&#34;</span>: err.<span style="color:#900;font-weight:bold">Error</span>()})
+</span></span><span style="display:flex;"><span>		<span style="color:#000;font-weight:bold">return</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>    <span style="color:#998;font-style:italic">//这样就将获取的参数存储到了infomation变量里，通过访问结构体变量即可访问数据
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>}
+</span></span></code></pre></td></tr></table>
+</div>
 </div><h2 id="参考资料">参考资料:</h2>
 <p><a href="https://gin-gonic.com/zh-cn/docs/">文档 | Gin Web Framework (gin-gonic.com)</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/275695831">http请求中get和post方法的区别 - 知乎 (zhihu.com)</a></p>
 
         </div>
 
@@ -338,7 +468,7 @@
         
         <li><a href="/post/notes/bsgs/">BSGS</a></li>
         
-        <li><a href="/archives/">归档</a></li>
+        <li><a href="/post/notes/untitled-1/"></a></li>
         
     </ul>
 </div>
@@ -511,6 +641,14 @@ div.highlight:hover .copy-code,pre:hover .copy-code {
     
     <li>
         <a href="https://1006487432.github.io/post/notes/bsgs/" title="BSGS" target="_blank">BSGS</a>
+    </li>
+    
+    <li>
+        <a href="https://1006487432.github.io/post/notes/untitled-1/" title="" target="_blank"></a>
+    </li>
+    
+    <li>
+        <a href="https://1006487432.github.io/post/notes/untitled/" title="" target="_blank"></a>
     </li>
     
     <li>
