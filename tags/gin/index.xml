@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gin on 瞻鹤的博客</title>
+    <link>https://1006487432.github.io/tags/gin/</link>
+    <description>Recent content in Gin on 瞻鹤的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language><atom:link href="https://1006487432.github.io/tags/gin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go-gin教程与实战(1)</title>
+      <link>https://1006487432.github.io/post/notes/go-gin%E6%95%99%E7%A8%8B%E4%B8%8E%E5%AE%9E%E6%88%981/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://1006487432.github.io/post/notes/go-gin%E6%95%99%E7%A8%8B%E4%B8%8E%E5%AE%9E%E6%88%981/</guid>
+      <description>Gin框架介绍 Gin 是一个用 Go (Golang) 编写的 HTTP Web 框架。 它具有类似 Martini 的 API，但性能比 Martini 快 40 倍。如果你需要极好的性能，使用 Gin 吧。Gin框架安装 要求：Go 1.13及以上版本 安装 下载并安装gin：
+go get -u github.com/gin-gonic/gin
+在项目中引入gin：
+1 import &amp;#34;github.com/gin-gonic/gin&amp;#34; 有时候需要使用诸如http.StatusOK之类的常量，则需要引入net/http包：
+1 import &amp;#34;net/http&amp;#34; Gin框架的简单使用 1 2 3 4 5 6 7 8 9 10 11 package main import &amp;#34;github.com/gin-gonic/gin&amp;#34; func main(){ router := gin.Default() router.GET(&amp;#34;/ping&amp;#34;, func(context *gin.Context) { context.JSON(200, gin.H{&amp;#34;message&amp;#34;: &amp;#34;pong&amp;#34;,}) }) router.Run(&amp;#34;:8080&amp;#34;) // 监听并在 0.0.0.0:8080 上启动服务 } 上述代码运行后访问https://localhost:8080/ping可以看到一个json格式的数据,{&amp;ldquo;message&amp;rdquo;:&amp;ldquo;pong&amp;rdquo;}说明代码运行成功了。</description>
+    </item>
+    
+  </channel>
+</rss>

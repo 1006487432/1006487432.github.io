@@ -25,5 +25,23 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Gin</title>
+      <link>https://1006487432.github.io/tags/gin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://1006487432.github.io/tags/gin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://1006487432.github.io/tags/go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://1006487432.github.io/tags/go/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
