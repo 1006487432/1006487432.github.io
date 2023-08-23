@@ -104,7 +104,29 @@
 
 
         <div class="post-content">
-            Go语言连接postgresql数据库并实现基础操作教程 安装依赖包 1 go get -u github.com/lib/pq 1 2 3 参考资料: https://godoc.org/github.com/lib/pq https://www.runoob.com/postgresql/postgresql-tutorial.html 基础操作 连接数据库 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 import ( &#34;database/sql&#34; &#34;fmt&#34; _ &#34;github.com/lib/pq&#34; ) func Database_connect() *sql.DB { localDB, err := sql.Open(&#34;postgres&#34;, &#34;host=localhost port=5432 user=postgres password=123456 dbname=test sslmode=disable&#34;) if err != nil { fmt.Println(&#34;Wrong args.Connected failed.&#34;) panic(err) } err = localDB.Ping()	//ping一下验证是否连通 if err !……
+            <h1 id="go语言连接postgresql数据库并实现基础操作教程">Go语言连接postgresql数据库并实现基础操作教程</h1>
+<h2 id="安装依赖包">安装依赖包</h2>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span> <span style="color:#000;font-weight:bold">go</span> get <span style="color:#000;font-weight:bold">-</span>u github.com<span style="color:#000;font-weight:bold">/</span>lib<span style="color:#000;font-weight:bold">/</span>pq
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>参考资料:
+</span></span><span style="display:flex;"><span>https://godoc.org/github.com/lib/pq
+</span></span><span style="display:flex;"><span>https://www.runoob.com/postgresql/postgresql-tutorial.html
+</span></span></code></pre></td></tr></table>
+</div>
+</div>……
             <p class="readmore"><a href="https://1006487432.github.io/post/notes/go%E8%BF%9E%E6%8E%A5postgresql%E6%95%B0%E6%8D%AE%E5%BA%93/" target="_blank">Continue reading</a></p>
         </div>
     </article>
