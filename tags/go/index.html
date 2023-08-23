@@ -76,6 +76,8 @@
         
         <span>3</span>
         
+        <span>2</span>
+        
         <span>1</span>
         
         <span>1</span>
@@ -87,6 +89,25 @@
     </h3>
     
 
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://1006487432.github.io/post/notes/go%E8%BF%9E%E6%8E%A5postgresql%E6%95%B0%E6%8D%AE%E5%BA%93/" target="_blank">Go连接postgresql数据库</a>
+            </h1>
+        </header>
+        
+  <time datetime="2023-08-22T23:19:51Z" class="post-meta meta-date dt-published">
+    2023-08-23
+  </time>
+
+
+
+        <div class="post-content">
+            Go语言连接postgresql数据库并实现基础操作教程 安装依赖包 1 go get -u github.com/lib/pq 1 2 3 参考资料: https://godoc.org/github.com/lib/pq https://www.runoob.com/postgresql/postgresql-tutorial.html 基础操作 连接数据库 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 import ( &#34;database/sql&#34; &#34;fmt&#34; _ &#34;github.com/lib/pq&#34; ) func Database_connect() *sql.DB { localDB, err := sql.Open(&#34;postgres&#34;, &#34;host=localhost port=5432 user=postgres password=123456 dbname=test sslmode=disable&#34;) if err != nil { fmt.Println(&#34;Wrong args.Connected failed.&#34;) panic(err) } err = localDB.Ping()	//ping一下验证是否连通 if err !……
+            <p class="readmore"><a href="https://1006487432.github.io/post/notes/go%E8%BF%9E%E6%8E%A5postgresql%E6%95%B0%E6%8D%AE%E5%BA%93/" target="_blank">Continue reading</a></p>
+        </div>
+    </article>
     
     <article class="post">
         <header>
@@ -165,6 +186,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://1006487432.github.io/post/notes/go%E8%BF%9E%E6%8E%A5postgresql%E6%95%B0%E6%8D%AE%E5%BA%93/" title="Go连接postgresql数据库" target="_blank">Go连接postgresql数据库</a>
+    </li>
+    
+    <li>
         <a href="https://1006487432.github.io/post/notes/go-gin%E6%95%99%E7%A8%8B%E4%B8%8E%E5%AE%9E%E6%88%981/" title="Go-gin教程与实战(1)" target="_blank">Go-gin教程与实战(1)</a>
     </li>
     
@@ -207,6 +232,8 @@
     <a href="https://1006487432.github.io/tags/go/">Go</a>
     
     <a href="https://1006487432.github.io/tags/java/">JAVA</a>
+    
+    <a href="https://1006487432.github.io/tags/postgresql/">Postgresql</a>
     
 </div>
     </section>
