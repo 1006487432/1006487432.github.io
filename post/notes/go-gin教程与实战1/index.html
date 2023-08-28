@@ -55,11 +55,9 @@
                 <nav id="nav-menu" class="clearfix">
                     <a class="current" href="https://1006487432.github.io/">Home</a>
                     
-                    <a  href="https://1006487432.github.io/post/notes/" title="笔记">笔记</a>
+                    <a  href="https://1006487432.github.io/categories/" title="分类">分类</a>
                     
                     <a  href="https://1006487432.github.io/archives/" title="归档">归档</a>
-                    
-                    <a  href="https://1006487432.github.io/about/" title="关于">关于</a>
                     
                 </nav>
             </div>
@@ -196,13 +194,23 @@
   </time>
 
 
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/%E8%AF%AD%E8%A8%80' target="_blank">语言</a>
+  
+</div>
+
+
 
         
         <div class="post-meta">
             <span id="busuanzi_container_page_pv">&nbsp;|
                 <span id="busuanzi_value_page_pv"></span> <span>reads</span>
             </span>
+            
         </div>
+        字数:259
         
         
         <div class="post-content">
@@ -223,40 +231,11 @@
 <p>在项目中引入gin：</p>
 </li>
 </ol>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">import</span> <span style="color:#d14">&#34;github.com/gin-gonic/gin&#34;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>有时候需要使用诸如http.StatusOK之类的常量，则需要引入<code>net/http</code>包：</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">import</span> <span style="color:#d14">&#34;net/http&#34;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="gin框架的简单使用">Gin框架的简单使用</h2>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">package</span> main
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">import</span> <span style="color:#d14">&#34;github.com/gin-gonic/gin&#34;</span>
+</span></span></code></pre></div><p>有时候需要使用诸如http.StatusOK之类的常量，则需要引入<code>net/http</code>包：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">import</span> <span style="color:#d14">&#34;net/http&#34;</span>
+</span></span></code></pre></div><h2 id="gin框架的简单使用">Gin框架的简单使用</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">package</span> main
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">import</span> <span style="color:#d14">&#34;github.com/gin-gonic/gin&#34;</span>
 </span></span><span style="display:flex;"><span>
@@ -267,46 +246,14 @@
 </span></span><span style="display:flex;"><span>	})
 </span></span><span style="display:flex;"><span>    router.<span style="color:#900;font-weight:bold">Run</span>(<span style="color:#d14">&#34;:8080&#34;</span>) <span style="color:#998;font-style:italic">// 监听并在 0.0.0.0:8080 上启动服务
 </span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>上述代码运行后访问https://localhost:8080/ping可以看到一个json格式的数据,{&ldquo;message&rdquo;:&ldquo;pong&rdquo;}说明代码运行成功了。</p>
+</span></span></code></pre></div><p>上述代码运行后访问https://localhost:8080/ping可以看到一个json格式的数据,{&ldquo;message&rdquo;:&ldquo;pong&rdquo;}说明代码运行成功了。</p>
 <p>首先使用gin.Default()函数生成一个路由引擎，这个路由引擎会默认使用两个全局中间件gin.Logger()和gin.Recovery()，生成的类型为*gin.Engine的变量router是Gin框架的基础。</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>gin.<span style="color:#900;font-weight:bold">Logger</span>()<span style="color:#998;font-style:italic">//Logger 中间件将日志写入 gin.DefaultWriter
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>gin.<span style="color:#900;font-weight:bold">Logger</span>()<span style="color:#998;font-style:italic">//Logger 中间件将日志写入 gin.DefaultWriter
 </span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>gin.<span style="color:#900;font-weight:bold">Recovery</span>()<span style="color:#998;font-style:italic">//Recovery 中间件会 recover 任何 panic。如果有 panic 的话，会写入 500
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p>如果想生成一个没有默认中间件的路由引擎则使用函数gin.New()</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>router <span style="color:#000;font-weight:bold">:=</span> gin.<span style="color:#900;font-weight:bold">New</span>()
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>然后注册路由，上述代码为匿名函数的写法，以下展示注册路由和自定义函数的写法：</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">---</span>
+</span></span></span></code></pre></div><p>如果想生成一个没有默认中间件的路由引擎则使用函数gin.New()</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>router <span style="color:#000;font-weight:bold">:=</span> gin.<span style="color:#900;font-weight:bold">New</span>()
+</span></span></code></pre></div><p>然后注册路由，上述代码为匿名函数的写法，以下展示注册路由和自定义函数的写法：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">---</span>
 </span></span><span style="display:flex;"><span>router.<span style="color:#900;font-weight:bold">GET</span>(<span style="color:#d14">&#34;/path/to&#34;</span>,	<span style="color:#000;font-weight:bold">func</span>(context <span style="color:#000;font-weight:bold">*</span>gin.Context)){函数内容})	<span style="color:#998;font-style:italic">//Get方法
 </span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>router.<span style="color:#900;font-weight:bold">POST</span>(<span style="color:#d14">&#34;/path/to&#34;</span>, <span style="color:#000;font-weight:bold">func</span>(context <span style="color:#000;font-weight:bold">*</span>gin.Context)){函数内容})	<span style="color:#998;font-style:italic">//post方法
 </span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">---</span>
@@ -317,29 +264,8 @@
 </span></span><span style="display:flex;"><span>router.<span style="color:#900;font-weight:bold">GET</span>(<span style="color:#d14">&#34;/path/to&#34;</span>, helloword)
 </span></span><span style="display:flex;"><span>router.<span style="color:#900;font-weight:bold">POST</span>(<span style="color:#d14">&#34;/path/to&#34;</span>, helloword)
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">---</span> 
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>当需要注册的路由太多时，可以采用注册路由组的方法：</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>test <span style="color:#000;font-weight:bold">:=</span> router.<span style="color:#900;font-weight:bold">Group</span>(<span style="color:#d14">&#34;/video&#34;</span>)
+</span></span></code></pre></div><p>当需要注册的路由太多时，可以采用注册路由组的方法：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>test <span style="color:#000;font-weight:bold">:=</span> router.<span style="color:#900;font-weight:bold">Group</span>(<span style="color:#d14">&#34;/video&#34;</span>)
 </span></span><span style="display:flex;"><span>	{
 </span></span><span style="display:flex;"><span>		test.<span style="color:#900;font-weight:bold">GET</span>(<span style="color:#d14">&#34;/1&#34;</span>, <span style="color:#000;font-weight:bold">func</span>(c <span style="color:#000;font-weight:bold">*</span>gin.Context) {<span style="color:#998;font-style:italic">//访问/video/1以此类推
 </span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>			c.<span style="color:#900;font-weight:bold">JSON</span>(http.StatusOK, gin.H{<span style="color:#d14">&#34;msg&#34;</span>: <span style="color:#d14">&#34;访问路由组成功&#34;</span>})
@@ -354,34 +280,12 @@
 </span></span><span style="display:flex;"><span>			c.<span style="color:#900;font-weight:bold">JSON</span>(http.StatusOK, gin.H{<span style="color:#d14">&#34;msg&#34;</span>: <span style="color:#d14">&#34;访问路由组成功&#34;</span>})
 </span></span><span style="display:flex;"><span>		})
 </span></span><span style="display:flex;"><span>	}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="从url获得参数">从URL获得参数</h3>
+</span></span></code></pre></div><h3 id="从url获得参数">从URL获得参数</h3>
 <p>从url获得参数有GET和POST两种方法，具体区别见<a href="https://zhuanlan.zhihu.com/p/275695831">http请求中get和post方法的区别 - 知乎 (zhihu.com)</a>，下面用代码展示两种方法的使用:</p>
 <ul>
 <li>通过上下文对象c *gin.Context的方法获得值</li>
 </ul>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#998;font-style:italic">//GET方法：
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#998;font-style:italic">//GET方法：
 </span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//URL /path?id=1234&amp;name=Manu&amp;value= 
 </span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//GET方法使用Query获得值，Query(key string) (value string)
 </span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>       c.<span style="color:#900;font-weight:bold">Query</span>(<span style="color:#d14">&#34;id&#34;</span>) <span style="color:#000;font-weight:bold">==</span> <span style="color:#d14">&#34;1234&#34;</span>
@@ -397,36 +301,14 @@
 </span></span><span style="display:flex;"><span>	price <span style="color:#000;font-weight:bold">:=</span> c.<span style="color:#900;font-weight:bold">DefaultPostForm</span>(<span style="color:#d14">&#34;price&#34;</span>, <span style="color:#d14">&#34;100&#34;</span>)
 </span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//c.PostForm(key string)(value string)
 </span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//同样有GET类似的方法，参数和返回值一样
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
+</span></span></span></code></pre></div><ul>
 <li>可以通过参数绑定获取参数
 <ul>
 <li>参数绑定利用反射机制，自动提取querystring，form表单，json，xml等参数到结构体中，可以极大提升开发效率。</li>
 </ul>
 </li>
 </ul>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">type</span> Teacher <span style="color:#000;font-weight:bold">struct</span> {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">type</span> Teacher <span style="color:#000;font-weight:bold">struct</span> {
 </span></span><span style="display:flex;"><span>	Name   <span style="color:#458;font-weight:bold">string</span> <span style="color:#d14">`form:&#34;Name&#34; json:&#34;Name&#34; binding:&#34;required&#34;`</span>
 </span></span><span style="display:flex;"><span>	Email  <span style="color:#458;font-weight:bold">string</span> <span style="color:#d14">`form:&#34;Email&#34; json:&#34;Email&#34; binding:&#34;required&#34;`</span>
 </span></span><span style="display:flex;"><span>	Wechat <span style="color:#458;font-weight:bold">string</span> <span style="color:#d14">`form:&#34;Wechat&#34; json:&#34;Wechat&#34; binding:&#34;required&#34;`</span>
@@ -442,9 +324,7 @@
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>    <span style="color:#998;font-style:italic">//这样就将获取的参数存储到了infomation变量里，通过访问结构体变量即可访问数据
 </span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="参考资料">参考资料:</h2>
+</span></span></code></pre></div><h2 id="参考资料">参考资料:</h2>
 <p><a href="https://gin-gonic.com/zh-cn/docs/">文档 | Gin Web Framework (gin-gonic.com)</a></p>
 <p><a href="https://zhuanlan.zhihu.com/p/275695831">http请求中get和post方法的区别 - 知乎 (zhihu.com)</a></p>
         </div>
@@ -635,6 +515,10 @@ div.highlight:hover .copy-code,pre:hover .copy-code {
 <ul class="widget-list">
     
     <li>
+        <a href="https://1006487432.github.io/post/notes/ctf-%E5%AF%86%E7%A0%81%E5%AD%A6%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" title="CTF简单编码题记录" target="_blank">CTF简单编码题记录</a>
+    </li>
+    
+    <li>
         <a href="https://1006487432.github.io/post/notes/go%E8%BF%9E%E6%8E%A5postgresql%E6%95%B0%E6%8D%AE%E5%BA%93/" title="Go连接postgresql数据库" target="_blank">Go连接postgresql数据库</a>
     </li>
     
@@ -667,6 +551,12 @@ div.highlight:hover .copy-code,pre:hover .copy-code {
         <h3 class="widget-title"><a href='/categories/'>Categories</a></h3>
 <ul class="widget-list">
     
+    <li><a href="https://1006487432.github.io/categories/ctf/">CTF (1)</a></li>
+    
+    <li><a href="https://1006487432.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (3)</a></li>
+    
+    <li><a href="https://1006487432.github.io/categories/%E8%AF%AD%E8%A8%80/">语言 (3)</a></li>
+    
 </ul>
     </section>
 
@@ -675,6 +565,10 @@ div.highlight:hover .copy-code,pre:hover .copy-code {
 <div class="tagcloud">
     
     <a href="https://1006487432.github.io/tags/algorithm/">Algorithm</a>
+    
+    <a href="https://1006487432.github.io/tags/crypto/">Crypto</a>
+    
+    <a href="https://1006487432.github.io/tags/ctf/">CTF</a>
     
     <a href="https://1006487432.github.io/tags/gin/">Gin</a>
     

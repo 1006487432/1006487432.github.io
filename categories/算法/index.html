@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-	<meta name="generator" content="Hugo 0.117.0">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,17 +9,21 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>瞻鹤的博客 | 仰天一笑，快意平生</title>
-    <meta property="og:title" content="瞻鹤的博客 | 仰天一笑，快意平生">
-    <meta property="og:type" content="website">
+    <title>算法 | 瞻鹤的博客</title>
+    <meta property="og:title" content="算法 - 瞻鹤的博客">
+    <meta property="og:type" content="article">
+        
+        
     <meta name="Keywords" content="golang,go语言,go语言笔记,瞻鹤,ACM,ICPC,博客, pwn">
-    <meta name="description" content="">
-    <meta property="og:url" content="https://1006487432.github.io/">
+    <meta name="description" content="算法">
+        
+    <meta name="author" content="瞻鹤">
+    <meta property="og:url" content="https://1006487432.github.io/categories/%E7%AE%97%E6%B3%95/">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml" href="https://1006487432.github.io/index.xml" title="瞻鹤的博客" />
+    <link rel="alternate" type="application/rss+xml" href="https://1006487432.github.io/categories/%E7%AE%97%E6%B3%95/index.xml" title="瞻鹤的博客" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -39,17 +42,15 @@
         <div class="col-group">
             <div class="site-name ">
                 
-                    <h1>
-                        <a id="logo" href="https://1006487432.github.io/">
-                            瞻鹤的博客
-                        </a>
-                    </h1>
+                    <a id="logo" href="https://1006487432.github.io/">
+                        瞻鹤的博客
+                    </a>
                 
                 <p class="description">仰天一笑，快意平生</p>
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="current" href="https://1006487432.github.io/">Home</a>
+                    <a class="" href="https://1006487432.github.io/">Home</a>
                     
                     <a  href="https://1006487432.github.io/categories/" title="分类">分类</a>
                     
@@ -69,146 +70,24 @@
                     
 <div class="res-cons">
     
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://1006487432.github.io/post/notes/ctf-%E5%AF%86%E7%A0%81%E5%AD%A6%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" title="CTF简单编码题记录" target="_blank">CTF简单编码题记录</a>
-                <p></p>
-            </h1>
-        </header>
+    <h3 class="archive-title">
         
-  <time datetime="2023-08-27T23:19:51Z" class="post-meta meta-date dt-published">
-    2023-08-28
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/ctf' target="_blank">CTF</a>
-  
-</div>
-
-
-        字数:48
-
-        <div class="post-content">
-            ……
-        </div>
-        <p class="readmore"><a href="https://1006487432.github.io/post/notes/ctf-%E5%AF%86%E7%A0%81%E5%AD%A6%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://1006487432.github.io/post/notes/go%E8%BF%9E%E6%8E%A5postgresql%E6%95%B0%E6%8D%AE%E5%BA%93/" title="Go连接postgresql数据库" target="_blank">Go连接postgresql数据库</a>
-                <p></p>
-            </h1>
-        </header>
+            <span>3</span>
         
-  <time datetime="2023-08-22T23:19:51Z" class="post-meta meta-date dt-published">
-    2023-08-23
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/%E8%AF%AD%E8%A8%80' target="_blank">语言</a>
-  
-</div>
-
-
-        字数:260
-
-        <div class="post-content">
-            <h1 id="go语言连接postgresql数据库并实现基础操作教程">Go语言连接postgresql数据库并实现基础操作教程</h1>
-<h2 id="安装依赖包">安装依赖包</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span> <span style="color:#000;font-weight:bold">go</span> get <span style="color:#000;font-weight:bold">-</span>u github.com<span style="color:#000;font-weight:bold">/</span>lib<span style="color:#000;font-weight:bold">/</span>pq
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>参考资料:
-</span></span><span style="display:flex;"><span>https://godoc.org/github.com/lib/pq
-</span></span><span style="display:flex;"><span>https://www.runoob.com/postgresql/postgresql-tutorial.html
-</span></span></code></pre></div>……
-        </div>
-        <p class="readmore"><a href="https://1006487432.github.io/post/notes/go%E8%BF%9E%E6%8E%A5postgresql%E6%95%B0%E6%8D%AE%E5%BA%93/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://1006487432.github.io/post/notes/go-gin%E6%95%99%E7%A8%8B%E4%B8%8E%E5%AE%9E%E6%88%981/" title="Go-gin教程与实战(1)" target="_blank">Go-gin教程与实战(1)</a>
-                <p></p>
-            </h1>
-        </header>
+            <span>3</span>
         
-  <time datetime="2023-08-17T23:19:51Z" class="post-meta meta-date dt-published">
-    2023-08-18
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/%E8%AF%AD%E8%A8%80' target="_blank">语言</a>
-  
-</div>
-
-
-        字数:259
-
-        <div class="post-content">
-            <h2 id="gin框架介绍">Gin框架介绍</h2>
-<pre><code>Gin 是一个用 Go (Golang) 编写的 HTTP Web 框架。 它具有类似 Martini 的 API，但性能比 Martini 快 40 倍。如果你需要极好的性能，使用 Gin 吧。
-</code></pre>……
-        </div>
-        <p class="readmore"><a href="https://1006487432.github.io/post/notes/go-gin%E6%95%99%E7%A8%8B%E4%B8%8E%E5%AE%9E%E6%88%981/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://1006487432.github.io/post/notes/javafirst/" title="JAVA 面向对象" target="_blank">JAVA 面向对象</a>
-                <p></p>
-            </h1>
-        </header>
+            <span>1</span>
         
-  <time datetime="2023-08-17T06:54:43Z" class="post-meta meta-date dt-published">
-    2023-08-17
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/%E8%AF%AD%E8%A8%80' target="_blank">语言</a>
-  
-</div>
-
-
-        字数:308
-
-        <div class="post-content">
-            <h1 id="从0开始学java-类个我的对象在哪里">【从0开始学JAVA】 类个，我的对象在哪里？</h1>
-<p>由于本人是从C开始学习的编程菜鸟，虽然接触过一点cpp(对现在的我来说也许只是c + stl库？只是为了写算法题方便一些&hellip;)，所以我打算先学JAVA的特点和思想————面向对象编程。
-（至于安装JAVA可以看我*<a href="https://blog.csdn.net/CHTXRT/article/details/128699818?spm=1001.2014.3001.5502">兄弟的博客</a>*)</p>……
-        </div>
-        <p class="readmore"><a href="https://1006487432.github.io/post/notes/javafirst/" target="_blank">Continue reading</a></p>
-    </article>
+        <span class="keyword">算法</span>
+        articles
+    </h3>
     
-    
+
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://1006487432.github.io/post/notes/%E5%B7%AE%E5%88%86/" title="差分" target="_blank">差分</a>
-                <p></p>
+                <a href="https://1006487432.github.io/post/notes/%E5%B7%AE%E5%88%86/" target="_blank">差分</a>
             </h1>
         </header>
         
@@ -225,8 +104,6 @@
 </div>
 
 
-        字数:239
-
         <div class="post-content">
             <h1 id="数组-差分">【数组】 差分</h1>
 <h2 id="前缀和-与-差分">前缀和 与 差分</h2>
@@ -234,17 +111,14 @@
 首先我们回顾一下前缀和：<strong>原数组</strong>a[n]和依据原数组构造出的<strong>新数组</strong>s[n]，s[n]是a[n]的<strong>前缀和数组</strong>。
 俗话说，有来有往，阴阳交汇，分久必合、合久必分&hellip;&hellip;
 总而言之，我们看到了<strong>新数组</strong>s[n]是<strong>原数组</strong>a[n]的前缀和数组，但我们都知道，事物之间的影响总是交互的，所以我们必然会想到<strong>原数组</strong>a[n]是<strong>新数组</strong>s[n]的什么？只是前缀和数组的原数组吗？</p>……
+            <p class="readmore"><a href="https://1006487432.github.io/post/notes/%E5%B7%AE%E5%88%86/" target="_blank">Continue reading</a></p>
         </div>
-        <p class="readmore"><a href="https://1006487432.github.io/post/notes/%E5%B7%AE%E5%88%86/" target="_blank">Continue reading</a></p>
     </article>
-    
-    
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://1006487432.github.io/post/notes/sum/" title="前缀和" target="_blank">前缀和</a>
-                <p></p>
+                <a href="https://1006487432.github.io/post/notes/sum/" target="_blank">前缀和</a>
             </h1>
         </header>
         
@@ -261,8 +135,6 @@
 </div>
 
 
-        字数:285
-
         <div class="post-content">
             <h1 id="前缀和"><strong>前缀和</strong></h1>
 <p>给出一个数列：</p>
@@ -275,17 +147,14 @@
 <p>通常我们会在数组中触及到这类知识。
 假设给出<strong>原数组</strong> a[5] = {1,2,3,4,5}，我们可以得到前缀和数组，假设为S[5] = {1,3,6,10,15}。
 那么可以得到： S[n] = S[n-1] + a[n]，即求前缀和的公式。</p>……
+            <p class="readmore"><a href="https://1006487432.github.io/post/notes/sum/" target="_blank">Continue reading</a></p>
         </div>
-        <p class="readmore"><a href="https://1006487432.github.io/post/notes/sum/" target="_blank">Continue reading</a></p>
     </article>
-    
-    
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://1006487432.github.io/post/notes/bsgs/" title="BSGS" target="_blank">BSGS</a>
-                <p></p>
+                <a href="https://1006487432.github.io/post/notes/bsgs/" target="_blank">BSGS</a>
             </h1>
         </header>
         
@@ -302,16 +171,14 @@
 </div>
 
 
-        字数:559
-
         <div class="post-content">
             <p><strong>BSGS</strong>算法(BABY-STEP GIANT-STEP)，又称大步小步法，通常用于求解<strong>高阶线性同余方程</strong>如：$a^x\ ≡\ b\ (mod\ p)$。根据p是否为质数，有扩展BSGS算法和BSGS算法。
 BSGS通过<strong>欧拉定理</strong>及其拓展确定x的范围，再通过<strong>暴力枚举</strong>求解x。其本质是<strong>分块思想</strong>。</p>……
+            <p class="readmore"><a href="https://1006487432.github.io/post/notes/bsgs/" target="_blank">Continue reading</a></p>
         </div>
-        <p class="readmore"><a href="https://1006487432.github.io/post/notes/bsgs/" target="_blank">Continue reading</a></p>
     </article>
     
-    
+
     
 
 

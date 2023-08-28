@@ -9,20 +9,21 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>搜索 | 瞻鹤的博客</title>
-    <meta property="og:title" content="搜索 - 瞻鹤的博客">
+    <title>CTF | 瞻鹤的博客</title>
+    <meta property="og:title" content="CTF - 瞻鹤的博客">
     <meta property="og:type" content="article">
         
         
     <meta name="Keywords" content="golang,go语言,go语言笔记,瞻鹤,ACM,ICPC,博客, pwn">
-    <meta name="description" content="搜索页面">
+    <meta name="description" content="CTF">
         
     <meta name="author" content="瞻鹤">
-    <meta property="og:url" content="https://1006487432.github.io/search/">
+    <meta property="og:url" content="https://1006487432.github.io/categories/ctf/">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
+    <link rel="alternate" type="application/rss+xml" href="https://1006487432.github.io/categories/ctf/index.xml" title="瞻鹤的博客" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -66,70 +67,57 @@
             <div class="col-group">
 
                 <div class="col-8" id="main">
-                    <div class="res-cons">
+                    
+<div class="res-cons">
+    
     <h3 class="archive-title">
-        Search: 
-        <span class="keyword">Keyword</span>
-        results
+        
+            <span>3</span>
+        
+            <span>3</span>
+        
+            <span>1</span>
+        
+        <span class="keyword">CTF</span>
+        articles
     </h3>
+    
 
+    
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="链接" target="_blank">标题</a>
+                <a href="https://1006487432.github.io/post/notes/ctf-%E5%AF%86%E7%A0%81%E5%AD%A6%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" target="_blank">CTF简单编码题记录</a>
             </h1>
         </header>
         
-        <div class="post-content">
-            概要……
-            <p class="readmore"><a href="链接" target="_blank">Continue reading</a></p>
-        </div>
-    </article>
+  <time datetime="2023-08-27T23:19:51Z" class="post-meta meta-date dt-published">
+    2023-08-28
+  </time>
 
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/ctf' target="_blank">CTF</a>
+  
 </div>
 
-<script type="text/javascript">
 
-    var getUrlParameter = function getUrlParameter (sParam) {
-        var sPageURL = window.location.search.substring(1),
-            sURLVariables = sPageURL.split('&'),
-            sParameterName,
-            i;
+        <div class="post-content">
+            ……
+            <p class="readmore"><a href="https://1006487432.github.io/post/notes/ctf-%E5%AF%86%E7%A0%81%E5%AD%A6%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" target="_blank">Continue reading</a></p>
+        </div>
+    </article>
+    
 
-        for (i = 0; i < sURLVariables.length; i++) {
-            sParameterName = sURLVariables[i].split('=');
+    
 
-            if (sParameterName[0] === sParam) {
-                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-            }
-        }
-    };
 
-    $(document).ready(function () {
-        var q = getUrlParameter("q");
-        $("span.keyword").text(q);
-        $("article.post").remove();
-        $.ajax({
-            url: 'https:\/\/1006487432.github.io\/index.xml',
-            dataType: "xml",
-            success: function (data) {
-                $(data).find("item").each(function () {
-                    var item = $(this);
-                    var title = item.find("title").text();
-                    if (title.toLowerCase().indexOf(q.toLowerCase()) >= 0) {
-                        var url = item.find("link").text();
-                        var searchItem = `<article class="post"><header><h1 class="post-title"><a href="` + url + `" target="_blank">` + title + `</a></h1></header>`;
-                        var pubDate = new Date(item.find("pubDate").text())
-                        searchItem += `<time class="post-meta meta-date">` + pubDate.getFullYear() + `-` + (pubDate.getMonth() + 1) + `-` + pubDate.getDate() + `</time>`;
-                        searchItem += `<div class="post-content">` + item.find("description").text() + `……<p class="readmore"><a href="` + url + `" target="_blank"></a></p></div></article>`;
 
-                        $("div.res-cons").append(searchItem);
-                    }
-                });
-            }
-        });
-    });
-</script>
+
+
+</div>
 
                     <footer id="footer">
     <div>
@@ -151,17 +139,6 @@
 </footer>
 
 
-    
-    
-    <script type="text/javascript">
-        window.MathJax = {
-            tex2jax: {
-                inlineMath: [['$', '$']],
-                processEscapes: true
-                }
-            };
-    </script>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script><script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
