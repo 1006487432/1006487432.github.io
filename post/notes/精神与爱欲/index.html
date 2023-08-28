@@ -9,20 +9,20 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>前缀和 | 瞻鹤的博客</title>
-    <meta property="og:title" content="前缀和 - 瞻鹤的博客">
+    <title>《精神与爱欲》 | 瞻鹤的博客</title>
+    <meta property="og:title" content="《精神与爱欲》 - 瞻鹤的博客">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2023-08-17T13:13:33&#43;08:00'>
+    <meta property="article:published_time" content='2023-08-18T12:19:51&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2023-08-17T13:13:33&#43;08:00'>
+    <meta property="article:modified_time" content='2023-08-18T12:19:51&#43;08:00'>
         
     <meta name="Keywords" content="golang,go语言,go语言笔记,瞻鹤,ACM,ICPC,博客, pwn">
-    <meta name="description" content="前缀和">
+    <meta name="description" content="《精神与爱欲》">
         
     <meta name="author" content="瞻鹤">
-    <meta property="og:url" content="https://1006487432.github.io/post/notes/sum/">
+    <meta property="og:url" content="https://1006487432.github.io/post/notes/%E7%B2%BE%E7%A5%9E%E4%B8%8E%E7%88%B1%E6%AC%B2/">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -138,14 +138,9 @@
     <div class="post-toc-content">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#那么前缀和数组有什么用呢">那么前缀和数组有什么用呢？</a></li>
-    <li><a href="#题目">题目</a>
-      <ul>
-        <li><a href="#前缀和结合哈希表">前缀和结合哈希表</a></li>
-        <li><a href="#前缀乘积">前缀乘积</a></li>
-        <li><a href="#httpsleetcodecnproblemssubarray-sum-equals-k"><a href="https://leetcode.cn/problems/subarray-sum-equals-k/">https://leetcode.cn/problems/subarray-sum-equals-k/</a></a></li>
-      </ul>
-    </li>
+    <li><a href="#人物">人物</a></li>
+    <li><a href="#主题">主题</a></li>
+    <li><a href="#情节">情节</a></li>
   </ul>
 </nav>
     </div>
@@ -183,18 +178,18 @@
 </script>
     <article class="post">
         <header>
-            <h1 class="post-title">前缀和</h1>
+            <h1 class="post-title">《精神与爱欲》</h1>
         </header>
         
-  <time datetime="2023-08-17T05:13:33Z" class="post-meta meta-date dt-published">
-    2023-08-17
+  <time datetime="2023-08-18T04:19:51Z" class="post-meta meta-date dt-published">
+    2023-08-18
   </time>
 
 
 <div class="post-meta meta-category">
   <span>&nbsp;|</span>
   
-    <a href='/categories/%E7%AE%97%E6%B3%95' target="_blank">算法</a>
+    <a href='/categories/%E7%AC%94%E8%AE%B0' target="_blank">笔记</a>
   
 </div>
 
@@ -207,129 +202,53 @@
             </span>
             
         </div>
-        字数:285
+        字数:25
         
         
         <div class="post-content">
-            <h1 id="前缀和"><strong>前缀和</strong></h1>
-<p>给出一个数列：</p>
-<pre><code>1 2 3 4 5 6 7 8 9 
-</code></pre>
-<p>它的前缀和：</p>
-<pre><code>1 3 6 10 15 21 28 36 45
-</code></pre>
-<p>前缀和即：从第一个元素到该元素之和</p>
-<p>通常我们会在数组中触及到这类知识。
-假设给出<strong>原数组</strong> a[5] = {1,2,3,4,5}，我们可以得到前缀和数组，假设为S[5] = {1,3,6,10,15}。
-那么可以得到： S[n] = S[n-1] + a[n]，即求前缀和的公式。</p>
-<h2 id="那么前缀和数组有什么用呢">那么前缀和数组有什么用呢？</h2>
-<p>以下给出一道经典前缀和问题：</p>
-<p>首先我们先从朴素思想开始考虑，求m次区间和的时间复杂度是O(mn^2^)</p>
-<pre tabindex="0"><code>while(m--)
-{
-  int l , r;
-  cin &gt;&gt; l &gt;&gt; r;
-  int sum = 0;
-  for(int i = l; i &lt;= r; i++)
-  {
-      sum += num[i];(假设下标从1开始）
-  }
-  cout &lt;&lt; sum &lt;&lt; endl;
-}
-</code></pre><p>我们会发现，我们没求一次区间和，就要循环一次，那么有没有一种方法可以让O(n)的求和变为O(1)的时间复杂度呢？
-答案就是使用前缀和。对区间[l,r]，通过对求前缀和过程的分析可以的出，区间和为s[r]-s[l-1]。因此我们可以通过一次运算求出原数组任意一段数据的和。</p>
-<p>以下为代码：</p>
-<!-- raw HTML omitted -->
-<pre tabindex="0"><code>#include&lt;iostream&gt;
-#define N 100010
-using namespace std;
-int nums[N];
-int s[N];
-int main()
-{
-    int n,m;
-    cin &gt;&gt; n &gt;&gt; m;
-    for(int i = 0; i &lt; n; i++)
-    {    
-        cin &gt;&gt; nums[i+1];
-        s[i+1] = s[i] + nums[i+1];//求前缀和
-    }
-    while(m--)
-    {
-        int l,r;
-        cin &gt;&gt; l &gt;&gt; r;
-        cout &lt;&lt; s[r]-s[l-1] &lt;&lt; endl;//
-    }
-    return 0;
-}
-</code></pre><!-- raw HTML omitted -->
-<h2 id="题目">题目</h2>
-<h3 id="前缀和结合哈希表">前缀和结合哈希表</h3>
-<p><a href="https://leetcode.cn/problems/subarray-sum-equals-k/">https://leetcode.cn/problems/subarray-sum-equals-k/</a></p>
-<pre><code>在数组中：
-1.子数组
-子数组的定义：一个或连续多个数组中的元素组成一个子数组(子数组最少包含一个元素)
-
-2.子序列
-子序列的定义：子序列就是在原来序列中找出一部分组成的序列（子序列不一定连续）
-</code></pre>
-<p>如果使用for嵌套循环暴力枚举O(n^2^)的方法必然会超时。
-那么分析题意，可知求区间和为k的区间个数,即 s[i] - s[j] == k
-同样，如果对前缀和数组进行枚举同样是O(n^2^)的时间复杂度,会超时。
-我们用哈希表存储前缀和数组，结合公式s[i] - s[j] == k的变形s[j] = s[i] - k就可以实现O(n)的时间复杂度的解法。
-即：对每一个前缀和数组元素s[i],利用哈希表查找s[i] - k是否存在，存在则找到了一个或n个符合题意的区间。
-以下为代码</p>
-<!-- raw HTML omitted -->
-<pre tabindex="0"><code>class Solution {
-public:
-    int subarraySum(vector&lt;int&gt;&amp; nums, int k) {
-        unordered_map&lt;int, int&gt; mp;
-        mp[0] = 1;
-        int sum = 0;
-        int ans = 0;
-        for(int i = 0; i &lt; nums.size(); i++)
-        {
-            sum += nums[i];
-            if(mp.find(sum - k) != mp.end())//
-                ans += mp[sum - k];
-            mp[sum]++;
-        }
-        return ans;
-    }
-};
-</code></pre><!-- raw HTML omitted -->
-<h3 id="前缀乘积">前缀乘积</h3>
-<h3 id="httpsleetcodecnproblemssubarray-sum-equals-k"><a href="https://leetcode.cn/problems/subarray-sum-equals-k/">https://leetcode.cn/problems/subarray-sum-equals-k/</a></h3>
-<p>最先想到的是遍历求乘积，也就是O(n^2^)的暴力算法，但这不符合题目的要求。
-那么我们需要对算法进行优化，从朴素思想出发，遍历求乘积时，从0到n-1累乘，中间跳过i，那么天然地由i分为左右两个区间，根据乘法的结合律，得出answer[i] = i左侧元素的乘积*i右侧元素的乘积。
-那么我们只需要提前将每一个i左侧、右侧元素的乘积算出来，就可以实现O(n)时间复杂度的算法。</p>
-<!-- raw HTML omitted -->
-<pre tabindex="0"><code>class Solution {
-public:
-    vector&lt;int&gt; productExceptSelf(vector&lt;int&gt;&amp; nums) {
-        int n = nums.size();
-        vector&lt;int&gt; answer(n);
-        vector&lt;int&gt; l(n);
-        vector&lt;int&gt; r(n);
-        l[0] = 1;
-        r[n - 1] = 1;
-        for(int i = 1; i &lt; n; i++)
-            l[i] = l[i-1]*nums[i-1];
-        for(int i = n - 2; i &gt;= 0; i--)
-            r[i] = r[i+1]*nums[i+1];
-        for(int i = 0; i &lt; n; i++)
-            answer[i] = l[i]*r[i];
-        return answer;
-    }
-};
-</code></pre><!-- raw HTML omitted -->
+            <h2 id="人物">人物</h2>
+<p>歌尔德蒙、纳尔齐斯、院长、安塞尔姆神父、马丁神父、尼克劳斯师傅、老骑士、维克托、罗伯特
+　　吉普赛人丽瑟、村姑们、莉迪亚、尤利娅、莉斯贝思、玛丽、主教城里的情人、蕾娜、丽贝卡、阿格尼斯、母亲</p>
+<h2 id="主题">主题</h2>
+<p>　　自由、欲望、精神、爱情、生活、灵魂、人与世界、无常、命运、创造、成长、追寻</p>
+<h2 id="情节">情节</h2>
+<p>　　情节：觉醒——流浪——创造（觉悟）
+　　  全书围绕歌尔德蒙的成长故事展开
+少年歌尔德蒙是听从父亲话的孩子，他进入玛利亚布隆修道院遵从修院的规矩生活学习。如同现在的孩子，从小生活在既定的道路上，或许会取得对他们没有意义的收获。
+  
+　　   歌尔德蒙有着自由、艺术、想象的天性，有着艺术家的气质。这一切都被善于看人的纳尔齐斯捕捉到，纳尔齐斯是歌尔德蒙从少年走向青年的导师，他给予歌尔德蒙灵魂中第一抹自由色彩，他们之间的爱是精神的，非肉体的，非占有的，是彼此补充，相互启发的。
+　　  
+　　   情欲是歌尔德蒙打破枷锁的内动力，使他从不自知的少年走向流浪生活。刚踏上流浪的歌尔德蒙是天真的，情欲旺盛的。对现在的他来说还没有爱情，有的只是一个接一个的一夜情，他在村庄间辗转，满足他的各种欲望，这个阶段的歌尔德蒙仍然是不自知的，他不知道爱情是什么，不知道人生的奥妙，只是初得自由的孩子，对很多事都不理解但就在这种命运使然的生活里，他汲取生活的精华，一点点成长，特别是在和女性交往方面得心应手。
+　　  
+　　   莉迪亚是歌尔德蒙真正意义上的“初恋”，他们之间的爱情是痛苦的，无可挽回的。莉迪亚的爱是克制的、痛苦的、充满对未来的害怕和惊慌但也是热烈的、诚挚的。是莉迪亚让歌尔德蒙明白爱情，相比肉体上片刻的欢愉，她给歌尔德蒙带来的是精神上的长久喜悦，以至于歌尔德蒙后期雕刻莉迪亚圣母像是那么美丽、深刻。这种没有未来的爱情，让两人急于享受当下，并从其中获得苦涩的幸福。莉迪亚的爱是不合规矩的，她是骑士家的长女。莉迪亚让歌尔德蒙明白，爱情不是所有人最高的准则。歌尔德蒙离开后心中实际上有着对这位骑士小姐的愧疚，或许如果他能够恪守规矩，向老骑士表明心意，这份爱情会延续下去。但没有如果，人世间所有东西，一经离开就不会再回来，当歌尔德蒙再次回到骑士的领地，莉迪亚已不见，尤利娅也早已嫁人。
+　　  
+　　   玛丽是整本书中最令人惋惜的形象，她对歌尔德蒙的爱是真正的爱，纯粹精神的爱欲。
+　　  
+　　  “唉，歌尔德蒙，我多希望自己健康、漂亮、强壮啊。这样你就不用大半夜跑去陌生房子里爱别的女人了。你也可以待在我身边，给我一点爱。”
+　　  
+　　   玛丽的爱是奉献的爱，不求回报。或许她能在烛火里看见歌尔德蒙回来就已是最大的幸福了。只有玛丽和纳尔齐斯一直在等着歌尔德蒙。可以说玛丽是全书中我最喜欢的形象。
+　　  
+　　   歌尔德蒙在流浪途中认识了“母亲”的形象，人类之母的形象。爱情、残忍、死亡、瘟疫，流浪途中遭受的一切都成了歌尔德蒙对母亲的认识。只有创作才能维系永恒。创作除了约束，带给歌尔德蒙的还有超脱。歌尔德蒙的生命体验浓缩在他的雕刻中。
+　　  
+　　   人生是无常的。全书一直在反复强调这一点。生活的漩涡总是逼迫我们。是生活自己来得。正如遗忘才能永葆青春，当歌尔德蒙回到修院后不断想起过去时，他已经不在年轻了。他认为自己虚度了青春，浪费了年华。其实这种看法是可溯性的，站在现在的节点回望过去。歌尔德蒙的青春是迷茫，追寻路上的迷茫，但迷茫总是必须的。正如歌德所说，善良的人或许会迷惘，但终将找到一条坦途。歌尔德蒙找到的坦途正是艺术，艺术将他从无常中解救出来，给予他无限的慰藉。到了最后，他生命中承受的种种人的形象都变作各种原型的载体。所有逝去的都无可挽回，时间会美化遗憾，给予我们深刻的美。
+　　  
+　　   对我来说，我也和歌尔德蒙一样一直在追寻着，不过不一样的是，我是“玛丽”，不是歌尔德蒙。如果我高大，英俊，幽默有趣，我喜欢的女孩会不会喜欢我呢？我不知道，但我唯一知道的是我的爱很纯粹，温和，无关风与月。我只是简单的告知，而不计较结果。记得高三的时候，我只是在后面默默看着喜欢的姑娘骑车离去，只是想让时间停下来，而我就这样默默看着，也就足够了。获得爱情这种事对我来说过于奢侈。事实上只有天生的缺陷会让人自卑，所以我知道没有人会看得上我。我的生活也充满痛苦，我是一个与痛苦为伍的人。
+　　（之前写过的东西：
+　　   我站在暗影尽头等待着，太阳从灵魂背面升起，守夜人替我点亮沉默的夜，秋天慢慢回溯&hellip;&hellip;
+　　我诗化的记忆总是被反复碾转，像朝日一样将薄凉的温暖敷在心头，因此我愿意和痛苦为伍，向世界呐喊出我缄默的思念，独自享受无限寂寥里的芬芳，忧郁星球上绝美的玫瑰。)
+　　
+　   本该如此，我满意。
+　
+　　   纳尔齐斯与歌尔德蒙的对话：</p>
+<pre><code>	“众人当中，你是唯一能够让我去爱的人。你可知道这意味着什么，这意味着沙漠里的清泉，荒原里开花的树。正是因为你，我的心灵才没有枯萎，我的灵魂中还保留了一处神恩可以抵达的地方。”
+	“现在我一无所有，无论是流浪还是自由，还是生活和女人，统统都背叛了我，没想到你却终于对我说出这些话来，我要收下它们，谢谢你。”</code></pre>
         </div>
 
         
 <div class="post-archive">
     <ul class="post-copyright">
         <li><strong>Author: </strong><a rel="author" href="https://1006487432.github.io/">瞻鹤</a></li>
-        <li style="word-break:break-all"><strong>Link: </strong><a href="https://1006487432.github.io/post/notes/sum/">https://1006487432.github.io/post/notes/sum/</a></li>
+        <li style="word-break:break-all"><strong>Link: </strong><a href="https://1006487432.github.io/post/notes/%E7%B2%BE%E7%A5%9E%E4%B8%8E%E7%88%B1%E6%AC%B2/">https://1006487432.github.io/post/notes/%E7%B2%BE%E7%A5%9E%E4%B8%8E%E7%88%B1%E6%AC%B2/</a></li>
         <li><strong>License: </strong>This work is under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>. Kindly fulfill the requirements of the aforementioned License when adapting or creating a derivative of this work.</li>
     </ul>
 </div>
@@ -343,11 +262,15 @@ public:
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/post/notes/bsgs/">BSGS</a></li>
+        <li><a href="/post/notes/%E6%B0%B8%E5%88%AB%E4%BA%86%E6%AD%A6%E5%99%A8/">《永别了，武器》</a></li>
         
-        <li><a href="/archives/">归档</a></li>
+        <li><a href="/post/notes/go-gin%E6%95%99%E7%A8%8B%E4%B8%8E%E5%AE%9E%E6%88%981/">Go-gin教程与实战(1)</a></li>
         
-        <li><a href="/search/">搜索</a></li>
+        <li><a href="/post/notes/javafirst/">JAVA 面向对象</a></li>
+        
+        <li><a href="/post/notes/%E5%B7%AE%E5%88%86/">差分</a></li>
+        
+        <li><a href="/post/notes/sum/">前缀和</a></li>
         
     </ul>
 </div>
@@ -357,7 +280,7 @@ public:
             
             <ul class="clearfix">
                 
-                <li><a href='/tags/algorithm' target="_blank">Algorithm</a></li>
+                <li><a href='/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0' target="_blank">读书笔记</a></li>
                 
             </ul>
             
