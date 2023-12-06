@@ -162,8 +162,8 @@
 
 
         <div class="post-content">
-            Problem - 1339B - Codeforces
-将数组排序后，从中间元素开始，左右依次插入即可，可以保证绝对值差距越来越大。……
+            Problem - 1339B - Codeforces 将数组排序后，从中间元素开始，左右依次插入即可，可以保证绝对值差距越来越大。
+#include &lt;cstdio&gt; #include &lt;algorithm&gt; #include &lt;iostream&gt; #include &lt;cmath&gt; #include &lt;bits/stdc++.h&gt; #define input_int(n) scanf(&#34;%d&#34;, &amp;n) using namespace std; typedef long long ll; typedef unsigned long long ull; typedef vector&lt;int&gt; vi; typedef pair&lt;int, int&gt; pii; void solve(){ int n; scanf(&#34;%d&#34;, &amp;n); vector&lt;int&gt; f(n); for(int i = 0; i &lt; n; i++) scanf(&#34;%d&#34;, &amp;f[i]); sort(f.begin(), f.end()); int l = (n - 1)/2, r = l + 1; for(int i = 0; i &lt; n; i++){ if(i % 2 == 0){ cout &lt;&lt; f[l] &lt;&lt; &#39; &#39;; l--; } else{ cout &lt;&lt; f[r] &lt;&lt; &#39; &#39;; r++; } } cout &lt;&lt; &#39;\n&#39;; } int main() { int t; scanf(&#34;%d&#34;, &amp;t); while(t--){ solve(); } return 0; } ……
             <p class="readmore"><a href="https://1006487432.github.io/post/notes/%E6%9E%84%E9%80%A0%E9%A2%98%E7%BB%83%E4%B9%A0%E8%AE%B0%E5%BD%95/" target="_blank">Continue reading</a></p>
         </div>
     </article>

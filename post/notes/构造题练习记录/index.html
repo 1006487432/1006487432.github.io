@@ -136,7 +136,12 @@
 <div class="post-toc" style="position: absolute; top: 188px;">
     <h2 class="post-toc-title">Table of Contents</h2>
     <div class="post-toc-content">
-        <nav id="TableOfContents"></nav>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#problem---1339b---codeforceshttpscodeforcescomproblemsetproblem1339b"><a href="https://codeforces.com/problemset/problem/1339/B">Problem - 1339B - Codeforces</a></a></li>
+    <li><a href="#heading"></a></li>
+  </ul>
+</nav>
     </div>
 </div>
 <script type="text/javascript">
@@ -196,17 +201,60 @@
             </span>
             
         </div>
-        字数:6
+        字数:118
         
         
         <div class="post-content">
-            <p><a href="https://codeforces.com/problemset/problem/1339/B">Problem - 1339B - Codeforces</a></p>
+            <h2 id="problem---1339b---codeforceshttpscodeforcescomproblemsetproblem1339b"><a href="https://codeforces.com/problemset/problem/1339/B">Problem - 1339B - Codeforces</a></h2>
 <p>
-        <a data-fancybox="gallery" href="E:%5chugoblog%5cstatic%5cimg%5cimage-20231206111021343.png">
-            <img class="mx-auto" alt="image-20231206111021343" src="E:%5chugoblog%5cstatic%5cimg%5cimage-20231206111021343.png" />
+        <a data-fancybox="gallery" href="%5cimg%5cimage-20231206111021343.png">
+            <img class="mx-auto" alt="image-20231206111021343" src="%5cimg%5cimage-20231206111021343.png" />
         </a>
     </p>
 <p>将数组排序后，从中间元素开始，左右依次插入即可，可以保证绝对值差距越来越大。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#999;font-weight:bold;font-style:italic">#include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;cstdio&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold;font-style:italic">#include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;algorithm&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold;font-style:italic">#include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold;font-style:italic">#include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;cmath&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold;font-style:italic">#include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;bits/stdc++.h&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold;font-style:italic">#define input_int(n) scanf(&#34;%d&#34;, &amp;n)
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">using</span>  <span style="color:#000;font-weight:bold">namespace</span>  std;
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">typedef</span> <span style="color:#458;font-weight:bold">long</span> <span style="color:#458;font-weight:bold">long</span> ll;
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">typedef</span> <span style="color:#458;font-weight:bold">unsigned</span> <span style="color:#458;font-weight:bold">long</span> <span style="color:#458;font-weight:bold">long</span> ull;
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">typedef</span> vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">&gt;</span> vi;
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">typedef</span> pair<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#458;font-weight:bold">int</span>, <span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">&gt;</span> pii;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">solve</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#458;font-weight:bold">int</span> n;
+</span></span><span style="display:flex;"><span>    scanf(<span style="color:#d14">&#34;%d&#34;</span>, <span style="color:#000;font-weight:bold">&amp;</span>n);
+</span></span><span style="display:flex;"><span>    vector<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#458;font-weight:bold">int</span><span style="color:#000;font-weight:bold">&gt;</span> f(n);
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">for</span>(<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> n; i<span style="color:#000;font-weight:bold">++</span>)
+</span></span><span style="display:flex;"><span>        scanf(<span style="color:#d14">&#34;%d&#34;</span>, <span style="color:#000;font-weight:bold">&amp;</span>f[i]);
+</span></span><span style="display:flex;"><span>    sort(f.begin(), f.end());
+</span></span><span style="display:flex;"><span>    <span style="color:#458;font-weight:bold">int</span> l <span style="color:#000;font-weight:bold">=</span> (n <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>)<span style="color:#000;font-weight:bold">/</span><span style="color:#099">2</span>, r <span style="color:#000;font-weight:bold">=</span> l <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">for</span>(<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> n; i<span style="color:#000;font-weight:bold">++</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">if</span>(i <span style="color:#000;font-weight:bold">%</span> <span style="color:#099">2</span> <span style="color:#000;font-weight:bold">==</span> <span style="color:#099">0</span>){
+</span></span><span style="display:flex;"><span>            cout <span style="color:#000;font-weight:bold">&lt;&lt;</span> f[l] <span style="color:#000;font-weight:bold">&lt;&lt;</span> <span style="color:#d14">&#39; &#39;</span>;
+</span></span><span style="display:flex;"><span>            l<span style="color:#000;font-weight:bold">--</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">else</span>{
+</span></span><span style="display:flex;"><span>            cout <span style="color:#000;font-weight:bold">&lt;&lt;</span> f[r] <span style="color:#000;font-weight:bold">&lt;&lt;</span> <span style="color:#d14">&#39; &#39;</span>;
+</span></span><span style="display:flex;"><span>            r<span style="color:#000;font-weight:bold">++</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    cout <span style="color:#000;font-weight:bold">&lt;&lt;</span> <span style="color:#d14">&#39;\n&#39;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#458;font-weight:bold">int</span> t;
+</span></span><span style="display:flex;"><span>    scanf(<span style="color:#d14">&#34;%d&#34;</span>, <span style="color:#000;font-weight:bold">&amp;</span>t);
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">while</span>(t<span style="color:#000;font-weight:bold">--</span>){
+</span></span><span style="display:flex;"><span>        solve();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="heading"></h2>
 
         </div>
 
