@@ -325,77 +325,8 @@ BSGS通过<strong>欧拉定理</strong>及其拓展确定x的范围，再通过<
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://1006487432.github.io/post/notes/%E6%9E%84%E9%80%A0%E9%A2%98%E7%BB%83%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="构造题练习记录" target="_blank">构造题练习记录</a>
-            </h1>
-        </header>
-        
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/%E7%AE%97%E6%B3%95' target="_blank">算法</a>
-  
-</div>
 
 
-        <div class="post-content">
-            Problem - 1339B - Codeforces
-将数组排序后，从中间元素开始，左右依次插入即可，可以保证绝对值差距越来越大。……
-        </div>
-        <p class="readmore"><a href="https://1006487432.github.io/post/notes/%E6%9E%84%E9%80%A0%E9%A2%98%E7%BB%83%E4%B9%A0%E8%AE%B0%E5%BD%95/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://1006487432.github.io/post/notes/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/" title="后缀数组" target="_blank">后缀数组</a>
-            </h1>
-        </header>
-        
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/%E7%AE%97%E6%B3%95' target="_blank">算法</a>
-  
-</div>
-
-
-        <div class="post-content">
-            #include &lt;bits/stdc++.h&gt; #define fi first; #define se second; #define vector&lt;int&gt; vi; using namespace std; typedef long long ll; typedef long double ld; typedef pair&lt;int, int&gt; pii; //1.integer overflow (1e5 * 1e5) (2e9 + 2e9) //2.runtime error //3.boundary condition const int N = 1000010; char s[N]; int sa[N], cnt[N], t1[N], t2[N], rk[N], height[N]; int n; void calc_sa(){ int m = 127; int i, *x = t1, *y = t2; for(i = 0; i &lt; m; i++) cnt[i] = 0; for(i = 0; i &lt; n; i++) cnt[x[i] = s[i]] ++; for(i = 1; i &lt; m; i++) cnt[i] += cnt[i - 1]; for(i = n - 1; i &gt;= 0; i--) sa[--cnt[x[i]]] = i; for(int k = 1; k &lt;= n; k = k * 2){ int p = 0; for(i = n - k; i &lt; n; i++) y[p++] = i; for(i = 0; i &lt; n; i++) if(sa[i] &gt;= k) y[p++] = sa[i] - k; for(i = 0; i &lt; m; i++) cnt[i] = 0; for(i = 0; i &lt; n; i++) cnt[x[y[i]]]++; for(i = 1; i &lt; m; i++) cnt[i] += cnt[i - 1]; for(i = n - 1; i &gt;= 0; i--) sa[--cnt[x[y[i]]]] = y[i]; swap(x, y); p = 1; x[sa[0]] = 0; for(i = 1; i &lt; n; i++) x[sa[i]] = y[sa[i - 1]] == y[sa[i]]&amp;&amp;y[sa[i - 1] + k] == y[sa[i] + k] ?……
-        </div>
-        <p class="readmore"><a href="https://1006487432.github.io/post/notes/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-
-
-
-<ol class="page-navigator">
-    
-
-    
-    <li  class="current">
-        <a href="https://1006487432.github.io/post/notes/">1</a>
-    </li>
-    
-    <li >
-        <a href="https://1006487432.github.io/post/notes/page/2/">2</a>
-    </li>
-    
-
-    
-    <li class="next">
-        <a href="https://1006487432.github.io/post/notes/page/2/">Next</a>
-    </li>
-    
-</ol>
 
 
 
@@ -479,14 +410,6 @@ BSGS通过<strong>欧拉定理</strong>及其拓展确定x的范围，再通过<
         <a href="https://1006487432.github.io/post/notes/bsgs/" title="BSGS" target="_blank">BSGS</a>
     </li>
     
-    <li>
-        <a href="https://1006487432.github.io/post/notes/%E9%A2%98%E8%A7%A3/" title="DP题目" target="_blank">DP题目</a>
-    </li>
-    
-    <li>
-        <a href="https://1006487432.github.io/post/notes/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/" title="后缀数组" target="_blank">后缀数组</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -498,7 +421,7 @@ BSGS通过<strong>欧拉定理</strong>及其拓展确定x的范围，再通过<
     
     <li><a href="https://1006487432.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记 (2)</a></li>
     
-    <li><a href="https://1006487432.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (6)</a></li>
+    <li><a href="https://1006487432.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (3)</a></li>
     
     <li><a href="https://1006487432.github.io/categories/%E8%AF%AD%E8%A8%80/">语言 (3)</a></li>
     
