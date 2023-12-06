@@ -30,6 +30,13 @@
       <description>&lt;h2 id=&#34;人物&#34;&gt;人物&lt;/h2&gt;&#xA;&lt;p&gt;歌尔德蒙、纳尔齐斯、院长、安塞尔姆神父、马丁神父、尼克劳斯师傅、老骑士、维克托、罗伯特&#xA;　　吉普赛人丽瑟、村姑们、莉迪亚、尤利娅、莉斯贝思、玛丽、主教城里的情人、蕾娜、丽贝卡、阿格尼斯、母亲&lt;/p&gt;</description>
     </item>
     <item>
+      <title>DP题目</title>
+      <link>https://1006487432.github.io/post/notes/%E9%A2%98%E8%A7%A3/</link>
+      <pubDate>Fri, 18 Aug 2023 12:19:51 +0800</pubDate>
+      <guid>https://1006487432.github.io/post/notes/%E9%A2%98%E8%A7%A3/</guid>
+      <description>DP 洛谷P1541 [P1095 NOIP2007 普及组] 守望者的逃离 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)&#xA;[P1541 NOIP2010 提高组] 乌龟棋 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)&#xA;首先考虑状态，在出第i张牌时，值只和dp[i - 1]有关，但有四种情况，同时需要知道当前能获取的价值（走到了哪里）。如果能记录下先前都出了什么牌以及获得的总价值，就能解决这个问题。由于有四类牌，设一个四维数组dp[a][b][c][d],表示出了a张1，b张2，c张3，d张4，dp[0][0][0][0]=val[0],那么当前获取的价值就是val[1 + a + b * 2 + c * 3 + d * 4];&#xA;对于状态转移：当出一张1时，显然有dp[a][b][c][d] = max（dp[a][b][c][d]， dp[a - 1][b][c][d] + val[1 + a + b * 2 + c * 3 + d * 4]）,以此类推当出其他牌时同理。&#xA;那么四重循环枚举每类牌的个数即可（每类牌不超过40)&#xA;#include &amp;lt;bits/stdc++.h&amp;gt; #define fi first; #define se second; using namespace std; typedef long long ll; typedef long double ld; typedef pair&amp;lt;int, int&amp;gt; pii; // 1.</description>
+    </item>
+    <item>
       <title>Go-gin教程与实战(1)</title>
       <link>https://1006487432.github.io/post/notes/go-gin%E6%95%99%E7%A8%8B%E4%B8%8E%E5%AE%9E%E6%88%981/</link>
       <pubDate>Fri, 18 Aug 2023 07:19:51 +0800</pubDate>
