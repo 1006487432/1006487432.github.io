@@ -6,21 +6,14 @@
     <description>Recent content in Postgresql on 瞻鹤的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 23 Aug 2023 07:19:51 +0800</lastBuildDate><atom:link href="https://1006487432.github.io/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Aug 2023 07:19:51 +0800</lastBuildDate>
+    <atom:link href="https://1006487432.github.io/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go连接postgresql数据库</title>
       <link>https://1006487432.github.io/post/notes/go%E8%BF%9E%E6%8E%A5postgresql%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
       <pubDate>Wed, 23 Aug 2023 07:19:51 +0800</pubDate>
-      
       <guid>https://1006487432.github.io/post/notes/go%E8%BF%9E%E6%8E%A5postgresql%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
-      <description>&lt;h1 id=&#34;go语言连接postgresql数据库并实现基础操作教程&#34;&gt;Go语言连接postgresql数据库并实现基础操作教程&lt;/h1&gt;
-&lt;h2 id=&#34;安装依赖包&#34;&gt;安装依赖包&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;go&lt;/span&gt; get &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;u github.com&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt;lib&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt;pq
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;参考资料:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;https://godoc.org/github.com/lib/pq
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;https://www.runoob.com/postgresql/postgresql-tutorial.html
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;h1 id=&#34;go语言连接postgresql数据库并实现基础操作教程&#34;&gt;Go语言连接postgresql数据库并实现基础操作教程&lt;/h1&gt;&#xA;&lt;h2 id=&#34;安装依赖包&#34;&gt;安装依赖包&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;go&lt;/span&gt; get &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;u github.com&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt;lib&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt;pq&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;参考资料:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;https://godoc.org/github.com/lib/pq&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;https://www.runoob.com/postgresql/postgresql-tutorial.html&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
   </channel>
 </rss>

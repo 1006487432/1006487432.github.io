@@ -6,17 +6,14 @@
     <description>Recent content in JAVA on 瞻鹤的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 17 Aug 2023 14:54:43 +0800</lastBuildDate><atom:link href="https://1006487432.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Aug 2023 14:54:43 +0800</lastBuildDate>
+    <atom:link href="https://1006487432.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JAVA 面向对象</title>
       <link>https://1006487432.github.io/post/notes/javafirst/</link>
       <pubDate>Thu, 17 Aug 2023 14:54:43 +0800</pubDate>
-      
       <guid>https://1006487432.github.io/post/notes/javafirst/</guid>
-      <description>&lt;h1 id=&#34;从0开始学java-类个我的对象在哪里&#34;&gt;【从0开始学JAVA】 类个，我的对象在哪里？&lt;/h1&gt;
-&lt;p&gt;由于本人是从C开始学习的编程菜鸟，虽然接触过一点cpp(对现在的我来说也许只是c + stl库？只是为了写算法题方便一些&amp;hellip;)，所以我打算先学JAVA的特点和思想————面向对象编程。
-（至于安装JAVA可以看我*&lt;a href=&#34;https://blog.csdn.net/CHTXRT/article/details/128699818?spm=1001.2014.3001.5502&#34;&gt;兄弟的博客&lt;/a&gt;*)&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;从0开始学java-类个我的对象在哪里&#34;&gt;【从0开始学JAVA】 类个，我的对象在哪里？&lt;/h1&gt;&#xA;&lt;p&gt;由于本人是从C开始学习的编程菜鸟，虽然接触过一点cpp(对现在的我来说也许只是c + stl库？只是为了写算法题方便一些&amp;hellip;)，所以我打算先学JAVA的特点和思想————面向对象编程。&#xA;（至于安装JAVA可以看我*&lt;a href=&#34;https://blog.csdn.net/CHTXRT/article/details/128699818?spm=1001.2014.3001.5502&#34;&gt;兄弟的博客&lt;/a&gt;*)&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

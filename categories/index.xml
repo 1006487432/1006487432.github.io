@@ -6,33 +6,28 @@
     <description>Recent content in Categories on 瞻鹤的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 23 Aug 2023 07:19:51 +0800</lastBuildDate><atom:link href="https://1006487432.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Aug 2023 07:19:51 +0800</lastBuildDate>
+    <atom:link href="https://1006487432.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>语言</title>
       <link>https://1006487432.github.io/categories/%E8%AF%AD%E8%A8%80/</link>
       <pubDate>Wed, 23 Aug 2023 07:19:51 +0800</pubDate>
-      
       <guid>https://1006487432.github.io/categories/%E8%AF%AD%E8%A8%80/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>笔记</title>
       <link>https://1006487432.github.io/categories/%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Fri, 18 Aug 2023 12:19:51 +0800</pubDate>
-      
       <guid>https://1006487432.github.io/categories/%E7%AC%94%E8%AE%B0/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>算法</title>
       <link>https://1006487432.github.io/categories/%E7%AE%97%E6%B3%95/</link>
       <pubDate>Thu, 17 Aug 2023 14:18:58 +0800</pubDate>
-      
       <guid>https://1006487432.github.io/categories/%E7%AE%97%E6%B3%95/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

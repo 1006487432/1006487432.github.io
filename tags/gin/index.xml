@@ -6,17 +6,14 @@
     <description>Recent content in Gin on 瞻鹤的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 18 Aug 2023 07:19:51 +0800</lastBuildDate><atom:link href="https://1006487432.github.io/tags/gin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Aug 2023 07:19:51 +0800</lastBuildDate>
+    <atom:link href="https://1006487432.github.io/tags/gin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go-gin教程与实战(1)</title>
       <link>https://1006487432.github.io/post/notes/go-gin%E6%95%99%E7%A8%8B%E4%B8%8E%E5%AE%9E%E6%88%981/</link>
       <pubDate>Fri, 18 Aug 2023 07:19:51 +0800</pubDate>
-      
       <guid>https://1006487432.github.io/post/notes/go-gin%E6%95%99%E7%A8%8B%E4%B8%8E%E5%AE%9E%E6%88%981/</guid>
-      <description>&lt;h2 id=&#34;gin框架介绍&#34;&gt;Gin框架介绍&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;Gin 是一个用 Go (Golang) 编写的 HTTP Web 框架。 它具有类似 Martini 的 API，但性能比 Martini 快 40 倍。如果你需要极好的性能，使用 Gin 吧。
-&lt;/code&gt;&lt;/pre&gt;</description>
+      <description>&lt;h2 id=&#34;gin框架介绍&#34;&gt;Gin框架介绍&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;Gin 是一个用 Go (Golang) 编写的 HTTP Web 框架。 它具有类似 Martini 的 API，但性能比 Martini 快 40 倍。如果你需要极好的性能，使用 Gin 吧。&#xD;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
-    
   </channel>
 </rss>
