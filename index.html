@@ -340,6 +340,56 @@ BSGS通过<strong>欧拉定理</strong>及其拓展确定x的范围，再通过<
     
     
     
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://1006487432.github.io/post/notes/%E6%9E%84%E9%80%A0%E9%A2%98%E7%BB%83%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="" target="_blank"></a>
+                <p></p>
+            </h1>
+        </header>
+        
+
+
+
+        <div class="post-content">
+            构造题练习记录……
+        </div>
+        <p class="readmore"><a href="https://1006487432.github.io/post/notes/%E6%9E%84%E9%80%A0%E9%A2%98%E7%BB%83%E4%B9%A0%E8%AE%B0%E5%BD%95/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://1006487432.github.io/post/notes/%E9%A2%98%E8%A7%A3/" title="DP题目" target="_blank">DP题目</a>
+                <p></p>
+            </h1>
+        </header>
+        
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/%E7%AE%97%E6%B3%95' target="_blank">算法</a>
+  
+</div>
+
+
+
+        <div class="post-content">
+            DP 洛谷P1541 [P1095 NOIP2007 普及组] 守望者的逃离 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)
+[P1541 NOIP2010 提高组] 乌龟棋 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)
+首先考虑状态，在出第i张牌时，值只和dp[i - 1]有关，但有四种情况，同时需要知道当前能获取的价值（走到了哪里）。如果能记录下先前都出了什么牌以及获得的总价值，就能解决这个问题。由于有四类牌，设一个四维数组dp[a][b][c][d],表示出了a张1，b张2，c张3，d张4，dp[0][0][0][0]=val[0],那么当前获取的价值就是val[1 + a + b * 2 + c * 3 + d * 4];
+对于状态转移：当出一张1时，显然有dp[a][b][c][d] = max（dp[a][b][c][d]， dp[a - 1][b][c][d] + val[1 + a + b * 2 + c * 3 + d * 4]）,以此类推当出其他牌时同理。
+那么四重循环枚举每类牌的个数即可（每类牌不超过40)
+#include &lt;bits/stdc++.h&gt; #define fi first; #define se second; using namespace std; typedef long long ll; typedef long double ld; typedef pair&lt;int, int&gt; pii; // 1.……
+        </div>
+        <p class="readmore"><a href="https://1006487432.github.io/post/notes/%E9%A2%98%E8%A7%A3/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
 
 
 
@@ -425,6 +475,14 @@ BSGS通过<strong>欧拉定理</strong>及其拓展确定x的范围，再通过<
         <a href="https://1006487432.github.io/post/notes/bsgs/" title="BSGS" target="_blank">BSGS</a>
     </li>
     
+    <li>
+        <a href="https://1006487432.github.io/post/notes/%E6%9E%84%E9%80%A0%E9%A2%98%E7%BB%83%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="" target="_blank"></a>
+    </li>
+    
+    <li>
+        <a href="https://1006487432.github.io/post/notes/%E9%A2%98%E8%A7%A3/" title="DP题目" target="_blank">DP题目</a>
+    </li>
+    
 </ul>
     </section>
 
@@ -436,7 +494,7 @@ BSGS通过<strong>欧拉定理</strong>及其拓展确定x的范围，再通过<
     
     <li><a href="https://1006487432.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记 (2)</a></li>
     
-    <li><a href="https://1006487432.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (3)</a></li>
+    <li><a href="https://1006487432.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (4)</a></li>
     
     <li><a href="https://1006487432.github.io/categories/%E8%AF%AD%E8%A8%80/">语言 (3)</a></li>
     
