@@ -1,0 +1,48 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Categories - 分类 - 瞻鹤的博客</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Categories - 分类 | 瞻鹤的博客</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>he-zhan@outlook.com (瞻鹤)</managingEditor>
+      <webMaster>he-zhan@outlook.com (瞻鹤)</webMaster><lastBuildDate>Tue, 11 Jun 2024 13:21:56 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /><item>
+  <title>ICPC</title>
+  <link>http://localhost:1313/categories/icpc/</link>
+  <pubDate>Tue, 11 Jun 2024 13:21:56 &#43;0800</pubDate>
+  <author>瞻鹤</author>
+  <guid>http://localhost:1313/categories/icpc/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
+  <title>工程</title>
+  <link>http://localhost:1313/categories/%E5%B7%A5%E7%A8%8B/</link>
+  <pubDate>Tue, 11 Jun 2024 13:21:56 &#43;0800</pubDate>
+  <author>瞻鹤</author>
+  <guid>http://localhost:1313/categories/%E5%B7%A5%E7%A8%8B/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
+  <title>算法和数据结构</title>
+  <link>http://localhost:1313/categories/%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+  <pubDate>Tue, 11 Jun 2024 13:21:56 &#43;0800</pubDate>
+  <author>瞻鹤</author>
+  <guid>http://localhost:1313/categories/%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
+  <title>信息安全</title>
+  <link>http://localhost:1313/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/</link>
+  <pubDate>Tue, 11 Jun 2024 13:21:56 &#43;0800</pubDate>
+  <author>瞻鹤</author>
+  <guid>http://localhost:1313/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
+  <title>语言</title>
+  <link>http://localhost:1313/categories/%E8%AF%AD%E8%A8%80/</link>
+  <pubDate>Tue, 11 Jun 2024 13:21:56 &#43;0800</pubDate>
+  <author>瞻鹤</author>
+  <guid>http://localhost:1313/categories/%E8%AF%AD%E8%A8%80/</guid>
+  <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>
