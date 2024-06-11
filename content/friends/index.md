@@ -1,5 +1,5 @@
 ---
-title: Index
+title: 友链
 subtitle:
 layout: friends
 date: 2024-06-11T16:12:19+08:00
@@ -19,12 +19,12 @@ comment: false
 
 ## Base info
 
-
+~~~ yaml
 - nickname: Lruihao
   avatar: https://lruihao.cn/images/avatar.jpg
   url: https://lruihao.cn
   description: Lruihao's Note
-
+~~~
 
 ## Friendly Reminder
 
