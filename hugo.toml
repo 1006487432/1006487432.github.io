@@ -108,6 +108,7 @@ rss = 10
   [params.page.library]
     [params.page.library.js]
       flyfish = "/js/flyfish.js"
+      
 [params.search]
     enable = true
     type = "fuse"

@@ -19,12 +19,12 @@ comment: false
 
 ## Base info
 
-```yaml
+
 - nickname: Lruihao
   avatar: https://lruihao.cn/images/avatar.jpg
   url: https://lruihao.cn
   description: Lruihao's Note
-```
+
 
 ## Friendly Reminder
 
