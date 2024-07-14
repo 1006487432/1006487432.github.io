@@ -1,5 +1,5 @@
 ---
-title: Codeforces Round #956 (Div. 2)
+title: Codeforces Round 956 (Div. 2)
 subtitle:
 date: 2024-07-06T22:21:56+08:00
 draft: false
@@ -280,5 +280,4 @@ int main(){
     return 0;
 }
 ~~~
-
 
