@@ -207,7 +207,7 @@
     {{- if eq $reward.position "after" -}}
       {{- partial "single/reward.html" . -}}
     {{- end -}}
-
+    {{ partial "gitalk.html" . }}
     {{- /* Comment */ -}}
     {{- partial "single/comment.html" . -}}
   </article>
