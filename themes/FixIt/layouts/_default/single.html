@@ -2,8 +2,6 @@
   {{- title .Title -}}
   {{- if .Site.Params.withSiteTitle }} {{ .Site.Params.titleDelimiter }} {{ .Site.Title }}{{- end -}}
 {{- end -}}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 {{- define "content" -}}
   {{- $params := partial "function/params.html" -}}
   <article class="page single special">
@@ -39,19 +37,8 @@
         {{- partial "single/fixit-decryptor.html" . -}}
       {{- end -}}
     </div>
-    <div id="gitalk-container"></div>
-    const gitalk = new Gitalk({
-      clientID: 'Ov23liW0JOcKBwRTF7ju',
-      clientSecret: 'db041648453aff3481de88718df93613d1398b5b',
-      repo: '1006487432.github.io',      // The repository of store comments,
-      owner: '1006487432',
-      admin: ['1006487432'],
-      id: location.pathname,      // Ensure uniqueness and length less than 50
-      language:'zh-CN',
-      distractionFreeMode: false  // Facebook-like distraction free mode
-    })
-    
-    gitalk.render('gitalk-container')
+    {{ partial "gitalk.html" . }}
+
     {{- /* Comment */ -}}
     {{- partial "single/comment.html" . -}}
   </article>
