@@ -158,12 +158,5 @@ rss = 10
       enable = false
       color = "blue"
       theme = "minimal"
-  [params.page.comment.gitalk]
-      enable = true
-      owner = "1006487432"
-      admin = ["1006487432"]
-      repo = "1006487432.github.io"
-      clientId = "Ov23liW0JOcKBwRTF7ju"
-      clientSecret = "db041648453aff3481de88718df93613d1398b5b"
 [outputs]
   home = ["HTML", "RSS", "JSON"]
