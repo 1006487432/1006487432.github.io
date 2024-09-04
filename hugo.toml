@@ -160,21 +160,11 @@ rss = 10
       theme = "minimal"
   [params.page.comment]
       enable = true
-      [params.page.comment.giscus]
-          enable = true
-          repo = "1006487432/1006487432.github.io"
-          repoId = "R_kgDOKIFOrw"
-          category = "Announcements"
-          categoryId = "DIC_kwDOKIFOr84CgAVb"
-          mapping = "pathname"
-          origin = "https://giscus.app" # FixIt 0.3.7 | 新增 Or set it to your self-hosted domain
-          strict = "0" # FixIt 0.2.18 | 新增
-          term = ""
-          reactionsEnabled = "1"
-          emitMetadata = "0"
-          inputPosition = "top" # ["top", "bottom"]
-          lightTheme = "light"
-          darkTheme = "dark"
-          lazyLoad = true
+      [params.page.comment.gitalk]
+        enable = true
+        owner = "1006487432"
+        repo = "1006487432.github.io"
+        clientId = "Ov23liW0JOcKBwRTF7ju"
+        clientSecret = "db041648453aff3481de88718df93613d1398b5b"
 [outputs]
   home = ["HTML", "RSS", "JSON"]
