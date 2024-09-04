@@ -97,6 +97,7 @@ rss = 10
     # false 是必要的设置 (https://github.com/hugo-fixit/FixIt/issues/43)
     noClasses = false
 [params]
+  enableGitalk = true
   [params.author]
     name = "瞻鹤"
     email = "he-zhan@outlook.com"
@@ -158,8 +159,6 @@ rss = 10
       enable = false
       color = "blue"
       theme = "minimal"
-[params]
-  enableGitalk = true
 [params.gitalk] 
     clientID = "Ov23liW0JOcKBwRTF7ju" # 您刚才创建Github Application 的 Client ID
     clientSecret = "db041648453aff3481de88718df93613d1398b5b" # 您刚才创建Github Application 的 Client Secret
