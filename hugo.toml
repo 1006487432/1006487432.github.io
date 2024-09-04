@@ -109,72 +109,72 @@ rss = 10
     [params.page.library.js]
       flyfish = "/js/flyfish.js"
       
-[params.search]
-    enable = true
-    type = "fuse"
-    contentLength = 4000
-    placeholder = "搜索~"
-    maxResultLength = 10
-    snippetLength = 30
-    highlightTag = "em"
-    absoluteURL = false
-    [params.search.algolia]
-      index = ""
-      appID = ""
-      searchKey = ""
-    [params.search.fuse]
-      isCaseSensitive = false
-      minMatchCharLength = 2
-      findAllMatches = false
-      location = 0
-      threshold = 0.3
-      distance = 100
-      ignoreLocation = false
-      useExtendedSearch = false
-      ignoreFieldNorm = false
-[params.tagcloud]
-    enable = false
-    min = 14
-    max = 32
-    peakCount = 10
-    orderby = "name"
-    [params.ibruce]
-    enable = true
-    enablePost = true
-[params.githubCorner]
-    enable = true
-    permalink = "https://github.com/1006487432/1006487432.github.io"
-    title = "View source on GitHub"
-    position = "right"
-[params.readingProgress]
-    enable = true
-    start = "left"
-    position = "top"
-    reversed = false
-    light = ""
-    dark = ""
-    height = "2px"
-[params.pace]
-    enable = false
-    color = "blue"
-    theme = "minimal"
-[params.page.comment]
+  [params.search]
       enable = true
-    [params.page.comment.giscus]
-        enable = true
-        repo = "1006487432/1006487432.github.io"
-        repoId = "R_kgDOKIFOrw"
-        category = "Announcements"
-        categoryId = "DIC_kwDOKIFOr84CgAVb"
-        mapping = "pathname"
-        origin = "https://giscus.app" # FixIt 0.3.7 | 新增 Or set it to your self-hosted domain
-        strict = "0" # FixIt 0.2.18 | 新增
-        term = ""
-        reactionsEnabled = "1"
-        emitMetadata = "0"
-        inputPosition = "top" # ["top", "bottom"]
-        lightTheme = "light"
-        darkTheme = "dark"
-        lazyLoad = true
+      type = "fuse"
+      contentLength = 4000
+      placeholder = "搜索~"
+      maxResultLength = 10
+      snippetLength = 30
+      highlightTag = "em"
+      absoluteURL = false
+      [params.search.algolia]
+        index = ""
+        appID = ""
+        searchKey = ""
+      [params.search.fuse]
+        isCaseSensitive = false
+        minMatchCharLength = 2
+        findAllMatches = false
+        location = 0
+        threshold = 0.3
+        distance = 100
+        ignoreLocation = false
+        useExtendedSearch = false
+        ignoreFieldNorm = false
+  [params.tagcloud]
+      enable = false
+      min = 14
+      max = 32
+      peakCount = 10
+      orderby = "name"
+      [params.ibruce]
+      enable = true
+      enablePost = true
+  [params.githubCorner]
+      enable = true
+      permalink = "https://github.com/1006487432/1006487432.github.io"
+      title = "View source on GitHub"
+      position = "right"
+  [params.readingProgress]
+      enable = true
+      start = "left"
+      position = "top"
+      reversed = false
+      light = ""
+      dark = ""
+      height = "2px"
+  [params.pace]
+      enable = false
+      color = "blue"
+      theme = "minimal"
+  [params.page.comment]
+      enable = true
+      [params.page.comment.giscus]
+          enable = true
+          repo = "1006487432/1006487432.github.io"
+          repoId = "R_kgDOKIFOrw"
+          category = "Announcements"
+          categoryId = "DIC_kwDOKIFOr84CgAVb"
+          mapping = "pathname"
+          origin = "https://giscus.app" # FixIt 0.3.7 | 新增 Or set it to your self-hosted domain
+          strict = "0" # FixIt 0.2.18 | 新增
+          term = ""
+          reactionsEnabled = "1"
+          emitMetadata = "0"
+          inputPosition = "top" # ["top", "bottom"]
+          lightTheme = "light"
+          darkTheme = "dark"
+          lazyLoad = true
 [outputs]
   home = ["HTML", "RSS", "JSON"]
