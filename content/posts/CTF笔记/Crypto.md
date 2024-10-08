@@ -45,6 +45,47 @@ repost:
 
 ## RSA
 
+#### p、q很接近的时候
+
+~~~ python
+from Crypto.Util.number import *
+import gmpy2
+# p = getPrime(512)
+# q = gmpy2.next_prime(p)
+temp=gmpy2.iroot(n,2)[0]
+p=gmpy2.next_prime(temp)
+q=n//p
+或者
+sn = isqrt(n)
+q = next_prime(sn)
+p = n // q
+~~~
+
+2.费马分解
+
+当p和q比较接近时，可以使用费马分解分解p、q
+
+
+
+~~~ python
+def fermat_attack(n):
+    a = isqrt(n)
+    b2 = a*a - n
+    b = isqrt(n)
+    count = 0
+    while b*b != b2:
+        a = a + 1
+        b2 = a*a - n
+        b = isqrt(b2)
+        count += 1
+    p = a+b
+    q = a-b
+    assert n == p * q
+    return p, q
+~~~
+
+
+
 #### 素数分解
 
 ##### 网站
