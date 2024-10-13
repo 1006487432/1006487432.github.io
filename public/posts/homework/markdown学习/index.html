@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>1-1 Markdown学习(选做) - 瞻鹤的博客</title><meta name="author" content="瞻鹤">
+<meta name="author-link" content="">
+<meta name="description" content="" /><meta name="keywords" content='' />
+  <meta itemprop="name" content="1-1 Markdown学习(选做)">
+  <meta itemprop="datePublished" content="2024-08-24T11:11:56+08:00">
+  <meta itemprop="dateModified" content="2024-08-24T11:11:56+08:00">
+  <meta itemprop="wordCount" content="4145">
+  <meta itemprop="keywords" content="Homework"><meta property="og:url" content="http://localhost:1313/posts/homework/markdown%E5%AD%A6%E4%B9%A0/">
+  <meta property="og:site_name" content="瞻鹤的博客">
+  <meta property="og:title" content="1-1 Markdown学习(选做)">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-08-24T11:11:56+08:00">
+    <meta property="article:modified_time" content="2024-08-24T11:11:56+08:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="1-1 Markdown学习(选做)">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/posts/homework/markdown%E5%AD%A6%E4%B9%A0/" /><link rel="prev" href="http://localhost:1313/posts/nowcoder/%E7%89%9B%E5%AE%A2%E5%91%A8%E8%B5%9B-round-52/" /><link rel="next" href="http://localhost:1313/posts/homework/ai%E5%B7%A5%E5%85%B7/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "1-1 Markdown学习(选做)",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/posts\/homework\/markdown%E5%AD%A6%E4%B9%A0\/"
+    },"genre": "posts","keywords": "","wordcount":  4145 ,
+    "url": "http:\/\/localhost:1313\/posts\/homework\/markdown%E5%AD%A6%E4%B9%A0\/","datePublished": "2024-08-24T11:11:56+08:00","dateModified": "2024-08-24T11:11:56+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "瞻鹤"
+      },"description": ""
+  }
+  </script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><script>(window.localStorage?.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('data-theme', 'dark');</script><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper" data-github-corner="right">
+    <div class="header-title">
+      <a href="/" title="瞻鹤的博客"><span class="header-title-text">瞻鹤的博客</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/"
+                
+                
+              >主页</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/posts/"
+                
+                
+              >文章</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              >分类</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              >标签</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/friends/"
+                
+                
+              >友链</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索~" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="瞻鹤的博客"><span class="header-title-text">瞻鹤的博客</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索~" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/"
+                  
+                  
+                >主页</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/posts/"
+                  
+                  
+                >文章</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/categories/"
+                  
+                  
+                >分类</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/tags/"
+                  
+                  
+                >标签</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/friends/"
+                  
+                  
+                >友链</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"> 
+<script src="https://fastly.jsdelivr.net/gh/1006487432/bkyl2d@main/loads.js"></script>
+
+<script>
+console.log(`
+  く__,.ヘヽ.        /  ,ー､ 〉
+           ＼ ', !-─‐-i  /  /´
+           ／｀ｰ'       L/／｀ヽ､
+         /   ／,   /|   ,   ,       ',
+       ｲ   / /-‐/  ｉ  L_ ﾊ ヽ!   i
+        ﾚ ﾍ 7ｲ｀ﾄ   ﾚ'ｧ-ﾄ､!ハ|   |
+          !,/7 '0'     ´0iソ|    |
+          |.从"    _     ,,,, / |./    |
+          ﾚ'| i＞.､,,__  _,.イ /   .i   |
+            ﾚ'| | / k_７_/ﾚ'ヽ,  ﾊ.  |
+              | |/i 〈|/   i  ,.ﾍ |  i  |
+             .|/ /  ｉ：    ﾍ!    ＼  |
+              kヽ>､ﾊ    _,.ﾍ､    /､!
+              !'〈//｀Ｔ´', ＼ ｀'7'ｰr'
+              ﾚ'ヽL__|___i,___,ンﾚ|ノ
+                  ﾄ-,/  |___./
+                  'ｰ'    !_,.:
+`);
+</script><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>1-1 Markdown学习(选做)</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><img loading="lazy" src="/images/avatar.jpg" alt="瞻鹤" data-title="瞻鹤" width="20" height="20" class="avatar" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&nbsp;瞻鹤</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/homework/" class="post-category" title="分类 - Homework"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Homework</a></span></div><div class="post-meta-line"><span title="发布于 2024-08-24 11:11:56"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-08-24">2024-08-24</time></span>&nbsp;<span title="4145 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 4200 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 9 分钟</span>&nbsp;<span id="busuanzi_container_page_pv" class="busuanzi_visitors comment-visitors" data-flag-title="1-1 Markdown学习(选做)">
+            <i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_page_pv">-</span>&nbsp;次阅读
+          </span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#任务详情">任务详情</a></li>
+    <li><a href="#ai平台返回的内容">AI平台返回的内容：</a>
+      <ul>
+        <li><a href="#1-什么是markdown">1. 什么是Markdown？</a></li>
+        <li><a href="#2-markdown的详细语法">2. Markdown的详细语法</a></li>
+        <li><a href="#3-推荐工具">3. 推荐工具</a></li>
+        <li><a href="#4-markdown的高级用法">4. Markdown的高级用法</a></li>
+        <li><a href="#5-markdown在aigc提示词工程中的应用">5. Markdown在AIGC提示词工程中的应用</a></li>
+      </ul>
+    </li>
+    <li><a href="#作答">作答：</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 id="任务详情" class="heading-element"><span>任务详情</span>
+  <a href="#%e4%bb%bb%e5%8a%a1%e8%af%a6%e6%83%85" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><pre tabindex="0"><code>你熟悉Markdown格式吗？选择自己熟悉的AI平台，把下面的提示词发给ta:
+&#34;&#34;&#34;
+作为计算机技术专家、人工智能技术专家，网络空间安全专家，密码学专家，密码技术专家，请您：
+1. 深入浅出的讲解一下Mardown，Markdown的详细语法
+2. 推荐至少两款线上工具，至少两种线下工具
+3. 讲解Markdown的高级用法，包括插入数学公式、绘图、制作PPT，格式转换等
+4. 讲解Markdown在chatgpt等AIGC的提示词工程中的应用
+&#34;&#34;&#34;
+学习、实践AI平台返回的内容，并回答：
+1.哪些内容是你掌握的？哪些内容是你没有掌握的？使用AI推荐的工具或者你喜欢的工具实践一下没有掌握的内容。
+2.要使用好AI工具，写好prompt(提示词)是非常重要的，提示词至少要有角色、上下文、任务。专家们提供了很多结构化提示词的框架，比如ICDO，BROKE，CRISP等，你知道哪些提示词框架？如果不知道，通过搜索工具或者AI工具学习一个。Markdown是结构化prompt的好方法，请为你学习的prompt框架使用Markdown格式设计一个通用模板
+3.作业提交要求使用Markdown格式，同时提交Markdown转化的PDF，推荐在https://www.cnblogs.com/或https://www.csdn.net/等技术平台发表博客，提交博客链接。或者在https://github.com/或https://gitee.com/等代码托管平台完成任务，提交文档链接</code></pre><h2 id="ai平台返回的内容" class="heading-element"><span>AI平台返回的内容：</span>
+  <a href="#ai%e5%b9%b3%e5%8f%b0%e8%bf%94%e5%9b%9e%e7%9a%84%e5%86%85%e5%ae%b9" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="1-什么是markdown" class="heading-element"><span>1. 什么是Markdown？</span>
+  <a href="#1-%e4%bb%80%e4%b9%88%e6%98%afmarkdown" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>Markdown是一种轻量级标记语言，旨在使文档的书写和阅读尽可能简单明了。它使用简洁的标记语法，可以轻松地将纯文本格式转换为格式丰富的文档，如HTML、PDF等。Markdown特别适合编写文档、笔记、博客等，因为它简洁直观，容易学习。</p>
+<h3 id="2-markdown的详细语法" class="heading-element"><span>2. Markdown的详细语法</span>
+  <a href="#2-markdown%e7%9a%84%e8%af%a6%e7%bb%86%e8%af%ad%e6%b3%95" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>Markdown的基本语法包括以下几部分：</p>
+<h4 id="标题" class="heading-element"><span>标题</span>
+  <a href="#%e6%a0%87%e9%a2%98" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>使用<code>#</code>表示标题，<code>#</code>的数量表示标题的层级，一级标题用一个<code>#</code>，二级标题用两个<code>#</code>，依此类推。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="gh"># 一级标题
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span><span class="gu">## 二级标题
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span>### 三级标题</span></span></code></pre></div><h4 id="列表" class="heading-element"><span>列表</span>
+  <a href="#%e5%88%97%e8%a1%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><ul>
+<li>无序列表使用<code>*</code>、<code>-</code>或<code>+</code>加空格。</li>
+<li>有序列表使用数字加点，例如 <code>1. </code>。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="k">-</span> 无序列表项
+</span></span><span class="line"><span class="cl"><span class="k">*</span> 另一项
+</span></span><span class="line"><span class="cl">+ 第三项
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">1.</span> 有序列表项
+</span></span><span class="line"><span class="cl">2. 另一项</span></span></code></pre></div><h4 id="强调" class="heading-element"><span>强调</span>
+  <a href="#%e5%bc%ba%e8%b0%83" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><ul>
+<li><strong>加粗</strong>：使用<code>**</code>或<code>__</code>包裹文本。</li>
+<li><em>斜体</em>：使用<code>*</code>或<code>_</code>包裹文本。</li>
+<li><em><strong>加粗斜体</strong></em>：组合使用<code>***</code>或<code>___</code>。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">**加粗**
+</span></span><span class="line"><span class="cl"><span class="ge">*斜体*</span>
+</span></span><span class="line"><span class="cl"><span class="ge">**</span>*加粗斜体***</span></span></code></pre></div><h4 id="引用" class="heading-element"><span>引用</span>
+  <a href="#%e5%bc%95%e7%94%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>使用<code>&gt;</code>表示引用。可以嵌套使用来创建多层引用。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="k">&gt; </span><span class="ge">这是一个引用
+</span></span></span><span class="line"><span class="cl"><span class="ge"></span>&gt;&gt; 这是嵌套引用</span></span></code></pre></div><h4 id="链接与图片" class="heading-element"><span>链接与图片</span>
+  <a href="#%e9%93%be%e6%8e%a5%e4%b8%8e%e5%9b%be%e7%89%87" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><ul>
+<li>链接使用 <code>[显示文本](URL)</code> 语法。</li>
+<li>图片使用 <code>![替代文本](图片URL)</code> 语法。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">[<span class="nt">这是一个链接</span>](<span class="na">https://www.example.com</span>)
+</span></span><span class="line"><span class="cl">![<span class="nt">这是一个图片</span>](<span class="na">https://www.example.com/image.png</span>)</span></span></code></pre></div><h4 id="代码块" class="heading-element"><span>代码块</span>
+  <a href="#%e4%bb%a3%e7%a0%81%e5%9d%97" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><ul>
+<li>行内代码使用<code>`</code>包裹代码。</li>
+<li>多行代码块使用三个反引号``` 包裹代码，并可指定语言。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="sb">`行内代码`</span></span></span></code></pre></div><p>```python
+def hello():
+print(&ldquo;Hello, World!&rdquo;)
+```</p>
+<pre tabindex="0"><code>
+#### 表格
+表格使用管道符`|`和连字符`-`来表示。
+
+```markdown
+| 表头1 | 表头2 |
+| ------ | ------ |
+| 单元格1 | 单元格2 |
+| 单元格3 | 单元格4 |</code></pre><h3 id="3-推荐工具" class="heading-element"><span>3. 推荐工具</span>
+  <a href="#3-%e6%8e%a8%e8%8d%90%e5%b7%a5%e5%85%b7" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><h4 id="线上工具" class="heading-element"><span>线上工具</span>
+  <a href="#%e7%ba%bf%e4%b8%8a%e5%b7%a5%e5%85%b7" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><ol>
+<li><strong>Typora</strong>：一个流行的Markdown编辑器，支持实时预览、插入图表、导出多种格式文档。</li>
+<li><strong>StackEdit</strong>：在线Markdown编辑器，支持云端存储和与各种服务同步。</li>
+</ol>
+<h4 id="线下工具" class="heading-element"><span>线下工具</span>
+  <a href="#%e7%ba%bf%e4%b8%8b%e5%b7%a5%e5%85%b7" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><ol>
+<li><strong>Visual Studio Code (VS Code)</strong>：强大的代码编辑器，通过Markdown插件支持Markdown语法。</li>
+<li><strong>Mark Text</strong>：开源的Markdown编辑器，界面简洁，支持实时预览。</li>
+</ol>
+<h3 id="4-markdown的高级用法" class="heading-element"><span>4. Markdown的高级用法</span>
+  <a href="#4-markdown%e7%9a%84%e9%ab%98%e7%ba%a7%e7%94%a8%e6%b3%95" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><h4 id="插入数学公式" class="heading-element"><span>插入数学公式</span>
+  <a href="#%e6%8f%92%e5%85%a5%e6%95%b0%e5%ad%a6%e5%85%ac%e5%bc%8f" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>Markdown使用LaTeX语法来插入数学公式。行内公式使用<code>$</code>包裹，块级公式使用<code>$$</code>。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">行内公式：$E = mc^2$
+</span></span><span class="line"><span class="cl">块级公式：
+</span></span><span class="line"><span class="cl">$$
+</span></span><span class="line"><span class="cl">\frac{a}{b} = c
+</span></span><span class="line"><span class="cl">$$</span></span></code></pre></div><h4 id="绘图" class="heading-element"><span>绘图</span>
+  <a href="#%e7%bb%98%e5%9b%be" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>可以使用 <strong>Mermaid</strong> 绘制流程图、甘特图等。Mermaid支持多种图表类型，如流程图、序列图等。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">```mermaid
+</span></span><span class="line"><span class="cl">graph TD;
+</span></span><span class="line"><span class="cl">    A--&gt;B;
+</span></span><span class="line"><span class="cl">    A--&gt;C;
+</span></span><span class="line"><span class="cl">    B--&gt;D;
+</span></span><span class="line"><span class="cl">    C--&gt;D;
+</span></span><span class="line"><span class="cl">\```</span></span></code></pre></div><h4 id="制作ppt" class="heading-element"><span>制作PPT</span>
+  <a href="#%e5%88%b6%e4%bd%9cppt" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>使用 <strong>Marp</strong>，一个基于Markdown的幻灯片工具，可以快速制作PPT。每个幻灯片用三个破折号<code>---</code>分隔。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="gh"># 幻灯片标题
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">## 幻灯片2内容</span></span></code></pre></div><h4 id="格式转换" class="heading-element"><span>格式转换</span>
+  <a href="#%e6%a0%bc%e5%bc%8f%e8%bd%ac%e6%8d%a2" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>Markdown文档可以通过工具如Pandoc转换为其他格式，如HTML、PDF、Word文档。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pandoc example.md -o example.pdf</span></span></code></pre></div><h3 id="5-markdown在aigc提示词工程中的应用" class="heading-element"><span>5. Markdown在AIGC提示词工程中的应用</span>
+  <a href="#5-markdown%e5%9c%a8aigc%e6%8f%90%e7%a4%ba%e8%af%8d%e5%b7%a5%e7%a8%8b%e4%b8%ad%e7%9a%84%e5%ba%94%e7%94%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>在AIGC（人工智能生成内容）中，Markdown可以用于编写和格式化提示词。例如，在ChatGPT中使用Markdown编写带有格式的提示词，可以帮助模型更好地理解和生成结构化内容。通过使用标题、列表、代码块等语法，提示词可以更具条理性和可读性。</p>
+<p>例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="gh"># 提示词结构
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span><span class="k">1.</span> <span class="gs">**输入**</span>：描述模型接收的输入。
+</span></span><span class="line"><span class="cl"><span class="k">2.</span> <span class="gs">**任务**</span>：明确希望模型完成的任务。
+</span></span><span class="line"><span class="cl">3. <span class="gs">**输出格式**</span>：指定模型生成内容的格式（例如：JSON、表格、文本）。</span></span></code></pre></div><p>这种结构化的提示词有助于明确模型的行为，特别是在复杂任务中，确保输出的格式和内容符合预期。</p>
+<h2 id="作答" class="heading-element"><span>作答：</span>
+  <a href="#%e4%bd%9c%e7%ad%94" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>1.</p>
+<ul>
+<li>
+<p>掌握的内容：语法、数学公式、格式转化</p>
+</li>
+<li>
+<p>未掌握的内容：绘图、制作PPT</p>
+</li>
+<li>
+<p>实践：</p>
+<p>使用markdown绘图：</p>
+<pre class="mermaid"> graph LR; 
+ A-->B  
+ B-->C  
+ C-->D  
+ D-->A
+</pre>
+<template> graph LR; 
+ A-->B  
+ B-->C  
+ C-->D  
+ D-->A</template><pre class="mermaid">graph LR  
+   subgraph g1  
+     a1*-->b1*  
+   end  
+   subgraph g2  
+     a2*-->b2*  
+   end  
+   subgraph g3  
+     a3*-->b3*  
+   end  
+   a3*-->a2*
+</pre>
+<template>graph LR  
+   subgraph g1  
+     a1*-->b1*  
+   end  
+   subgraph g2  
+     a2*-->b2*  
+   end  
+   subgraph g3  
+     a3*-->b3*  
+   end  
+   a3*-->a2*</template></li>
+</ul>
+<p>2.</p>
+<ul>
+<li>
+<p>未尝试过提示词框架</p>
+</li>
+<li>
+<p>ICDO框架</p>
+<ul>
+<li>🤖 <strong>Instruction (任务)</strong> ：你希望 AI 去做的任务，比如翻译或者写一段文字</li>
+<li>📋 <strong>Context (背景)</strong> ：给 AI 更多的背景信息，引导模型做出更贴合需求的回复，比如你要他写的这段文字用在什么场景的、达到什么目的的</li>
+<li>📖 <strong>Input Data (输入数据)</strong> ：告诉 AI 你这次你要他处理的数据。 比如你要他翻译那么你每次要他翻译的句子就是「输入数据」</li>
+<li>📤 <strong>Output Indicator (输出格式)</strong> ：告诉 AI 他输出的时候要用什么格式、风格、类型，如果你无所谓它输出时候的格式，也可以不写</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="gh"># Intruction 
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>描述：请将以下的法文段落翻译成英文。 
+</span></span><span class="line"><span class="cl">重要性：翻译的准确性对于我们的商务报告至关重要。 
+</span></span><span class="line"><span class="cl"><span class="gh"># Context 场景：
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>这段法文将用于我们公司的年度商务报告。 
+</span></span><span class="line"><span class="cl">目的：报告将呈现给公司的股东和潜在投资者，所以翻译需要准确且专业。 
+</span></span><span class="line"><span class="cl"><span class="gh"># Input Data 
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>&#34;La croissance économique de la France a été stable au cours des dernières années, malgré les défis mondiaux.&#34; 
+</span></span><span class="line"><span class="cl"><span class="gh"># Output Indicator 
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>风格：正式和专业的商务英文风格。 
+</span></span><span class="line"><span class="cl">注意事项：请确保翻译内容无语法错误，并保持原文的意思。</span></span></code></pre></div><ul>
+<li>
+<p>CRISPE 框架</p>
+<ul>
+<li>
+<p>😊 <strong>Capacity and Role （角色）</strong> ：告诉 AI 你要他扮演的角色，比如老师、翻译官等等</p>
+<p>📜 <strong>Insight (背景)</strong> ：告诉 AI 你让他扮演这个角色的背景，比如扮演老师是要教自己 10 岁的儿子等等</p>
+<p>📌 <strong>Statement (任务)</strong> ：告诉 AI 你要他做什么任务</p>
+<p>🎨 <strong>Personality (格式)</strong> ：告诉 AI 用什么风格、方式、格式来回答</p>
+<p>🧪 <strong>Experiment (实验)</strong> ：请求 AI 为你回复多个示例（如果不需要，可无）</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="gh"># Capacity and Role
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>描述：我希望你扮演一名经验丰富的小学数学老师。
+</span></span><span class="line"><span class="cl">特点：具备耐心和鼓励性的教学风格，能够简单明了地解释数学概念。
+</span></span><span class="line"><span class="cl"><span class="gh"># Insight
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>学生信息：你将为我的10岁的儿子提供帮助，他目前正在学习小学四年级的数学。
+</span></span><span class="line"><span class="cl">学习环境：他在家中进行在线学习，有时会遇到一些数学问题需要帮助。
+</span></span><span class="line"><span class="cl"><span class="gh"># Statement
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>描述：请帮助解答以下数学问题，并提供解题步骤。
+</span></span><span class="line"><span class="cl">重要性：确保解答方法适合10岁儿童的理解能力。
+</span></span><span class="line"><span class="cl"><span class="gh"># Personality
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>风格：友好、鼓励性，使用简单易懂的语言。
+</span></span><span class="line"><span class="cl">示例：可以使用实际生活中的例子来解释数学概念。
+</span></span><span class="line"><span class="cl"><span class="gh"># Experiment
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>描述：如果可能，请为每个问题提供两种不同的解题方法。
+</span></span><span class="line"><span class="cl">目的：增强孩子的数学思维和解题能力。</span></span></code></pre></div></li>
+<li>
+<p>BROKE框架</p>
+<ul>
+<li>
+<p>🌄 <strong>Background (背景)</strong>：说明背景，提供充足信息</p>
+<p>🎭 <strong>Role (角色)</strong>：你要 AI 扮演的角色是什么</p>
+<p>🎯 <strong>Objectives (目标/任务)</strong>：你要 AI 做的事情的一个描述</p>
+<p>🔑 <strong>Key Result (关键结果)</strong>：对于 AI 输出的回答，在风格、格式、内容等方面的要求</p>
+<p>🌟 <strong>Evolve (改进)</strong>：在 AI 给出回答以后，三种调整、改进方法</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="gh"># Background
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>项目描述：我们正在启动一个新的软件开发项目，目标是为中小企业提供一款高效的财务管理工具。
+</span></span><span class="line"><span class="cl">团队组成：项目团队由5名开发人员、2名设计师、1名测试工程师和1名产品经理组成。
+</span></span><span class="line"><span class="cl"><span class="gh"># Role
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>描述：我希望你扮演一名经验丰富的项目经理。
+</span></span><span class="line"><span class="cl">特点：具备出色的项目管理技能，能够确保项目按时完成并满足预定的质量标准。
+</span></span><span class="line"><span class="cl"><span class="gh"># Objectives
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>描述：请帮助我们制定一个详细的项目计划，包括项目的各个阶段、关键里程碑、资源分配和风险管理。
+</span></span><span class="line"><span class="cl"><span class="gh"># Key Result
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>输出格式：项目计划应以Gantt图的形式呈现，并包括每个任务的开始和结束日期、负责人和依赖关系。
+</span></span><span class="line"><span class="cl">关键指标：确保项目计划考虑到所有潜在的风险，并为每个风险提供了相应的应对策略。
+</span></span><span class="line"><span class="cl"><span class="gh"># Evolve
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>反馈机制：在项目计划制定完成后，请提供一个反馈机制，以便团队成员可以提出他们的建议和改进意见。
+</span></span><span class="line"><span class="cl">迭代：根据团队的反馈和项目进展，每两周对项目计划进行一次迭代和更新。
+</span></span><span class="line"><span class="cl">持续监控：提供一个机制，以便我们可以实时监控项目的进展和状态。</span></span></code></pre></div></li>
+<li>
+<p>RASCEF框架</p>
+<ul>
+<li>
+<p>🎭 <strong>Role (角色)</strong>：这就是 AI 需要扮演的人，他可以是电子邮件营销人员、项目经理、厨师或您能想到的任何其他角色</p>
+<p>🔍 <strong>Action (行动)</strong>：这是人工智能需要做的，例如编写项目执行计划</p>
+<p>📝 <strong>Script (步骤)</strong>：这些是 A 完成操作应遵循的步骤</p>
+<p>🌐 <strong>Content (上下文)</strong>：这是背景信息或情况</p>
+<p>🔍 <strong>Example (示例)</strong>：这些是说明这一点的特定实例，它们帮助人工智能理解语气和思维/写作风格</p>
+<p>📄 <strong>Format (格式)</strong>：这是 AI 应该呈现其答案的方式，它可以是段落、列表、对话或任何其他格式</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="gh"># Role
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>描述：我希望你扮演一名经验丰富的电子邮件营销人员。
+</span></span><span class="line"><span class="cl">特点：具备出色的市场分析能力，了解当前的电子邮件营销趋势和最佳实践。
+</span></span><span class="line"><span class="cl"><span class="gh"># Action
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>任务：请为我们制定一个电子邮件营销策略，包括目标受众、内容策划和发送频率。
+</span></span><span class="line"><span class="cl"><span class="gh"># Script
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>1.分析目标受众的特点和需求。
+</span></span><span class="line"><span class="cl">2.设计电子邮件的内容和格式。
+</span></span><span class="line"><span class="cl">3.制定发送计划和频率。
+</span></span><span class="line"><span class="cl">4.设计跟踪和分析反馈的机制。
+</span></span><span class="line"><span class="cl"><span class="gh"># Content
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>公司背景：我们是一家新兴的健康食品品牌，目标受众为20-40岁的健康生活爱好者。
+</span></span><span class="line"><span class="cl">营销目标：提高品牌知名度，增加网站流量和促进产品销售。
+</span></span><span class="line"><span class="cl"><span class="gh"># Example
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>内容建议：可以设计一系列关于健康饮食的小贴士，每周发送一次。
+</span></span><span class="line"><span class="cl">风格：友好、鼓励性，使用简单易懂的语言。
+</span></span><span class="line"><span class="cl"><span class="gh"># Format
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>电子邮件模板：使用清晰的标题、引人入胜的图片和简洁的文本内容。
+</span></span><span class="line"><span class="cl">响应式设计：确保电子邮件在各种设备上都能正常显示。
+</span></span><span class="line"><span class="cl">希望这样的格式和内容满足您的需求，如有其他修改或补充，请告诉我。</span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+<p>参考链接：</p>
+<p>[你要牢记的四个常用AI提示词框架：ICIO、CRISPE、BROKE、RASCEF，有助于获取更加稳定和高质量的内容-阿里云开发者社区 (aliyun.com)](<a href="https://developer.aliyun.com/article/1490356#:~:text=BROKE"target="_blank" rel="external nofollow noopener noreferrer">https://developer.aliyun.com/article/1490356#:~:text=BROKE</a> 框架 强调了任务的背景、角色、目标、关键输出和持续改进。,它特别适用于那些需要 AI 在明确的背景和角色下，为用户提供目标导向的输出并持续优化的场景。)</p></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2024-08-24 11:11:56">更新于 2024-08-24&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="http://localhost:1313/posts/homework/markdown%E5%AD%A6%E4%B9%A0/" data-title="1-1 Markdown学习(选做)" data-hashtags=""><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/homework/markdown%E5%AD%A6%E4%B9%A0/" data-hashtag=""><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/homework/markdown%E5%AD%A6%E4%B9%A0/" data-title="1-1 Markdown学习(选做)"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div>
+
+  <div class="post-nav"><a href="/posts/nowcoder/%E7%89%9B%E5%AE%A2%E5%91%A8%E8%B5%9B-round-52/" class="post-nav-item" rel="prev" title="牛客周赛Round52"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>牛客周赛Round52</a>
+      <a href="/posts/homework/ai%E5%B7%A5%E5%85%B7/" class="post-nav-item" rel="next" title="1-0.AI工具(选做)">1-0.AI工具(选做)<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'Ov23liW0JOcKBwRTF7ju',
+    clientSecret: 'db041648453aff3481de88718df93613d1398b5b',
+    repo: '1006487432.github.io',
+    owner: '1006487432',
+    admin: ['1006487432'],
+    id: location.pathname.substr(0,50), 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.127.0"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.8-RC"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">瞻鹤</a></span></div><div class="footer-line visitor">
+          <span id="busuanzi_container_site_uv" title='总访客数'><i class="fa-regular fa-user fa-fw" aria-hidden="true"></i>&nbsp;<span id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span><span id="busuanzi_container_site_pv" class="footer-divider" title='总访问量'><i class="fa-regular fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span>
+        </div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><a href="https://github.com/1006487432/1006487432.github.io" title="View source on GitHub"target="_blank" rel="external nofollow" class="github-corner right d-none-mobile"><svg viewBox="0 0 250 250" aria-hidden="true" width="56" height="56"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><div id="mask"></div><div class="reading-progress-bar" style="left: 0;top: 0;"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    window.mermaid = mermaid;
+    window.mermaid.themes = ["default","dark"];
+  </script><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async defer></script><script src="/js/flyfish.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.3.8-RC"};</script><script src="/js/theme.min.js" defer></script><script src="/js/custom.min.js" defer></script></body>
+</html>

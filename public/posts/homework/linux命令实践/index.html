@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Linux命令实践 - 瞻鹤的博客</title><meta name="author" content="瞻鹤">
+<meta name="author-link" content="">
+<meta name="description" content="" /><meta name="keywords" content='' />
+  <meta itemprop="name" content="Linux命令实践">
+  <meta itemprop="datePublished" content="2024-09-10T11:12:56+08:00">
+  <meta itemprop="dateModified" content="2024-09-10T11:12:56+08:00">
+  <meta itemprop="wordCount" content="4248">
+  <meta itemprop="keywords" content="Homework"><meta property="og:url" content="http://localhost:1313/posts/homework/linux%E5%91%BD%E4%BB%A4%E5%AE%9E%E8%B7%B5/">
+  <meta property="og:site_name" content="瞻鹤的博客">
+  <meta property="og:title" content="Linux命令实践">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-09-10T11:12:56+08:00">
+    <meta property="article:modified_time" content="2024-09-10T11:12:56+08:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Linux命令实践">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/posts/homework/linux%E5%91%BD%E4%BB%A4%E5%AE%9E%E8%B7%B5/" /><link rel="prev" href="http://localhost:1313/posts/homework/%E7%AC%AC%E4%B8%80%E5%91%A8%E9%A2%84%E4%B9%A0%E4%BD%9C%E4%B8%9A/" /><link rel="next" href="http://localhost:1313/posts/homework/%E7%AC%AC%E4%BA%8C%E5%91%A8%E9%A2%84%E4%B9%A0%E4%BD%9C%E4%B8%9A/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Linux命令实践",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/posts\/homework\/linux%E5%91%BD%E4%BB%A4%E5%AE%9E%E8%B7%B5\/"
+    },"genre": "posts","keywords": "","wordcount":  4248 ,
+    "url": "http:\/\/localhost:1313\/posts\/homework\/linux%E5%91%BD%E4%BB%A4%E5%AE%9E%E8%B7%B5\/","datePublished": "2024-09-10T11:12:56+08:00","dateModified": "2024-09-10T11:12:56+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "瞻鹤"
+      },"description": ""
+  }
+  </script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><script>(window.localStorage?.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('data-theme', 'dark');</script><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper" data-github-corner="right">
+    <div class="header-title">
+      <a href="/" title="瞻鹤的博客"><span class="header-title-text">瞻鹤的博客</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/"
+                
+                
+              >主页</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/posts/"
+                
+                
+              >文章</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              >分类</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              >标签</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/friends/"
+                
+                
+              >友链</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索~" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="瞻鹤的博客"><span class="header-title-text">瞻鹤的博客</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索~" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/"
+                  
+                  
+                >主页</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/posts/"
+                  
+                  
+                >文章</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/categories/"
+                  
+                  
+                >分类</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/tags/"
+                  
+                  
+                >标签</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/friends/"
+                  
+                  
+                >友链</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"> 
+<script src="https://fastly.jsdelivr.net/gh/1006487432/bkyl2d@main/loads.js"></script>
+
+<script>
+console.log(`
+  く__,.ヘヽ.        /  ,ー､ 〉
+           ＼ ', !-─‐-i  /  /´
+           ／｀ｰ'       L/／｀ヽ､
+         /   ／,   /|   ,   ,       ',
+       ｲ   / /-‐/  ｉ  L_ ﾊ ヽ!   i
+        ﾚ ﾍ 7ｲ｀ﾄ   ﾚ'ｧ-ﾄ､!ハ|   |
+          !,/7 '0'     ´0iソ|    |
+          |.从"    _     ,,,, / |./    |
+          ﾚ'| i＞.､,,__  _,.イ /   .i   |
+            ﾚ'| | / k_７_/ﾚ'ヽ,  ﾊ.  |
+              | |/i 〈|/   i  ,.ﾍ |  i  |
+             .|/ /  ｉ：    ﾍ!    ＼  |
+              kヽ>､ﾊ    _,.ﾍ､    /､!
+              !'〈//｀Ｔ´', ＼ ｀'7'ｰr'
+              ﾚ'ヽL__|___i,___,ンﾚ|ノ
+                  ﾄ-,/  |___./
+                  'ｰ'    !_,.:
+`);
+</script><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>Linux命令实践</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><img loading="lazy" src="/images/avatar.jpg" alt="瞻鹤" data-title="瞻鹤" width="20" height="20" class="avatar" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&nbsp;瞻鹤</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/homework/" class="post-category" title="分类 - Homework"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Homework</a></span></div><div class="post-meta-line"><span title="发布于 2024-09-10 11:12:56"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-09-10">2024-09-10</time></span>&nbsp;<span title="4248 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 4300 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 9 分钟</span>&nbsp;<span id="busuanzi_container_page_pv" class="busuanzi_visitors comment-visitors" data-flag-title="Linux命令实践">
+            <i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_page_pv">-</span>&nbsp;次阅读
+          </span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#作业题目linux命令实践">作业题目：Linux命令实践</a>
+      <ul>
+        <li><a href="#学习linux核心命令">学习Linux核心命令</a></li>
+        <li><a href="#作业要求9">作业要求（9‘）</a></li>
+      </ul>
+    </li>
+    <li><a href="#实践">实践</a>
+      <ul>
+        <li><a href="#重复老师演示得内容">重复老师演示得内容</a></li>
+        <li><a href="#ai-常用指令">AI-常用指令</a></li>
+        <li><a href="#ai推荐重要命令">AI推荐重要命令</a></li>
+        <li><a href="#总结-1">总结</a></li>
+      </ul>
+    </li>
+    <li><a href="#作业提交要求-1">作业提交要求 (1')</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h1 id="课上测试" class="heading-element"><span>课上测试</span>
+  <a href="#%e8%af%be%e4%b8%8a%e6%b5%8b%e8%af%95" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><h2 id="作业题目linux命令实践" class="heading-element"><span>作业题目：Linux命令实践</span>
+  <a href="#%e4%bd%9c%e4%b8%9a%e9%a2%98%e7%9b%aelinux%e5%91%bd%e4%bb%a4%e5%ae%9e%e8%b7%b5" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="学习linux核心命令" class="heading-element"><span>学习Linux核心命令</span>
+  <a href="#%e5%ad%a6%e4%b9%a0linux%e6%a0%b8%e5%bf%83%e5%91%bd%e4%bb%a4" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li>ls</li>
+<li>who</li>
+<li>pwd</li>
+<li>cd</li>
+<li>man</li>
+<li>whereis</li>
+<li>which</li>
+<li>find</li>
+<li>locate</li>
+<li>grep</li>
+</ul>
+<h3 id="作业要求9" class="heading-element"><span>作业要求（9‘）</span>
+  <a href="#%e4%bd%9c%e4%b8%9a%e8%a6%81%e6%b1%829" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li>参考课件，针对上面核心命令重复老师的演示内容（3’）</li>
+<li>选择自己习惯的 AI 工具， 针对上面核心命令，让 AI 给自己生成至少例子，然后自己进行验证，总结（3’）</li>
+<li>让 AI工具推荐一些重要命令，然后选择自己认为会高频应用的至少 3个命令（重点推荐 echo，od，sort，bc，ls）进行自主深入学习，每个命令不少于 5 个例子，提交验证，实践过程和总结（3’）</li>
+</ul>
+<h2 id="实践" class="heading-element"><span>实践</span>
+  <a href="#%e5%ae%9e%e8%b7%b5" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="重复老师演示得内容" class="heading-element"><span>重复老师演示得内容</span>
+  <a href="#%e9%87%8d%e5%a4%8d%e8%80%81%e5%b8%88%e6%bc%94%e7%a4%ba%e5%be%97%e5%86%85%e5%ae%b9" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li>
+<p>ls</p>
+<ul>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ls
+</span></span><span class="line"><span class="cl">GmSSL-master  py  snap</span></span></code></pre></div></li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ls .
+</span></span><span class="line"><span class="cl">GmSSL-master  py  snap</span></span></code></pre></div></li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ls -a
+</span></span><span class="line"><span class="cl">.              .bash_logout  .config     .java     .motd_shown       .sage                      GmSSL-master
+</span></span><span class="line"><span class="cl">..             .bashrc       .gdbinit    .lesshst  .profile          .sudo_as_admin_successful  py
+</span></span><span class="line"><span class="cl">.bash_history  .cache        .gitconfig  .local    .pycharm_helpers  .viminfo                   snap</span></span></code></pre></div></li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ls -l
+</span></span><span class="line"><span class="cl">total <span class="m">12</span>
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">9</span> zhanhe zhanhe <span class="m">4096</span> Sep  <span class="m">4</span> 10:08 GmSSL-master
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">3</span> zhanhe zhanhe <span class="m">4096</span> Aug <span class="m">22</span> 14:05 py
+</span></span><span class="line"><span class="cl">drwx------ <span class="m">3</span> zhanhe zhanhe <span class="m">4096</span> Sep <span class="m">10</span> 11:01 snap</span></span></code></pre></div></li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ls -R
+</span></span><span class="line"><span class="cl">.:
+</span></span><span class="line"><span class="cl">GmSSL-master  py  snap
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">./GmSSL-master:
+</span></span><span class="line"><span class="cl">CMakeLists.txt  INSTALL.md  LICENSE  README.md  build  cmake  include  src  tests  tools
+</span></span><span class="line"><span class="cl">内容过多，仅复制一小段</span></span></code></pre></div></li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ls -lh
+</span></span><span class="line"><span class="cl">total 12K
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">9</span> zhanhe zhanhe 4.0K Sep  <span class="m">4</span> 10:08 GmSSL-master
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">3</span> zhanhe zhanhe 4.0K Aug <span class="m">22</span> 14:05 py
+</span></span><span class="line"><span class="cl">drwx------ <span class="m">3</span> zhanhe zhanhe 4.0K Sep <span class="m">10</span> 11:01 snap</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>who</p>
+<ul>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ who
+</span></span><span class="line"><span class="cl">zhanhe   pts/1        2024-09-10 11:04</span></span></code></pre></div></li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ whoami
+</span></span><span class="line"><span class="cl">zhanhe</span></span></code></pre></div></li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ who -a
+</span></span><span class="line"><span class="cl">           system boot  2024-09-10 11:04
+</span></span><span class="line"><span class="cl">           run-level <span class="m">5</span>  2024-09-10 11:04
+</span></span><span class="line"><span class="cl">LOGIN      tty1         2024-09-10 11:04               <span class="m">292</span> <span class="nv">id</span><span class="o">=</span>tty1
+</span></span><span class="line"><span class="cl">LOGIN      console      2024-09-10 11:04               <span class="m">285</span> <span class="nv">id</span><span class="o">=</span>cons
+</span></span><span class="line"><span class="cl">zhanhe   - pts/1        2024-09-10 11:04 00:15         <span class="m">427</span></span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>pwd</p>
+<ul>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nb">pwd</span>
+</span></span><span class="line"><span class="cl">/home/zhanhe</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>cd</p>
+<ul>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">~$ <span class="nb">cd</span> /
+</span></span><span class="line"><span class="cl">/$ <span class="nb">pwd</span>
+</span></span><span class="line"><span class="cl">/</span></span></code></pre></div></li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">/$ <span class="nb">cd</span> /home/zhanhe
+</span></span><span class="line"><span class="cl">~$ <span class="nb">pwd</span>
+</span></span><span class="line"><span class="cl">/home/zhanhe</span></span></code></pre></div></li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">/$ <span class="nb">cd</span> ~
+</span></span><span class="line"><span class="cl">~$ <span class="nb">pwd</span>
+</span></span><span class="line"><span class="cl">/home/zhanhe</span></span></code></pre></div></li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">~/GmSSL-master$ <span class="nb">cd</span> .
+</span></span><span class="line"><span class="cl">~/GmSSL-master$ <span class="nb">pwd</span>
+</span></span><span class="line"><span class="cl">/home/zhanhe/GmSSL-master</span></span></code></pre></div></li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">~/GmSSL-master$ <span class="nb">cd</span> ..
+</span></span><span class="line"><span class="cl">~$ <span class="nb">pwd</span>
+</span></span><span class="line"><span class="cl">/home/zhanhe</span></span></code></pre></div></li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">~$ <span class="nb">cd</span> -
+</span></span><span class="line"><span class="cl">/home/zhanhe/GmSSL-master
+</span></span><span class="line"><span class="cl">~/GmSSL-master$</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>man</p>
+<ul>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">MAN<span class="o">(</span>1<span class="o">)</span>                                               Manual pager utils                                               MAN<span class="o">(</span>1<span class="o">)</span>
+</span></span><span class="line"><span class="cl">NAME
+</span></span><span class="line"><span class="cl">       man - an interface to the system reference manuals</span></span></code></pre></div></li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">PRINTF<span class="o">(</span>1<span class="o">)</span>                                               User Commands                                              PRINTF<span class="o">(</span>1<span class="o">)</span>
+</span></span><span class="line"><span class="cl">NAME
+</span></span><span class="line"><span class="cl">       <span class="nb">printf</span> - format and print data</span></span></code></pre></div></li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">PRINTF<span class="o">(</span>3<span class="o">)</span>                                         Linux Programmer<span class="err">&#39;</span>s Manual                                        PRINTF<span class="o">(</span>3<span class="o">)</span>
+</span></span><span class="line"><span class="cl">NAME
+</span></span><span class="line"><span class="cl">       printf, fprintf, dprintf, sprintf, snprintf, vprintf, vfprintf, vdprintf, vsprintf, vsnprintf - formatted output con‐
+</span></span><span class="line"><span class="cl">       version</span></span></code></pre></div></li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ man -k <span class="nb">printf</span>
+</span></span><span class="line"><span class="cl">asprintf <span class="o">(</span>3<span class="o">)</span>         - print to allocated string
+</span></span><span class="line"><span class="cl">dprintf <span class="o">(</span>3<span class="o">)</span>          - formatted output conversion
+</span></span><span class="line"><span class="cl">fmtcheck <span class="o">(</span>3bsd<span class="o">)</span>      - sanitizes user-supplied printf<span class="o">(</span>3<span class="o">)</span>-style format string
+</span></span><span class="line"><span class="cl">fprintf <span class="o">(</span>3<span class="o">)</span>          - formatted output conversion
+</span></span><span class="line"><span class="cl">fwprintf <span class="o">(</span>3<span class="o">)</span>         - formatted wide-character output conversion
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="o">(</span>1<span class="o">)</span>           - format and print data
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="o">(</span>3<span class="o">)</span>           - formatted output conversion
+</span></span><span class="line"><span class="cl">set_matchpathcon_printf <span class="o">(</span>3<span class="o">)</span> - <span class="nb">set</span> flags controlling the operation of matchpathcon or matchpathcon_index and configure the beh...
+</span></span><span class="line"><span class="cl">snprintf <span class="o">(</span>3<span class="o">)</span>         - formatted output conversion
+</span></span><span class="line"><span class="cl">sprintf <span class="o">(</span>3<span class="o">)</span>          - formatted output conversion
+</span></span><span class="line"><span class="cl">swprintf <span class="o">(</span>3<span class="o">)</span>         - formatted wide-character output conversion
+</span></span><span class="line"><span class="cl">vasprintf <span class="o">(</span>3<span class="o">)</span>        - print to allocated string
+</span></span><span class="line"><span class="cl">vdprintf <span class="o">(</span>3<span class="o">)</span>         - formatted output conversion
+</span></span><span class="line"><span class="cl">vfprintf <span class="o">(</span>3<span class="o">)</span>         - formatted output conversion
+</span></span><span class="line"><span class="cl">vfwprintf <span class="o">(</span>3<span class="o">)</span>        - formatted wide-character output conversion
+</span></span><span class="line"><span class="cl">vprintf <span class="o">(</span>3<span class="o">)</span>          - formatted output conversion
+</span></span><span class="line"><span class="cl">vsnprintf <span class="o">(</span>3<span class="o">)</span>        - formatted output conversion
+</span></span><span class="line"><span class="cl">vsprintf <span class="o">(</span>3<span class="o">)</span>         - formatted output conversion
+</span></span><span class="line"><span class="cl">vswprintf <span class="o">(</span>3<span class="o">)</span>        - formatted wide-character output conversion
+</span></span><span class="line"><span class="cl">vwprintf <span class="o">(</span>3<span class="o">)</span>         - formatted wide-character output conversion
+</span></span><span class="line"><span class="cl">wprintf <span class="o">(</span>3<span class="o">)</span>          - formatted wide-character output conversion
+</span></span><span class="line"><span class="cl">XtAsprintf <span class="o">(</span>3<span class="o">)</span>       - memory management functions</span></span></code></pre></div></li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ man -f <span class="nb">printf</span>
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="o">(</span>1<span class="o">)</span>           - format and print data
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="o">(</span>3<span class="o">)</span>           - formatted output conversion</span></span></code></pre></div></li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ man -k <span class="nb">printf</span> <span class="p">|</span> grep <span class="m">3</span>
+</span></span><span class="line"><span class="cl">asprintf <span class="o">(</span>3<span class="o">)</span>         - print to allocated string
+</span></span><span class="line"><span class="cl">dprintf <span class="o">(</span>3<span class="o">)</span>          - formatted output conversion
+</span></span><span class="line"><span class="cl">fmtcheck <span class="o">(</span>3bsd<span class="o">)</span>      - sanitizes user-supplied printf<span class="o">(</span>3<span class="o">)</span>-style format string
+</span></span><span class="line"><span class="cl">fprintf <span class="o">(</span>3<span class="o">)</span>          - formatted output conversion
+</span></span><span class="line"><span class="cl">fwprintf <span class="o">(</span>3<span class="o">)</span>         - formatted wide-character output conversion
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="o">(</span>3<span class="o">)</span>           - formatted output conversion
+</span></span><span class="line"><span class="cl">set_matchpathcon_printf <span class="o">(</span>3<span class="o">)</span> - <span class="nb">set</span> flags controlling the operation of matchpathcon or matchpathcon_index and configure the beh...
+</span></span><span class="line"><span class="cl">snprintf <span class="o">(</span>3<span class="o">)</span>         - formatted output conversion
+</span></span><span class="line"><span class="cl">sprintf <span class="o">(</span>3<span class="o">)</span>          - formatted output conversion
+</span></span><span class="line"><span class="cl">swprintf <span class="o">(</span>3<span class="o">)</span>         - formatted wide-character output conversion
+</span></span><span class="line"><span class="cl">vasprintf <span class="o">(</span>3<span class="o">)</span>        - print to allocated string
+</span></span><span class="line"><span class="cl">vdprintf <span class="o">(</span>3<span class="o">)</span>         - formatted output conversion
+</span></span><span class="line"><span class="cl">vfprintf <span class="o">(</span>3<span class="o">)</span>         - formatted output conversion
+</span></span><span class="line"><span class="cl">vfwprintf <span class="o">(</span>3<span class="o">)</span>        - formatted wide-character output conversion
+</span></span><span class="line"><span class="cl">vprintf <span class="o">(</span>3<span class="o">)</span>          - formatted output conversion
+</span></span><span class="line"><span class="cl">vsnprintf <span class="o">(</span>3<span class="o">)</span>        - formatted output conversion
+</span></span><span class="line"><span class="cl">vsprintf <span class="o">(</span>3<span class="o">)</span>         - formatted output conversion
+</span></span><span class="line"><span class="cl">vswprintf <span class="o">(</span>3<span class="o">)</span>        - formatted wide-character output conversion
+</span></span><span class="line"><span class="cl">vwprintf <span class="o">(</span>3<span class="o">)</span>         - formatted wide-character output conversion
+</span></span><span class="line"><span class="cl">wprintf <span class="o">(</span>3<span class="o">)</span>          - formatted wide-character output conversion
+</span></span><span class="line"><span class="cl">XtAsprintf <span class="o">(</span>3<span class="o">)</span>       - memory management functions</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>whereis</p>
+<ul>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ whereis ls
+</span></span><span class="line"><span class="cl">ls: /usr/bin/ls /usr/share/man/man1/ls.1.gz</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>which</p>
+<ul>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ which ls
+</span></span><span class="line"><span class="cl">/usr/bin/ls</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>find</p>
+<ul>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ find -name flag
+</span></span><span class="line"><span class="cl">./home/zhanhe/.local/lib/python3.10/site-packages/pwnlib/flag
+</span></span><span class="line"><span class="cl">find: ‘./etc/polkit-1/localauthority’: Permission denied
+</span></span><span class="line"><span class="cl">find: ‘./etc/ssl/private’: Permission denied
+</span></span><span class="line"><span class="cl">./flag
+</span></span><span class="line"><span class="cl">find: ‘./root’: Permission denied
+</span></span><span class="line"><span class="cl">find: ‘./mnt/e/<span class="nv">$RECYCLE</span>.BIN/S-1-5-21-1401408247-2291080922-2548902397-1001’: Permission denied
+</span></span><span class="line"><span class="cl">find: ‘./mnt/e/<span class="nv">$RECYCLE</span>.BIN/S-1-5-21-1401408247-2291080922-2548902397-1002’: Permission denied</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>locate</p>
+<ul>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ locate hello.c
+</span></span><span class="line"><span class="cl">/mnt/c/Users/He-Zh/.gradle/caches/transforms-4/435be38f8324990cec484e03044db2a0/transformed/unzipped-distribution/gradle-8.6/platforms/documentation/docs/src/snippets/native-binaries/c/groovy/src/hello/c/hello.c
+</span></span><span class="line"><span class="cl">/mnt/c/Users/He-Zh/.gradle/caches/transforms-4/435be38f8324990cec484e03044db2a0/transformed/unzipped-distribution/gradle-8.6/platforms/documentation/docs/src/snippets/native-binaries/cpp/groovy/src/hello/cpp/hello.cpp
+</span></span><span class="line"><span class="cl">/mnt/c/Users/He-Zh/.gradle/caches/transforms-4/435be38f8324990cec484e03044db2a0/transformed/unzipped-distribution/gradle-8.6/platforms/documentation/docs/src/snippets/native-binaries/cpp-exe/groovy/src/main/cpp/hello.cpp
+</span></span><span class="line"><span class="cl">/mnt/c/Users/He-Zh/.gradle/caches/transforms-4/435be38f8324990cec484e03044db2a0/transformed/unzipped-distribution/gradle-8.6/platforms/documentation/docs/src/snippets/native-binaries/cpp-lib/groovy/src/main/cpp/hello.cpp
+</span></span><span class="line"><span class="cl">/mnt/c/Users/He-Zh/.gradle/caches/transforms-4/435be38f8324990cec484e03044db2a0/transformed/unzipped-distribution/gradle-8.6/platforms/documentation/docs/src/snippets/native-binaries/custom-layout/groovy/src/source/hello.c
+</span></span><span class="line"><span class="cl">/mnt/c/Users/He-Zh/.gradle/caches/transforms-4/435be38f8324990cec484e03044db2a0/transformed/unzipped-distribution/gradle-8.6/platforms/documentation/docs/src/snippets/native-binaries/flavors/groovy/src/hello/cpp/hello.cpp
+</span></span><span class="line"><span class="cl">/mnt/c/Users/He-Zh/.gradle/caches/transforms-4/435be38f8324990cec484e03044db2a0/transformed/unzipped-distribution/gradle-8.6/platforms/documentation/docs/src/snippets/native-binaries/multi-project/groovy/lib/src/main/cpp/hello.cpp
+</span></span><span class="line"><span class="cl">/mnt/c/Users/He-Zh/.gradle/caches/transforms-4/435be38f8324990cec484e03044db2a0/transformed/unzipped-distribution/gradle-8.6/platforms/documentation/docs/src/snippets/native-binaries/pre-compiled-headers/groovy/src/hello/cpp/hello.cpp
+</span></span><span class="line"><span class="cl">/mnt/c/Users/He-Zh/.gradle/caches/transforms-4/435be38f8324990cec484e03044db2a0/transformed/unzipped-distribution/gradle-8.6/platforms/documentation/docs/src/snippets/native-binaries/variants/groovy/src/hello/cpp/hello.cpp
+</span></span><span class="line"><span class="cl">/mnt/c/Users/He-Zh/.gradle/caches/transforms-4/435be38f8324990cec484e03044db2a0/transformed/unzipped-distribution/gradle-8.6/platforms/documentation/docs/src/snippets/native-binaries/visual-studio/groovy/src/hello/cpp/hello.cpp
+</span></span><span class="line"><span class="cl">/mnt/c/Users/He-Zh/.gradle/caches/transforms-4/435be38f8324990cec484e03044db2a0/transformed/unzipped-distribution/gradle-8.6/platforms/documentation/docs/src/snippets/native-binaries/windows-resources/groovy/src/hello/cpp/hello.cpp
+</span></span><span class="line"><span class="cl">/mnt/c/Users/He-Zh/.gradle/caches/transforms-4/435be38f8324990cec484e03044db2a0/transformed/unzipped-distribution/gradle-8.6/platforms/software/build-init/src/main/resources/org/gradle/buildinit/tasks/templates/cpplibrary/hello.cpp.template
+</span></span><span class="line"><span class="cl">/mnt/c/Users/He-Zh/Desktop/Understanding UnixLinux Programming/chapters/ch01/class/classcode/hello.c
+</span></span><span class="line"><span class="cl">/mnt/c/Users/He-Zh/Desktop/Understanding UnixLinux Programming/chapters/ch06/class/classcode/hello.c
+</span></span><span class="line"><span class="cl">/mnt/c/Users/He-Zh/Desktop/Understanding UnixLinux Programming/chapters/ch12/class/classcode/hello.cgi
+</span></span><span class="line"><span class="cl">/mnt/c/Users/He-Zh/Desktop/Understanding UnixLinux Programming/projects/wsng/public_html/wsng/dir2/hello.c
+</span></span><span class="line"><span class="cl">/mnt/c/Users/He-Zh/Desktop/Understanding UnixLinux Programming/projects/wsng/public_html/wsng/dir2/hello.cgi
+</span></span><span class="line"><span class="cl">/mnt/d/javaworkplace/hello/bin/hello/hello.class
+</span></span><span class="line"><span class="cl">/mnt/d/javaworkplace/hello/src/hello/hello.class
+</span></span><span class="line"><span class="cl">/mnt/d/metasploit-framework/embedded/lib/ruby/gems/3.1.0/gems/mini_portile2-2.8.6/test/assets/test-cmake-1.0/hello.c
+</span></span><span class="line"><span class="cl">/mnt/e/Qt/Examples/Qt-6.7.1/qmake/tutorial/hello.cpp
+</span></span><span class="line"><span class="cl">/mnt/e/go/src/debug/elf/testdata/hello.c
+</span></span><span class="line"><span class="cl">/mnt/e/go/src/debug/macho/testdata/hello.c
+</span></span><span class="line"><span class="cl">/mnt/e/go/src/debug/pe/testdata/hello.c
+</span></span><span class="line"><span class="cl">/mnt/e/go/src/debug/plan9obj/testdata/hello.c
+</span></span><span class="line"><span class="cl">/mnt/e/go/src/internal/xcoff/testdata/hello.c
+</span></span><span class="line"><span class="cl">/mnt/e/go/src/internal/xcoff/testdata/printhello.c
+</span></span><span class="line"><span class="cl">/usr/share/doc/fltk1.3-doc/examples/hello.cxx</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>grep</p>
+<ul>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ grep -nr setup.sh ~
+</span></span><span class="line"><span class="cl">grep: /home/zhanhe/.cache/JetBrains/RemoteDev/dist/5e55a3f40833c_RustRover-2024.1.5/plugins/clouds-docker-impl/lib/clouds-docker-impl.jar: binary file matches
+</span></span><span class="line"><span class="cl">grep: /home/zhanhe/.cache/JetBrains/RemoteDev/dist/5e55a3f40833c_RustRover-2024.1.5/plugins/remoteRun/lib/remoteRun.jar: binary file matches
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/home/zhanhe/.bash_history:63:./setup.sh
+</span></span><span class="line"><span class="cl">/home/zhanhe/.bash_history:65:./setup.sh
+</span></span><span class="line"><span class="cl">/home/zhanhe/.bash_history:70:./setup.sh
+</span></span><span class="line"><span class="cl">/home/zhanhe/.bash_history:89:./setup.sh
+</span></span><span class="line"><span class="cl">/home/zhanhe/.bash_history:156:./setup.sh
+</span></span><span class="line"><span class="cl">/home/zhanhe/.bash_history:181:./setup.sh
+</span></span><span class="line"><span class="cl">/home/zhanhe/.bash_history:219:./setup.sh
+</span></span><span class="line"><span class="cl">/home/zhanhe/.bash_history:220:sudo ./setup.sh
+</span></span><span class="line"><span class="cl">/home/zhanhe/.bash_history:224:./setup.sh
+</span></span><span class="line"><span class="cl">/home/zhanhe/.bash_history:236:./setup.sh
+</span></span><span class="line"><span class="cl">/home/zhanhe/.bash_history:261:./setup.sh
+</span></span><span class="line"><span class="cl">/home/zhanhe/.bash_history:263:./setup.sh
+</span></span><span class="line"><span class="cl">/home/zhanhe/.bash_history:269:./setup.sh
+</span></span><span class="line"><span class="cl">/home/zhanhe/.bash_history:271:./setup.sh
+</span></span><span class="line"><span class="cl">/home/zhanhe/.pycharm_helpers/typeshed/stubs/setuptools/setuptools/command/build_ext.pyi:25:    def setup_shlib_compiler<span class="o">(</span>self<span class="o">)</span> -&gt; None: ...
+</span></span><span class="line"><span class="cl">/home/zhanhe/.local/pwntools-doc/TESTING.md:11:bash travis/ssh_setup.sh
+</span></span><span class="line"><span class="cl">/home/zhanhe/.local/share/virtualenv/wheel/3.10/image/1/CopyPipInstall/setuptools-68.2.0-py3-none-any/setuptools/command/build_ext.py:186:            self.setup_shlib_compiler<span class="o">()</span>
+</span></span><span class="line"><span class="cl">/home/zhanhe/.local/share/virtualenv/wheel/3.10/image/1/CopyPipInstall/setuptools-68.2.0-py3-none-any/setuptools/command/build_ext.py:211:    def setup_shlib_compiler<span class="o">(</span>self<span class="o">)</span>:
+</span></span><span class="line"><span class="cl">grep: /home/zhanhe/.local/share/pypoetry/venv/lib/python3.10/site-packages/setuptools/command/__pycache__/build_ext.cpython-310.pyc: binary file matches
+</span></span><span class="line"><span class="cl">/home/zhanhe/.local/share/pypoetry/venv/lib/python3.10/site-packages/setuptools/command/build_ext.py:142:            self.setup_shlib_compiler<span class="o">()</span>
+</span></span><span class="line"><span class="cl">/home/zhanhe/.local/share/pypoetry/venv/lib/python3.10/site-packages/setuptools/command/build_ext.py:164:    def setup_shlib_compiler<span class="o">(</span>self<span class="o">)</span>:
+</span></span><span class="line"><span class="cl">grep: /home/zhanhe/.local/share/pypoetry/venv.save/lib/python3.10/site-packages/setuptools/command/__pycache__/build_ext.cpython-310.pyc: binary file matches
+</span></span><span class="line"><span class="cl">/home/zhanhe/.local/share/pypoetry/venv.save/lib/python3.10/site-packages/setuptools/command/build_ext.py:142:
+</span></span><span class="line"><span class="cl">  self.setup_shlib_compiler<span class="o">()</span>
+</span></span><span class="line"><span class="cl">/home/zhanhe/.local/share/pypoetry/venv.save/lib/python3.10/site-packages/setuptools/command/build_ext.py:164:    def setup_shlib_compiler<span class="o">(</span>self<span class="o">)</span>:
+</span></span><span class="line"><span class="cl">/home/zhanhe/py/pythonProject1/.venv/lib/python3.10/site-packages/setuptools/command/build_ext.py:186:            self.setup_shlib_compiler<span class="o">()</span>
+</span></span><span class="line"><span class="cl">/home/zhanhe/py/pythonProject1/.venv/lib/python3.10/site-packages/setuptools/command/build_ext.py:211:    def setup_shlib_compiler<span class="o">(</span>self<span class="o">)</span>:</span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h3 id="ai-常用指令" class="heading-element"><span>AI-常用指令</span>
+  <a href="#ai-%e5%b8%b8%e7%94%a8%e6%8c%87%e4%bb%a4" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><h4 id="ai回答" class="heading-element"><span>AI回答</span>
+  <a href="#ai%e5%9b%9e%e7%ad%94" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>当然！以下是这些常用Linux命令的解释和使用示例：</p>
+<h5 id="1-ls---列出目录内容" class="heading-element"><span>1. <strong><code>ls</code></strong> - 列出目录内容</span>
+  <a href="#1-ls---%e5%88%97%e5%87%ba%e7%9b%ae%e5%bd%95%e5%86%85%e5%ae%b9" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p><code>ls</code> 命令用于列出当前目录或指定目录中的文件和子目录。</p>
+<ul>
+<li><strong>示例 1:</strong> 列出当前目录下的所有文件和目录
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls</span></span></code></pre></div></li>
+<li><strong>示例 2:</strong> 列出详细信息（包括权限、所有者、大小、修改时间等）
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -l</span></span></code></pre></div></li>
+<li><strong>示例 3:</strong> 列出包含隐藏文件的所有文件和目录
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -a</span></span></code></pre></div></li>
+</ul>
+<h5 id="2-who---显示当前登录的用户" class="heading-element"><span>2. <strong><code>who</code></strong> - 显示当前登录的用户</span>
+  <a href="#2-who---%e6%98%be%e7%a4%ba%e5%bd%93%e5%89%8d%e7%99%bb%e5%bd%95%e7%9a%84%e7%94%a8%e6%88%b7" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p><code>who</code> 命令用于显示当前登录到系统的所有用户信息。</p>
+<ul>
+<li><strong>示例 1:</strong> 显示当前登录的用户列表
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">who</span></span></code></pre></div></li>
+<li><strong>示例 2:</strong> 显示用户的登录时间和TTY信息
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">who -u</span></span></code></pre></div></li>
+</ul>
+<h5 id="3-pwd---显示当前工作目录" class="heading-element"><span>3. <strong><code>pwd</code></strong> - 显示当前工作目录</span>
+  <a href="#3-pwd---%e6%98%be%e7%a4%ba%e5%bd%93%e5%89%8d%e5%b7%a5%e4%bd%9c%e7%9b%ae%e5%bd%95" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p><code>pwd</code> 命令用于显示当前所在的工作目录的绝对路径。</p>
+<ul>
+<li><strong>示例 1:</strong> 显示当前目录的路径
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pwd</span></span></code></pre></div></li>
+</ul>
+<h5 id="4-cd---更改目录" class="heading-element"><span>4. <strong><code>cd</code></strong> - 更改目录</span>
+  <a href="#4-cd---%e6%9b%b4%e6%94%b9%e7%9b%ae%e5%bd%95" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p><code>cd</code> 命令用于在文件系统中更改当前工作目录。</p>
+<ul>
+<li><strong>示例 1:</strong> 切换到指定目录
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /home/user/Documents</span></span></code></pre></div></li>
+<li><strong>示例 2:</strong> 返回到上一级目录
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> ..</span></span></code></pre></div></li>
+<li><strong>示例 3:</strong> 切换到用户的主目录
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> ~</span></span></code></pre></div></li>
+</ul>
+<h5 id="5-man---显示手册页" class="heading-element"><span>5. <strong><code>man</code></strong> - 显示手册页</span>
+  <a href="#5-man---%e6%98%be%e7%a4%ba%e6%89%8b%e5%86%8c%e9%a1%b5" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p><code>man</code> 命令用于显示指定命令的手册页，可以查看命令的详细信息和使用方式。</p>
+<ul>
+<li><strong>示例 1:</strong> 查看 <code>ls</code> 命令的手册页
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">man ls</span></span></code></pre></div></li>
+<li><strong>示例 2:</strong> 查看 <code>man</code> 命令的手册页
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">man man</span></span></code></pre></div></li>
+</ul>
+<h5 id="6-whereis---查找二进制源代码和手册页文件" class="heading-element"><span>6. <strong><code>whereis</code></strong> - 查找二进制、源代码和手册页文件</span>
+  <a href="#6-whereis---%e6%9f%a5%e6%89%be%e4%ba%8c%e8%bf%9b%e5%88%b6%e6%ba%90%e4%bb%a3%e7%a0%81%e5%92%8c%e6%89%8b%e5%86%8c%e9%a1%b5%e6%96%87%e4%bb%b6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p><code>whereis</code> 命令用于定位二进制文件、源代码文件和手册页文件的路径。</p>
+<ul>
+<li>
+<p><strong>示例 1:</strong> 查找 <code>ls</code> 命令的路径</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">whereis ls</span></span></code></pre></div></li>
+<li>
+<p><strong>示例 2:</strong> 查找 <code>bash</code> 命令的所有相关文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">whereis bash</span></span></code></pre></div></li>
+</ul>
+<h5 id="7-which---显示命令的可执行文件路径" class="heading-element"><span>7. <strong><code>which</code></strong> - 显示命令的可执行文件路径</span>
+  <a href="#7-which---%e6%98%be%e7%a4%ba%e5%91%bd%e4%bb%a4%e7%9a%84%e5%8f%af%e6%89%a7%e8%a1%8c%e6%96%87%e4%bb%b6%e8%b7%af%e5%be%84" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p><code>which</code> 命令用于显示指定命令的可执行文件所在路径。</p>
+<ul>
+<li><strong>示例 1:</strong> 显示 <code>python</code> 命令的路径
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">which python</span></span></code></pre></div></li>
+<li><strong>示例 2:</strong> 显示 <code>ls</code> 命令的路径
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">which ls</span></span></code></pre></div></li>
+</ul>
+<h5 id="8-find---查找文件" class="heading-element"><span>8. <strong><code>find</code></strong> - 查找文件</span>
+  <a href="#8-find---%e6%9f%a5%e6%89%be%e6%96%87%e4%bb%b6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p><code>find</code> 命令用于查找目录树中的文件和目录。</p>
+<ul>
+<li>
+<p><strong>示例 1:</strong> 在当前目录及其子目录中查找名为 <code>file.txt</code> 的文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">find . -name <span class="s2">&#34;file.txt&#34;</span></span></span></code></pre></div></li>
+<li>
+<p><strong>示例 2:</strong> 查找大小超过 10MB 的文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">find / -size +10M</span></span></code></pre></div></li>
+</ul>
+<h5 id="9-locate---查找文件" class="heading-element"><span>9. <strong><code>locate</code></strong> - 查找文件</span>
+  <a href="#9-locate---%e6%9f%a5%e6%89%be%e6%96%87%e4%bb%b6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p><code>locate</code> 命令通过查询预先构建的数据库快速查找文件。</p>
+<ul>
+<li><strong>示例 1:</strong> 查找名为 <code>passwd</code> 的文件
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">locate passwd</span></span></code></pre></div></li>
+<li><strong>示例 2:</strong> 查找包含 <code>conf</code> 的所有文件
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">locate conf</span></span></code></pre></div></li>
+</ul>
+<h5 id="10-grep---搜索文本" class="heading-element"><span>10. <strong><code>grep</code></strong> - 搜索文本</span>
+  <a href="#10-grep---%e6%90%9c%e7%b4%a2%e6%96%87%e6%9c%ac" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p><code>grep</code> 命令用于在文件或输入中搜索匹配的文本模式。</p>
+<ul>
+<li>
+<p><strong>示例 1:</strong> 在文件 <code>logfile.txt</code> 中查找包含 <code>error</code> 的行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep <span class="s2">&#34;error&#34;</span> logfile.txt</span></span></code></pre></div></li>
+<li>
+<p><strong>示例 2:</strong> 查找当前目录下所有 <code>.txt</code> 文件中包含 <code>example</code> 的行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep <span class="s2">&#34;example&#34;</span> *.txt</span></span></code></pre></div></li>
+<li>
+<p><strong>示例 3:</strong> 搜索时忽略大小写</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -i <span class="s2">&#34;example&#34;</span> logfile.txt</span></span></code></pre></div></li>
+</ul>
+<h5 id="总结" class="heading-element"><span>总结</span>
+  <a href="#%e6%80%bb%e7%bb%93" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p>这些命令是Linux系统中常用的基本命令，掌握这些命令将帮助你高效地管理和操作系统。</p>
+<h4 id="实践-1" class="heading-element"><span>实践</span>
+  <a href="#%e5%ae%9e%e8%b7%b5-1" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><h5 id="grep" class="heading-element"><span>grep</span>
+  <a href="#grep" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ls
+</span></span><span class="line"><span class="cl">GmSSL-master  flag  py  snap
+</span></span><span class="line"><span class="cl">$ cat flag
+</span></span><span class="line"><span class="cl">FLAG
+</span></span><span class="line"><span class="cl">flag
+</span></span><span class="line"><span class="cl">flag
+</span></span><span class="line"><span class="cl">FLAG
+</span></span><span class="line"><span class="cl">$ grep <span class="s2">&#34;flag&#34;</span> flag
+</span></span><span class="line"><span class="cl">flag
+</span></span><span class="line"><span class="cl">flag
+</span></span><span class="line"><span class="cl">$ grep -i <span class="s2">&#34;flag&#34;</span> flag
+</span></span><span class="line"><span class="cl">FLAG
+</span></span><span class="line"><span class="cl">flag
+</span></span><span class="line"><span class="cl">flag
+</span></span><span class="line"><span class="cl">FLAG
+</span></span><span class="line"><span class="cl">$ grep -i <span class="s2">&#34;flag&#34;</span> *
+</span></span><span class="line"><span class="cl">grep: GmSSL-master: Is a directory
+</span></span><span class="line"><span class="cl">flag:FLAG
+</span></span><span class="line"><span class="cl">flag:flag
+</span></span><span class="line"><span class="cl">flag:flag
+</span></span><span class="line"><span class="cl">flag:FLAG
+</span></span><span class="line"><span class="cl">grep: py: Is a directory
+</span></span><span class="line"><span class="cl">grep: snap: Is a directory</span></span></code></pre></div><h5 id="find" class="heading-element"><span>find</span>
+  <a href="#find" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ find / -size +1024M
+</span></span><span class="line"><span class="cl">find: ‘/etc/polkit-1/localauthority’: Permission denied
+</span></span><span class="line"><span class="cl">find: ‘/etc/ssl/private’: Permission denied
+</span></span><span class="line"><span class="cl">find: ‘/root’: Permission denied
+</span></span><span class="line"><span class="cl">find: ‘/mnt/e/<span class="nv">$RECYCLE</span>.BIN/S-1-5-21-1401408247-2291080922-2548902397-1001’: Permission denied
+</span></span><span class="line"><span class="cl">find: ‘/mnt/e/<span class="nv">$RECYCLE</span>.BIN/S-1-5-21-1401408247-2291080922-2548902397-1002’: Permission denied
+</span></span><span class="line"><span class="cl">/mnt/e/20240827_113100.mp4
+</span></span><span class="line"><span class="cl">/mnt/e/20240827_165004.mp4
+</span></span><span class="line"><span class="cl">/mnt/e/20240908_101433.mp4
+</span></span><span class="line"><span class="cl">/mnt/e/BaiduNetdiskDownload/MATLAB R2024a<span class="o">(</span>64bit<span class="o">)</span>/Setup/archives/win64/3p/cuda_win64_1700448735.enc
+</span></span><span class="line"><span class="cl">/mnt/e/BaiduNetdiskDownload/MATLAB R2024a<span class="o">(</span>64bit<span class="o">)</span>.zip
+</span></span><span class="line"><span class="cl">/mnt/e/kali-linux-2024.2-vmware-amd64.7z
+</span></span><span class="line"><span class="cl">/mnt/e/kali-linux-2024.2-vmware-amd64.vmwarevm/kali-linux-2024.2-vmware-amd64-s001.vmdk
+</span></span><span class="line"><span class="cl">/mnt/e/kali-linux-2024.2-vmware-amd64.vmwarevm/kali-linux-2024.2-vmware-amd64-s002.vmdk
+</span></span><span class="line"><span class="cl">/mnt/e/kali-linux-2024.2-vmware-amd64.vmwarevm/kali-linux-2024.2-vmware-amd64-s035.vmdk
+</span></span><span class="line"><span class="cl">......</span></span></code></pre></div><h3 id="ai推荐重要命令" class="heading-element"><span>AI推荐重要命令</span>
+  <a href="#ai%e6%8e%a8%e8%8d%90%e9%87%8d%e8%a6%81%e5%91%bd%e4%bb%a4" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><h4 id="ai回答-1" class="heading-element"><span>AI回答</span>
+  <a href="#ai%e5%9b%9e%e7%ad%94-1" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>当然可以！以下是一些在 Linux 中非常重要和常用的指令，涵盖系统管理、文件操作、网络管理等多个方面：</p>
+<h5 id="1-ls" class="heading-element"><span>1. <strong><code>ls</code></strong></span>
+  <a href="#1-ls" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 列出目录内容。</li>
+<li><strong>重要性</strong>: 这是文件管理的基础命令，用于查看目录下的文件和文件夹。</li>
+</ul>
+<h5 id="2-cd" class="heading-element"><span>2. <strong><code>cd</code></strong></span>
+  <a href="#2-cd" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 更改当前工作目录。</li>
+<li><strong>重要性</strong>: 每次在文件系统中导航时都需要使用这个命令。</li>
+</ul>
+<h5 id="3-pwd" class="heading-element"><span>3. <strong><code>pwd</code></strong></span>
+  <a href="#3-pwd" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 显示当前工作目录的绝对路径。</li>
+<li><strong>重要性</strong>: 当你需要确认自己当前所在的目录时，这个命令非常有用。</li>
+</ul>
+<h5 id="4-cp" class="heading-element"><span>4. <strong><code>cp</code></strong></span>
+  <a href="#4-cp" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 复制文件或目录。</li>
+<li><strong>重要性</strong>: 用于备份文件或在不同目录之间复制文件。</li>
+</ul>
+<h5 id="5-mv" class="heading-element"><span>5. <strong><code>mv</code></strong></span>
+  <a href="#5-mv" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 移动文件或重命名文件。</li>
+<li><strong>重要性</strong>: 用于组织文件、将文件从一个位置移动到另一个位置，或重命名文件。</li>
+</ul>
+<h5 id="6-rm" class="heading-element"><span>6. <strong><code>rm</code></strong></span>
+  <a href="#6-rm" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 删除文件或目录。</li>
+<li><strong>重要性</strong>: 在清理不再需要的文件或目录时，使用这个命令。</li>
+</ul>
+<h5 id="7-chmod" class="heading-element"><span>7. <strong><code>chmod</code></strong></span>
+  <a href="#7-chmod" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 更改文件或目录的权限。</li>
+<li><strong>重要性</strong>: 这个命令是管理文件权限、确保安全性的重要工具。</li>
+</ul>
+<h5 id="8-chown" class="heading-element"><span>8. <strong><code>chown</code></strong></span>
+  <a href="#8-chown" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 更改文件或目录的所有者和组。</li>
+<li><strong>重要性</strong>: 在管理多用户系统时，确保正确的所有权设置至关重要。</li>
+</ul>
+<h5 id="9-tar" class="heading-element"><span>9. <strong><code>tar</code></strong></span>
+  <a href="#9-tar" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 归档文件（通常与 <code>gzip</code> 结合使用）。</li>
+<li><strong>重要性</strong>: 在备份、压缩和传输文件时非常有用。</li>
+</ul>
+<h5 id="10-ps" class="heading-element"><span>10. <strong><code>ps</code></strong></span>
+  <a href="#10-ps" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 显示当前运行的进程。</li>
+<li><strong>重要性</strong>: 用于监视和管理系统上的进程，了解正在运行的程序。</li>
+</ul>
+<h5 id="11-top" class="heading-element"><span>11. <strong><code>top</code></strong></span>
+  <a href="#11-top" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 实时显示系统进程和资源使用情况。</li>
+<li><strong>重要性</strong>: 监视系统性能，特别是在诊断性能问题时。</li>
+</ul>
+<h5 id="12-kill" class="heading-element"><span>12. <strong><code>kill</code></strong></span>
+  <a href="#12-kill" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 终止进程。</li>
+<li><strong>重要性</strong>: 当进程挂起或消耗大量资源时，可以使用它来强制终止进程。</li>
+</ul>
+<h5 id="13-df" class="heading-element"><span>13. <strong><code>df</code></strong></span>
+  <a href="#13-df" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 显示文件系统磁盘空间使用情况。</li>
+<li><strong>重要性</strong>: 检查磁盘使用情况，防止磁盘空间不足。</li>
+</ul>
+<h5 id="14-du" class="heading-element"><span>14. <strong><code>du</code></strong></span>
+  <a href="#14-du" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 显示目录或文件的磁盘使用量。</li>
+<li><strong>重要性</strong>: 了解哪个目录或文件占用了大量磁盘空间。</li>
+</ul>
+<h5 id="15-ssh" class="heading-element"><span>15. <strong><code>ssh</code></strong></span>
+  <a href="#15-ssh" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 通过网络远程登录到另一台机器。</li>
+<li><strong>重要性</strong>: 管理和控制远程服务器的基本工具。</li>
+</ul>
+<h5 id="16-scp" class="heading-element"><span>16. <strong><code>scp</code></strong></span>
+  <a href="#16-scp" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 通过 SSH 安全地复制文件。</li>
+<li><strong>重要性</strong>: 在远程机器之间传输文件时，非常有用。</li>
+</ul>
+<h5 id="17-wget" class="heading-element"><span>17. <strong><code>wget</code></strong></span>
+  <a href="#17-wget" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 从网络下载文件。</li>
+<li><strong>重要性</strong>: 自动化下载任务、获取文件的实用工具。</li>
+</ul>
+<h5 id="18-curl" class="heading-element"><span>18. <strong><code>curl</code></strong></span>
+  <a href="#18-curl" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 使用 URL 语法传输数据。</li>
+<li><strong>重要性</strong>: 用于测试 API 接口、下载文件或检查网络资源。</li>
+</ul>
+<h5 id="19-iptables" class="heading-element"><span>19. <strong><code>iptables</code></strong></span>
+  <a href="#19-iptables" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 配置 Linux 内核的网络包过滤规则。</li>
+<li><strong>重要性</strong>: 管理和配置防火墙，确保系统的网络安全。</li>
+</ul>
+<h5 id="20-systemctl" class="heading-element"><span>20. <strong><code>systemctl</code></strong></span>
+  <a href="#20-systemctl" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 控制 systemd 系统和服务管理器。</li>
+<li><strong>重要性</strong>: 管理系统服务、启动和停止服务、查看系统状态等。</li>
+</ul>
+<h5 id="21-crontab" class="heading-element"><span>21. <strong><code>crontab</code></strong></span>
+  <a href="#21-crontab" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 定时任务调度。</li>
+<li><strong>重要性</strong>: 自动化任务执行，例如定期备份、系统清理。</li>
+</ul>
+<h5 id="22-grep" class="heading-element"><span>22. <strong><code>grep</code></strong></span>
+  <a href="#22-grep" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 搜索文本中的特定模式。</li>
+<li><strong>重要性</strong>: 快速查找日志文件或其他文本文件中的特定内容。</li>
+</ul>
+<h5 id="23-find" class="heading-element"><span>23. <strong><code>find</code></strong></span>
+  <a href="#23-find" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 查找文件或目录。</li>
+<li><strong>重要性</strong>: 在复杂的文件系统中查找文件时非常有用。</li>
+</ul>
+<h5 id="24-alias" class="heading-element"><span>24. <strong><code>alias</code></strong></span>
+  <a href="#24-alias" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>用途</strong>: 为命令创建别名。</li>
+<li><strong>重要性</strong>: 简化常用命令，节省输入时间。</li>
+</ul>
+<h5 id="25-echo" class="heading-element"><span>25. <strong><code>echo</code></strong></span>
+  <a href="#25-echo" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li>
+<p><strong>用途</strong>: 显示一段文本或变量的值。</p>
+</li>
+<li>
+<p><strong>重要性</strong>: 调试脚本时，经常用于输出信息。</p>
+</li>
+</ul>
+<p>总结：掌握这些命令将极大地提升你在Linux系统上的工作效率和管理能力。</p>
+<h4 id="实践-2" class="heading-element"><span>实践</span>
+  <a href="#%e5%ae%9e%e8%b7%b5-2" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><h5 id="echo" class="heading-element"><span>echo</span>
+  <a href="#echo" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;123gsgdhdhFGH&#34;</span>
+</span></span><span class="line"><span class="cl">123gsgdhdhFGH
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#echo重定向</span>
+</span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;This text goes to a file&#34;</span> &gt;&gt; file.txt
+</span></span><span class="line"><span class="cl">$ cat file.txt
+</span></span><span class="line"><span class="cl">This text goes to a file
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> *
+</span></span><span class="line"><span class="cl">GmSSL-master file.txt flag py snap
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#清空文件</span>
+</span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> &gt; file.txt
+</span></span><span class="line"><span class="cl">$ cat file.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#以颜色显示 echo 命令输出</span>
+</span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> -e <span class="s2">&#34;\033[31m这是红色&#34;</span>
+</span></span><span class="line"><span class="cl">这是红色
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#查看命令在不运行的情况下会执行什么操作</span>
+</span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> rm -R *
+</span></span><span class="line"><span class="cl">rm -R GmSSL-master file.txt flag py snap</span></span></code></pre></div><h5 id="tar" class="heading-element"><span>tar</span>
+  <a href="#tar" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">1、创建归档文件：将文件 file1、file2 和 directory 打包到一个名为 archive.tar 的归档文件中。
+</span></span><span class="line"><span class="cl">$ tar -cvf flag.tar flag flag1 flag2
+</span></span><span class="line"><span class="cl">flag
+</span></span><span class="line"><span class="cl">flag1
+</span></span><span class="line"><span class="cl">flag2
+</span></span><span class="line"><span class="cl">$ ls
+</span></span><span class="line"><span class="cl">GmSSL-master  file.txt  flag  flag.tar  flag1  flag2  py  snap
+</span></span><span class="line"><span class="cl">2、解压归档文件：解压名为 archive.tar 的归档文件，还原其中包含的文件和目录。
+</span></span><span class="line"><span class="cl"><span class="nv">$tar</span> -xvf flag.tar
+</span></span><span class="line"><span class="cl">flag
+</span></span><span class="line"><span class="cl">flag1
+</span></span><span class="line"><span class="cl">flag2
+</span></span><span class="line"><span class="cl">3、列出归档文件中的内容：列出名为 archive.tar 的归档文件中包含的所有文件和目录。
+</span></span><span class="line"><span class="cl">$ tar -tvf flag.tar
+</span></span><span class="line"><span class="cl">-rw-r--r-- zhanhe/zhanhe    <span class="m">20</span> 2024-09-10 12:25 flag
+</span></span><span class="line"><span class="cl">-rw-r--r-- zhanhe/zhanhe    <span class="m">17</span> 2024-09-10 17:55 flag1
+</span></span><span class="line"><span class="cl">-rw-r--r-- zhanhe/zhanhe    <span class="m">23</span> 2024-09-10 17:56 flag2
+</span></span><span class="line"><span class="cl">4、追加文件到已存在的归档中：将名为 newfile 的文件添加到已存在的名为 archive.tar 的归档文件中。
+</span></span><span class="line"><span class="cl">$ tar -rvf flag.tar file.txt
+</span></span><span class="line"><span class="cl">file.txt
+</span></span><span class="line"><span class="cl">$ tar -tvf flag.tar
+</span></span><span class="line"><span class="cl">-rw-r--r-- zhanhe/zhanhe    <span class="m">20</span> 2024-09-10 12:25 flag
+</span></span><span class="line"><span class="cl">-rw-r--r-- zhanhe/zhanhe    <span class="m">17</span> 2024-09-10 17:55 flag1
+</span></span><span class="line"><span class="cl">-rw-r--r-- zhanhe/zhanhe    <span class="m">23</span> 2024-09-10 17:56 flag2
+</span></span><span class="line"><span class="cl">-rw-r--r-- zhanhe/zhanhe     <span class="m">1</span> 2024-09-10 17:51 file.txt
+</span></span><span class="line"><span class="cl">6、创建一个经过 gzip 压缩的归档文件：打包 directory 目录下的所有文件和子目录，并使用 gzip 压缩，生成名为 archive.tar.gz 的归档文件。
+</span></span><span class="line"><span class="cl">$ tar -zcvf archive.tar.gz <span class="nb">test</span>
+</span></span><span class="line"><span class="cl">test/
+</span></span><span class="line"><span class="cl">test/flag1
+</span></span><span class="line"><span class="cl">test/flag2
+</span></span><span class="line"><span class="cl">$ ls
+</span></span><span class="line"><span class="cl">GmSSL-master  archive.tar.gz  file.txt  flag  flag.tar  py  snap  test</span></span></code></pre></div><h5 id="alias" class="heading-element"><span>alias</span>
+  <a href="#alias" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">1.创建一个简单的alias
+</span></span><span class="line"><span class="cl">$ <span class="nb">alias</span> <span class="nv">cf</span><span class="o">=</span><span class="s1">&#39;cat /flag&#39;</span>
+</span></span><span class="line"><span class="cl">$ cf
+</span></span><span class="line"><span class="cl">flag<span class="o">{</span>th1s_1s_n2t_f1ag<span class="o">}</span>
+</span></span><span class="line"><span class="cl">2.创建一个包含选项的alias
+</span></span><span class="line"><span class="cl">$ <span class="nb">alias</span> <span class="nv">la</span><span class="o">=</span><span class="s1">&#39;ls -a&#39;</span>
+</span></span><span class="line"><span class="cl">$ la
+</span></span><span class="line"><span class="cl">.              .bash_logout  .config     .java     .motd_shown       .sage                      GmSSL-master    flag      snap
+</span></span><span class="line"><span class="cl">..             .bashrc       .gdbinit    .lesshst  .profile          .sudo_as_admin_successful  archive.tar.gz  flag.tar  <span class="nb">test</span>
+</span></span><span class="line"><span class="cl">.bash_history  .cache        .gitconfig  .local    .pycharm_helpers  .viminfo                   file.txt        py
+</span></span><span class="line"><span class="cl">3.创建一个包含多个命令的alias
+</span></span><span class="line"><span class="cl">$ <span class="nb">alias</span> <span class="nv">update</span><span class="o">=</span><span class="s1">&#39;sudo apt update &amp;&amp; sudo apt upgrade&#39;</span>
+</span></span><span class="line"><span class="cl">$ update
+</span></span><span class="line"><span class="cl">4.查看所有的alias
+</span></span><span class="line"><span class="cl">$ <span class="nb">alias</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">alert</span><span class="o">=</span><span class="s1">&#39;notify-send --urgency=low -i &#34;$([ $? = 0 ] &amp;&amp; echo terminal || echo error)&#34; &#34;$(history|tail -n1|sed -e &#39;</span><span class="se">\&#39;</span><span class="s1">&#39;s/^\s*[0-9]\+\s*//;s/[;&amp;|]\s*alert$//&#39;</span><span class="se">\&#39;</span><span class="s1">&#39;)&#34;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">cf</span><span class="o">=</span><span class="s1">&#39;cat /flag&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">egrep</span><span class="o">=</span><span class="s1">&#39;egrep --color=auto&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">fgrep</span><span class="o">=</span><span class="s1">&#39;fgrep --color=auto&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">grep</span><span class="o">=</span><span class="s1">&#39;grep --color=auto&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">l</span><span class="o">=</span><span class="s1">&#39;ls -CF&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">la</span><span class="o">=</span><span class="s1">&#39;ls -A&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -alF&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls --color=auto&#39;</span>
+</span></span><span class="line"><span class="cl">5.删除一个alias
+</span></span><span class="line"><span class="cl">$ <span class="nb">unalias</span> cf
+</span></span><span class="line"><span class="cl">$ <span class="nb">alias</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">alert</span><span class="o">=</span><span class="s1">&#39;notify-send --urgency=low -i &#34;$([ $? = 0 ] &amp;&amp; echo terminal || echo error)&#34; &#34;$(history|tail -n1|sed -e &#39;</span><span class="se">\&#39;</span><span class="s1">&#39;s/^\s*[0-9]\+\s*//;s/[;&amp;|]\s*alert$//&#39;</span><span class="se">\&#39;</span><span class="s1">&#39;)&#34;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">egrep</span><span class="o">=</span><span class="s1">&#39;egrep --color=auto&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">fgrep</span><span class="o">=</span><span class="s1">&#39;fgrep --color=auto&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">grep</span><span class="o">=</span><span class="s1">&#39;grep --color=auto&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">l</span><span class="o">=</span><span class="s1">&#39;ls -CF&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">la</span><span class="o">=</span><span class="s1">&#39;ls -A&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -alF&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls --color=auto&#39;</span></span></span></code></pre></div><h3 id="总结-1" class="heading-element"><span>总结</span>
+  <a href="#%e6%80%bb%e7%bb%93-1" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>本次实践从重复老师上课教学内容开始到借助AI自主学习新的指令。显然，通过AI工具进一步扩展学习，进一步巩固所学知识，在平时学习中也要进一步掌握结合AI的能力，让AI辅助学习，减少重复而琐碎的行为，让注意力更加聚焦在关键的知识点。</p>
+<h2 id="作业提交要求-1" class="heading-element"><span>作业提交要求 (1')</span>
+  <a href="#%e4%bd%9c%e4%b8%9a%e6%8f%90%e4%ba%a4%e8%a6%81%e6%b1%82-1" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><ol start="0">
+<li>记录实践过程和 AI 问答过程，尽量不要截图，给出文本内容</li>
+<li>(选做)推荐所有作业托管到 <a href="https://gitee.com/"target="_blank" rel="external nofollow noopener noreferrer">gitee</a>或 <a href="https://github.com/"target="_blank" rel="external nofollow noopener noreferrer">github</a> 上</li>
+<li>(必做)提交作业 markdown文档，命名为“学号-姓名-作业题目.md”</li>
+<li>(必做)提交作业 markdown文档转成的 PDF 文件，命名为“学号-姓名-作业题目.pdf”</li>
+</ol></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2024-09-10 11:12:56">更新于 2024-09-10&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="http://localhost:1313/posts/homework/linux%E5%91%BD%E4%BB%A4%E5%AE%9E%E8%B7%B5/" data-title="Linux命令实践" data-hashtags=""><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/homework/linux%E5%91%BD%E4%BB%A4%E5%AE%9E%E8%B7%B5/" data-hashtag=""><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/homework/linux%E5%91%BD%E4%BB%A4%E5%AE%9E%E8%B7%B5/" data-title="Linux命令实践"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div>
+
+  <div class="post-nav"><a href="/posts/homework/%E7%AC%AC%E4%B8%80%E5%91%A8%E9%A2%84%E4%B9%A0%E4%BD%9C%E4%B8%9A/" class="post-nav-item" rel="prev" title="第一周预习报告"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>第一周预习报告</a>
+      <a href="/posts/homework/%E7%AC%AC%E4%BA%8C%E5%91%A8%E9%A2%84%E4%B9%A0%E4%BD%9C%E4%B8%9A/" class="post-nav-item" rel="next" title="第二周预习报告">第二周预习报告<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'Ov23liW0JOcKBwRTF7ju',
+    clientSecret: 'db041648453aff3481de88718df93613d1398b5b',
+    repo: '1006487432.github.io',
+    owner: '1006487432',
+    admin: ['1006487432'],
+    id: location.pathname.substr(0,50), 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.127.0"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.8-RC"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">瞻鹤</a></span></div><div class="footer-line visitor">
+          <span id="busuanzi_container_site_uv" title='总访客数'><i class="fa-regular fa-user fa-fw" aria-hidden="true"></i>&nbsp;<span id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span><span id="busuanzi_container_site_pv" class="footer-divider" title='总访问量'><i class="fa-regular fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span>
+        </div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><a href="https://github.com/1006487432/1006487432.github.io" title="View source on GitHub"target="_blank" rel="external nofollow" class="github-corner right d-none-mobile"><svg viewBox="0 0 250 250" aria-hidden="true" width="56" height="56"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><div id="mask"></div><div class="reading-progress-bar" style="left: 0;top: 0;"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async defer></script><script src="/js/flyfish.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.3.8-RC"};</script><script src="/js/theme.min.js" defer></script><script src="/js/custom.min.js" defer></script></body>
+</html>

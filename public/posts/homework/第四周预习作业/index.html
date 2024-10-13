@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>第四周预习报告 - 瞻鹤的博客</title><meta name="author" content="瞻鹤">
+<meta name="author-link" content="">
+<meta name="description" content="" /><meta name="keywords" content='' />
+  <meta itemprop="name" content="第四周预习报告">
+  <meta itemprop="datePublished" content="2024-09-29T11:11:56+08:00">
+  <meta itemprop="dateModified" content="2024-09-29T11:11:56+08:00">
+  <meta itemprop="wordCount" content="7361">
+  <meta itemprop="keywords" content="Homework"><meta property="og:url" content="http://localhost:1313/posts/homework/%E7%AC%AC%E5%9B%9B%E5%91%A8%E9%A2%84%E4%B9%A0%E4%BD%9C%E4%B8%9A/">
+  <meta property="og:site_name" content="瞻鹤的博客">
+  <meta property="og:title" content="第四周预习报告">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-09-29T11:11:56+08:00">
+    <meta property="article:modified_time" content="2024-09-29T11:11:56+08:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="第四周预习报告">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/posts/homework/%E7%AC%AC%E5%9B%9B%E5%91%A8%E9%A2%84%E4%B9%A0%E4%BD%9C%E4%B8%9A/" /><link rel="prev" href="http://localhost:1313/posts/homework/%E7%AC%AC%E4%B8%89%E5%91%A8%E9%A2%84%E4%B9%A0%E4%BD%9C%E4%B8%9A/" /><link rel="next" href="http://localhost:1313/posts/homework/gdb%E8%B0%83%E8%AF%95/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "第四周预习报告",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/posts\/homework\/%E7%AC%AC%E5%9B%9B%E5%91%A8%E9%A2%84%E4%B9%A0%E4%BD%9C%E4%B8%9A\/"
+    },"genre": "posts","keywords": "","wordcount":  7361 ,
+    "url": "http:\/\/localhost:1313\/posts\/homework\/%E7%AC%AC%E5%9B%9B%E5%91%A8%E9%A2%84%E4%B9%A0%E4%BD%9C%E4%B8%9A\/","datePublished": "2024-09-29T11:11:56+08:00","dateModified": "2024-09-29T11:11:56+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "瞻鹤"
+      },"description": ""
+  }
+  </script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><script>(window.localStorage?.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('data-theme', 'dark');</script><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper" data-github-corner="right">
+    <div class="header-title">
+      <a href="/" title="瞻鹤的博客"><span class="header-title-text">瞻鹤的博客</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/"
+                
+                
+              >主页</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/posts/"
+                
+                
+              >文章</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              >分类</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              >标签</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/friends/"
+                
+                
+              >友链</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索~" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="瞻鹤的博客"><span class="header-title-text">瞻鹤的博客</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索~" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/"
+                  
+                  
+                >主页</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/posts/"
+                  
+                  
+                >文章</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/categories/"
+                  
+                  
+                >分类</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/tags/"
+                  
+                  
+                >标签</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/friends/"
+                  
+                  
+                >友链</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"> 
+<script src="https://fastly.jsdelivr.net/gh/1006487432/bkyl2d@main/loads.js"></script>
+
+<script>
+console.log(`
+  く__,.ヘヽ.        /  ,ー､ 〉
+           ＼ ', !-─‐-i  /  /´
+           ／｀ｰ'       L/／｀ヽ､
+         /   ／,   /|   ,   ,       ',
+       ｲ   / /-‐/  ｉ  L_ ﾊ ヽ!   i
+        ﾚ ﾍ 7ｲ｀ﾄ   ﾚ'ｧ-ﾄ､!ハ|   |
+          !,/7 '0'     ´0iソ|    |
+          |.从"    _     ,,,, / |./    |
+          ﾚ'| i＞.､,,__  _,.イ /   .i   |
+            ﾚ'| | / k_７_/ﾚ'ヽ,  ﾊ.  |
+              | |/i 〈|/   i  ,.ﾍ |  i  |
+             .|/ /  ｉ：    ﾍ!    ＼  |
+              kヽ>､ﾊ    _,.ﾍ､    /､!
+              !'〈//｀Ｔ´', ＼ ｀'7'ｰr'
+              ﾚ'ヽL__|___i,___,ンﾚ|ノ
+                  ﾄ-,/  |___./
+                  'ｰ'    !_,.:
+`);
+</script><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>第四周预习报告</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><img loading="lazy" src="/images/avatar.jpg" alt="瞻鹤" data-title="瞻鹤" width="20" height="20" class="avatar" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&nbsp;瞻鹤</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/homework/" class="post-category" title="分类 - Homework"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Homework</a></span></div><div class="post-meta-line"><span title="发布于 2024-09-29 11:11:56"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-09-29">2024-09-29</time></span>&nbsp;<span title="7361 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 7400 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 15 分钟</span>&nbsp;<span id="busuanzi_container_page_pv" class="busuanzi_visitors comment-visitors" data-flag-title="第四周预习报告">
+            <i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_page_pv">-</span>&nbsp;次阅读
+          </span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#学习内容">学习内容</a>
+      <ul>
+        <li><a href="#ai对学习内容的总结">AI对学习内容的总结</a></li>
+        <li><a href="#对ai总结的反思">对AI总结的反思</a></li>
+        <li><a href="#学习思维导图">学习思维导图</a></li>
+        <li><a href="#基于ai的学习">基于AI的学习</a></li>
+        <li><a href="#学习实践过程遇到的问题与解决方式ai-驱动优先使用ai工具解决问题">学习实践过程遇到的问题与解决方式（AI 驱动，优先使用AI工具解决问题）</a></li>
+        <li><a href="#作业提交要求">作业提交要求</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><p>[toc]</p>
+<h1 id="第四周预习报告" class="heading-element"><span>第四周预习报告</span>
+  <a href="#%e7%ac%ac%e5%9b%9b%e5%91%a8%e9%a2%84%e4%b9%a0%e6%8a%a5%e5%91%8a" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><h2 id="学习内容" class="heading-element"><span>学习内容</span>
+  <a href="#%e5%ad%a6%e4%b9%a0%e5%86%85%e5%ae%b9" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><ul>
+<li>
+<p>学习内容</p>
+</li>
+<li>
+<p>Head First C 嗨翻 C 语⾔ 第5章</p>
+</li>
+<li>
+<p>《Windows C/C++加密解密实战》第 6，8，13,14 章</p>
+<ul>
+<li>重点第14 章，第 6 章了解 ，第 8，,13 参考</li>
+</ul>
+</li>
+<li>
+<p>课程 mindmap</p>
+</li>
+<li>
+<p>报告内容参考第⼀周</p>
+</li>
+</ul>
+<h3 id="ai对学习内容的总结" class="heading-element"><span>AI对学习内容的总结</span>
+  <a href="#ai%e5%af%b9%e5%ad%a6%e4%b9%a0%e5%86%85%e5%ae%b9%e7%9a%84%e6%80%bb%e7%bb%93" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><h4 id="要求" class="heading-element"><span>要求</span>
+  <a href="#%e8%a6%81%e6%b1%82" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><ul>
+<li>让AI（kimi，元宝等）阅读学习内容并进⾏总结，教材内容可以使⽤微信读书或者云班课电⼦教材</li>
+</ul>
+<h4 id="总结" class="heading-element"><span>总结</span>
+  <a href="#%e6%80%bb%e7%bb%93" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><h5 id="windows-cc加密解密实战第-681314-章" class="heading-element"><span>《windows C/C++加密解密实战》第 6，8，13,14 章</span>
+  <a href="#windows-cc%e5%8a%a0%e5%af%86%e8%a7%a3%e5%af%86%e5%ae%9e%e6%88%98%e7%ac%ac-681314-%e7%ab%a0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p>以下是第6、8、13、14章的学习内容总结：</p>
+<h6 id="第6章非对称算法rsa的加解密" class="heading-element"><span>第6章：非对称算法RSA的加解密</span>
+  <a href="#%e7%ac%ac6%e7%ab%a0%e9%9d%9e%e5%af%b9%e7%a7%b0%e7%ae%97%e6%b3%95rsa%e7%9a%84%e5%8a%a0%e8%a7%a3%e5%af%86" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h6><ul>
+<li><strong>RSA算法概述</strong>：RSA是一种广泛使用的公钥加密系统，基于大素数的数学性质。它通过生成一对密钥（公钥和私钥）实现数据的安全传输。</li>
+<li><strong>密钥生成</strong>：RSA通过两个大素数的乘积生成模数，并使用公钥指数和私钥指数来生成密钥。</li>
+<li><strong>加密与解密</strong>：加密过程是将明文用公钥指数进行幂运算并取模，而解密过程则使用私钥指数进行逆运算。</li>
+<li><strong>安全性</strong>：RSA的安全性依赖于大数分解的计算困难性。</li>
+</ul>
+<h6 id="第8章椭圆曲线密码体制" class="heading-element"><span>第8章：椭圆曲线密码体制</span>
+  <a href="#%e7%ac%ac8%e7%ab%a0%e6%a4%ad%e5%9c%86%e6%9b%b2%e7%ba%bf%e5%af%86%e7%a0%81%e4%bd%93%e5%88%b6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h6><ul>
+<li><strong>椭圆曲线概述</strong>：椭圆曲线密码体制（ECC）是一种基于椭圆曲线数学结构的公钥加密算法。相比RSA，ECC提供相同安全强度所需的密钥长度更短，因此更加高效。</li>
+<li><strong>椭圆曲线的定义</strong>：椭圆曲线由一组满足特定方程的点组成，曲线上的加法运算具有封闭性，适用于密码学。</li>
+<li><strong>加密与解密</strong>：ECC的加密与解密通过曲线上的点运算完成，具有较高的安全性和效率。</li>
+<li><strong>安全性</strong>：椭圆曲线离散对数问题的计算复杂度为ECC提供了很强的安全性。</li>
+</ul>
+<h6 id="第13章sm2算法的数学基础" class="heading-element"><span>第13章：SM2算法的数学基础</span>
+  <a href="#%e7%ac%ac13%e7%ab%a0sm2%e7%ae%97%e6%b3%95%e7%9a%84%e6%95%b0%e5%ad%a6%e5%9f%ba%e7%a1%80" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h6><ul>
+<li><strong>SM2算法概述</strong>：SM2是中国国家标准的椭圆曲线公钥密码算法，基于椭圆曲线离散对数问题，适用于数字签名、密钥交换和数据加密。</li>
+<li><strong>数学基础</strong>：SM2的安全性依赖于椭圆曲线上的离散对数问题，其核心运算包括椭圆曲线点加和点乘操作。</li>
+<li><strong>优点</strong>：SM2相比传统算法（如RSA），在同等安全性下具有更短的密钥长度和更高的计算效率。</li>
+</ul>
+<h6 id="第14章sm2算法的实现" class="heading-element"><span>第14章：SM2算法的实现</span>
+  <a href="#%e7%ac%ac14%e7%ab%a0sm2%e7%ae%97%e6%b3%95%e7%9a%84%e5%ae%9e%e7%8e%b0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h6><ul>
+<li><strong>实现概述</strong>：SM2算法的实现涉及具体的椭圆曲线参数选择、密钥生成、加密和解密的流程。</li>
+<li><strong>加密过程</strong>：使用接收方的公钥对数据进行加密，确保消息只能被持有私钥的一方解密。</li>
+<li><strong>解密过程</strong>：接收方使用私钥对密文进行解密，恢复原始消息。</li>
+<li><strong>应用场景</strong>：SM2广泛应用于数字签名、身份认证等领域，并且在中国的国家标准中被指定为首选算法。</li>
+</ul>
+<p>这些内容涵盖了非对称加密RSA和椭圆曲线密码学的基础，以及SM2算法的理论和实践实现。</p>
+<h5 id="head-first-c第5章" class="heading-element"><span>《Head First C》第5章</span>
+  <a href="#head-first-c%e7%ac%ac5%e7%ab%a0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><h4 id="第5章结构体联合和位域" class="heading-element"><span>第5章：结构体、联合和位域</span>
+  <a href="#%e7%ac%ac5%e7%ab%a0%e7%bb%93%e6%9e%84%e4%bd%93%e8%81%94%e5%90%88%e5%92%8c%e4%bd%8d%e5%9f%9f" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><ol>
+<li>
+<p><strong>结构体（Structs）</strong></p>
+<ul>
+<li>
+<p><strong>定义</strong>：结构体是C语言中的一种复合数据类型，它允许将不同类型的数据组合在一起。通过定义结构体，用户可以更轻松地描述现实世界中的复杂对象。</p>
+</li>
+<li>
+<p><strong>使用场景</strong>：当需要将多个不同类型的数据打包在一起时，例如描述一条鱼的名字、种类、牙齿数量和年龄等。</p>
+</li>
+<li>
+<p>语法</p>
+<pre tabindex="0"><code>c复制代码struct fish {
+    const char *name;
+    const char *species;
+    int teeth;
+    int age;
+};</code></pre></li>
+<li>
+<p><strong>访问</strong>：使用点运算符来访问结构体中的字段，如<code>snappy.name</code>来获取名称。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>联合（Unions）</strong></p>
+<ul>
+<li><strong>定义</strong>：联合允许将不同的数据类型存储在同一块内存区域中，但每次只能存储其中一个值。</li>
+<li><strong>使用场景</strong>：联合通常用于内存受限的场景，或者需要节省空间的地方，因为它只为其中的最大数据类型分配空间。</li>
+<li><strong>风险</strong>：联合无法追踪当前存储的数据类型，因此错误访问会引发程序错误。</li>
+</ul>
+</li>
+<li>
+<p><strong>位域（Bitfields）</strong></p>
+<ul>
+<li><strong>定义</strong>：位域允许程序员指定结构体中某个字段的位数，从而节省内存。</li>
+<li><strong>使用场景</strong>：用于需要对每一位或位段进行控制的场合，例如自定义二进制协议或硬件寄存器操作。</li>
+</ul>
+</li>
+</ol>
+<h3 id="对ai总结的反思" class="heading-element"><span>对AI总结的反思</span>
+  <a href="#%e5%af%b9ai%e6%80%bb%e7%bb%93%e7%9a%84%e5%8f%8d%e6%80%9d" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><h4 id="要求-1" class="heading-element"><span>要求</span>
+  <a href="#%e8%a6%81%e6%b1%82-1" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><ul>
+<li>AI总结的问题</li>
+</ul>
+<h4 id="反思" class="heading-element"><span>反思</span>
+  <a href="#%e5%8f%8d%e6%80%9d" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><ul>
+<li>AI总结比较精简，适合作为提纲、导图等方式指导学习，更有助于分配自己的学习时间和精力</li>
+</ul>
+<h3 id="学习思维导图" class="heading-element"><span>学习思维导图</span>
+  <a href="#%e5%ad%a6%e4%b9%a0%e6%80%9d%e7%bb%b4%e5%af%bc%e5%9b%be" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><h4 id="要求-2" class="heading-element"><span>要求</span>
+  <a href="#%e8%a6%81%e6%b1%82-2" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><ul>
+<li>Mermaid 代码与截图(参考Mermaid MindMap语法)或者提交思维导图链接（如果使用线上编辑器，推荐processon,xmind,&hellip;）</li>
+</ul>
+<h4 id="思维导图" class="heading-element"><span>思维导图</span>
+  <a href="#%e6%80%9d%e7%bb%b4%e5%af%bc%e5%9b%be" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>代码:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">mindmap
+</span></span><span class="line"><span class="cl">    root(密码学中的RSA、ECC与SM2)
+</span></span><span class="line"><span class="cl">        sub章1(RSA加解密算法)
+</span></span><span class="line"><span class="cl">            sub节1_1(算法概述)
+</span></span><span class="line"><span class="cl">                详细1_1_1(基于大素数的公钥加密系统)
+</span></span><span class="line"><span class="cl">                详细1_1_2(非对称加密，使用公钥加密，私钥解密)
+</span></span><span class="line"><span class="cl">            sub节1_2(密钥生成)
+</span></span><span class="line"><span class="cl">                详细1_2_1(选择两个大素数p和q)
+</span></span><span class="line"><span class="cl">                详细1_2_2(计算n=p*q，生成模数)
+</span></span><span class="line"><span class="cl">                详细1_2_3(选择公钥e和私钥d)
+</span></span><span class="line"><span class="cl">            sub节1_3(加密过程)
+</span></span><span class="line"><span class="cl">                详细1_3_1(使用公钥e进行加密运算)
+</span></span><span class="line"><span class="cl">                详细1_3_2(加密公式：C = M^e mod n)
+</span></span><span class="line"><span class="cl">            sub节1_4(解密过程)
+</span></span><span class="line"><span class="cl">                详细1_4_1(使用私钥d进行解密运算)
+</span></span><span class="line"><span class="cl">                详细1_4_2(解密公式：M = C^d mod n)
+</span></span><span class="line"><span class="cl">            sub节1_5(安全性)
+</span></span><span class="line"><span class="cl">                详细1_5_1(基于大数分解的计算复杂性)
+</span></span><span class="line"><span class="cl">                详细1_5_2(密钥长度决定安全强度)
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        sub章2(椭圆曲线密码体制ECC)
+</span></span><span class="line"><span class="cl">            sub节2_1(算法概述)
+</span></span><span class="line"><span class="cl">                详细2_1_1(基于椭圆曲线数学结构)
+</span></span><span class="line"><span class="cl">                详细2_1_2(公钥加密算法，与RSA相比更高效)
+</span></span><span class="line"><span class="cl">            sub节2_2(椭圆曲线定义)
+</span></span><span class="line"><span class="cl">                详细2_2_1(曲线满足y^2 = x^3 + ax + b)
+</span></span><span class="line"><span class="cl">                详细2_2_2(点的加法运算和标量乘法)
+</span></span><span class="line"><span class="cl">            sub节2_3(加密与解密)
+</span></span><span class="line"><span class="cl">                详细2_3_1(加密：通过曲线上点的运算进行)
+</span></span><span class="line"><span class="cl">                详细2_3_2(解密：使用私钥恢复原始消息)
+</span></span><span class="line"><span class="cl">            sub节2_4(安全性)
+</span></span><span class="line"><span class="cl">                详细2_4_1(基于椭圆曲线离散对数问题)
+</span></span><span class="line"><span class="cl">                详细2_4_2(提供相同安全性下的更短密钥)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        sub章3(SM2算法的数学基础)
+</span></span><span class="line"><span class="cl">            sub节3_1(算法概述)
+</span></span><span class="line"><span class="cl">                详细3_1_1(中国国家标准的椭圆曲线加密算法)
+</span></span><span class="line"><span class="cl">                详细3_1_2(应用于数字签名、密钥交换、数据加密)
+</span></span><span class="line"><span class="cl">            sub节3_2(数学基础)
+</span></span><span class="line"><span class="cl">                详细3_2_1(椭圆曲线离散对数问题)
+</span></span><span class="line"><span class="cl">                详细3_2_2(椭圆曲线上的点加法与点乘法)
+</span></span><span class="line"><span class="cl">            sub节3_3(安全性与优点)
+</span></span><span class="line"><span class="cl">                详细3_3_1(较短的密钥长度提供相同的安全性)
+</span></span><span class="line"><span class="cl">                详细3_3_2(比传统算法计算更高效)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        sub章4(SM2算法的实现)
+</span></span><span class="line"><span class="cl">            sub节4_1(实现概述)
+</span></span><span class="line"><span class="cl">                详细4_1_1(基于椭圆曲线参数选择)
+</span></span><span class="line"><span class="cl">                详细4_1_2(密钥生成、加密和解密流程)
+</span></span><span class="line"><span class="cl">            sub节4_2(加密过程)
+</span></span><span class="line"><span class="cl">                详细4_2_1(使用接收方的公钥加密)
+</span></span><span class="line"><span class="cl">                详细4_2_2(确保消息只能被持有私钥的人解密)
+</span></span><span class="line"><span class="cl">            sub节4_3(解密过程)
+</span></span><span class="line"><span class="cl">                详细4_3_1(使用私钥解密密文)
+</span></span><span class="line"><span class="cl">                详细4_3_2(恢复原始消息)
+</span></span><span class="line"><span class="cl">            sub节4_4(应用场景)
+</span></span><span class="line"><span class="cl">                详细4_4_1(数字签名)
+</span></span><span class="line"><span class="cl">                详细4_4_2(身份认证)
+</span></span><span class="line"><span class="cl">                详细4_4_3(中国国家标准的首选算法)</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">mindmap
+</span></span><span class="line"><span class="cl">    root(结构体、联合和位域)
+</span></span><span class="line"><span class="cl">        Structs(结构体)
+</span></span><span class="line"><span class="cl">            定义(复合数据类型)
+</span></span><span class="line"><span class="cl">            使用场景(复杂数据模型)
+</span></span><span class="line"><span class="cl">            访问(点运算符)
+</span></span><span class="line"><span class="cl">        Unions(联合)
+</span></span><span class="line"><span class="cl">            定义(同一内存区域存储不同类型数据)
+</span></span><span class="line"><span class="cl">            使用场景(内存节省)
+</span></span><span class="line"><span class="cl">            风险(无法追踪存储类型)
+</span></span><span class="line"><span class="cl">        Bitfields(位域)
+</span></span><span class="line"><span class="cl">            定义(指定位数)
+</span></span><span class="line"><span class="cl">            使用场景(精细控制位存储)</span></span></code></pre></div><pre class="mermaid">mindmap
+    root(密码学中的RSA、ECC与SM2)
+        sub章1(RSA加解密算法)
+            sub节1_1(算法概述)
+                详细1_1_1(基于大素数的公钥加密系统)
+                详细1_1_2(非对称加密，使用公钥加密，私钥解密)
+            sub节1_2(密钥生成)
+                详细1_2_1(选择两个大素数p和q)
+                详细1_2_2(计算n=p*q，生成模数)
+                详细1_2_3(选择公钥e和私钥d)
+            sub节1_3(加密过程)
+                详细1_3_1(使用公钥e进行加密运算)
+                详细1_3_2(加密公式：C = M^e mod n)
+            sub节1_4(解密过程)
+                详细1_4_1(使用私钥d进行解密运算)
+                详细1_4_2(解密公式：M = C^d mod n)
+            sub节1_5(安全性)
+                详细1_5_1(基于大数分解的计算复杂性)
+                详细1_5_2(密钥长度决定安全强度)
+        
+        sub章2(椭圆曲线密码体制ECC)
+            sub节2_1(算法概述)
+                详细2_1_1(基于椭圆曲线数学结构)
+                详细2_1_2(公钥加密算法，与RSA相比更高效)
+            sub节2_2(椭圆曲线定义)
+                详细2_2_1(曲线满足y^2 = x^3 + ax + b)
+                详细2_2_2(点的加法运算和标量乘法)
+            sub节2_3(加密与解密)
+                详细2_3_1(加密：通过曲线上点的运算进行)
+                详细2_3_2(解密：使用私钥恢复原始消息)
+            sub节2_4(安全性)
+                详细2_4_1(基于椭圆曲线离散对数问题)
+                详细2_4_2(提供相同安全性下的更短密钥)
+
+        sub章3(SM2算法的数学基础)
+            sub节3_1(算法概述)
+                详细3_1_1(中国国家标准的椭圆曲线加密算法)
+                详细3_1_2(应用于数字签名、密钥交换、数据加密)
+            sub节3_2(数学基础)
+                详细3_2_1(椭圆曲线离散对数问题)
+                详细3_2_2(椭圆曲线上的点加法与点乘法)
+            sub节3_3(安全性与优点)
+                详细3_3_1(较短的密钥长度提供相同的安全性)
+                详细3_3_2(比传统算法计算更高效)
+
+        sub章4(SM2算法的实现)
+            sub节4_1(实现概述)
+                详细4_1_1(基于椭圆曲线参数选择)
+                详细4_1_2(密钥生成、加密和解密流程)
+            sub节4_2(加密过程)
+                详细4_2_1(使用接收方的公钥加密)
+                详细4_2_2(确保消息只能被持有私钥的人解密)
+            sub节4_3(解密过程)
+                详细4_3_1(使用私钥解密密文)
+                详细4_3_2(恢复原始消息)
+            sub节4_4(应用场景)
+                详细4_4_1(数字签名)
+                详细4_4_2(身份认证)
+                详细4_4_3(中国国家标准的首选算法)
+</pre>
+<template>mindmap
+    root(密码学中的RSA、ECC与SM2)
+        sub章1(RSA加解密算法)
+            sub节1_1(算法概述)
+                详细1_1_1(基于大素数的公钥加密系统)
+                详细1_1_2(非对称加密，使用公钥加密，私钥解密)
+            sub节1_2(密钥生成)
+                详细1_2_1(选择两个大素数p和q)
+                详细1_2_2(计算n=p*q，生成模数)
+                详细1_2_3(选择公钥e和私钥d)
+            sub节1_3(加密过程)
+                详细1_3_1(使用公钥e进行加密运算)
+                详细1_3_2(加密公式：C = M^e mod n)
+            sub节1_4(解密过程)
+                详细1_4_1(使用私钥d进行解密运算)
+                详细1_4_2(解密公式：M = C^d mod n)
+            sub节1_5(安全性)
+                详细1_5_1(基于大数分解的计算复杂性)
+                详细1_5_2(密钥长度决定安全强度)
+        
+        sub章2(椭圆曲线密码体制ECC)
+            sub节2_1(算法概述)
+                详细2_1_1(基于椭圆曲线数学结构)
+                详细2_1_2(公钥加密算法，与RSA相比更高效)
+            sub节2_2(椭圆曲线定义)
+                详细2_2_1(曲线满足y^2 = x^3 + ax + b)
+                详细2_2_2(点的加法运算和标量乘法)
+            sub节2_3(加密与解密)
+                详细2_3_1(加密：通过曲线上点的运算进行)
+                详细2_3_2(解密：使用私钥恢复原始消息)
+            sub节2_4(安全性)
+                详细2_4_1(基于椭圆曲线离散对数问题)
+                详细2_4_2(提供相同安全性下的更短密钥)
+
+        sub章3(SM2算法的数学基础)
+            sub节3_1(算法概述)
+                详细3_1_1(中国国家标准的椭圆曲线加密算法)
+                详细3_1_2(应用于数字签名、密钥交换、数据加密)
+            sub节3_2(数学基础)
+                详细3_2_1(椭圆曲线离散对数问题)
+                详细3_2_2(椭圆曲线上的点加法与点乘法)
+            sub节3_3(安全性与优点)
+                详细3_3_1(较短的密钥长度提供相同的安全性)
+                详细3_3_2(比传统算法计算更高效)
+
+        sub章4(SM2算法的实现)
+            sub节4_1(实现概述)
+                详细4_1_1(基于椭圆曲线参数选择)
+                详细4_1_2(密钥生成、加密和解密流程)
+            sub节4_2(加密过程)
+                详细4_2_1(使用接收方的公钥加密)
+                详细4_2_2(确保消息只能被持有私钥的人解密)
+            sub节4_3(解密过程)
+                详细4_3_1(使用私钥解密密文)
+                详细4_3_2(恢复原始消息)
+            sub节4_4(应用场景)
+                详细4_4_1(数字签名)
+                详细4_4_2(身份认证)
+                详细4_4_3(中国国家标准的首选算法)</template><pre class="mermaid">mindmap
+    root(结构体、联合和位域)
+        Structs(结构体)
+            定义(复合数据类型)
+            使用场景(复杂数据模型)
+            访问(点运算符)
+        Unions(联合)
+            定义(同一内存区域存储不同类型数据)
+            使用场景(内存节省)
+            风险(无法追踪存储类型)
+        Bitfields(位域)
+            定义(指定位数)
+            使用场景(精细控制位存储)
+</pre>
+<template>mindmap
+    root(结构体、联合和位域)
+        Structs(结构体)
+            定义(复合数据类型)
+            使用场景(复杂数据模型)
+            访问(点运算符)
+        Unions(联合)
+            定义(同一内存区域存储不同类型数据)
+            使用场景(内存节省)
+            风险(无法追踪存储类型)
+        Bitfields(位域)
+            定义(指定位数)
+            使用场景(精细控制位存储)</template><h3 id="基于ai的学习" class="heading-element"><span>基于AI的学习</span>
+  <a href="#%e5%9f%ba%e4%ba%8eai%e7%9a%84%e5%ad%a6%e4%b9%a0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><h4 id="要求-3" class="heading-element"><span>要求</span>
+  <a href="#%e8%a6%81%e6%b1%82-3" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><ul>
+<li>至少找到自己理解不是太好2个概念，让AI对自己进行苏格拉底提问</li>
+<li>参考下面提示词或者使用AI Agent</li>
+</ul>
+<pre tabindex="0"><code class="language-mark" data-lang="mark">提示词：“我在学习XXX知识点，请你以苏格拉底的方式对我进行提问，一次一个问题”
+1. 核心是要求AI工具：“请你以苏格拉底的方式对我进行提问”
+2. 然后AI工具就会给你提问，如果不知道问题的答案，可以反问AI：“你的理解（回答）是什么？”
+3. 如果你觉得差不多了，可以先问问AI工具：“针对我XXX知识点，我理解了吗？”
+4. AI工具会给出它的判断，如果你也觉得自己想清楚了，可以最后问AI工具：“我的回答结束了，请对我的回答进行评价总结”，让它帮你总结一下。</code></pre><h4 id="学习内容-1" class="heading-element"><span>学习内容</span>
+  <a href="#%e5%ad%a6%e4%b9%a0%e5%86%85%e5%ae%b9-1" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>Human:</p>
+<pre tabindex="0"><code>我在学习RSA知识点，请你以苏格拉底的方式对我进行提问，一次一个问题</code></pre><p>AI:</p>
+<pre tabindex="0"><code>好的，我们开始吧！
+**第一个问题：**
+RSA加密算法使用的是什么类型的密钥结构？公钥</code></pre><p>Human:</p>
+<pre tabindex="0"><code>公钥</code></pre><p>AI:</p>
+<pre tabindex="0"><code>很好！那么，第二个问题：
+
+RSA中的私钥与公钥有什么区别，它们各自的作用是什么？</code></pre><p>Human:</p>
+<pre tabindex="0"><code>公钥公开用于加密，私钥保密用于解密</code></pre><p>AI:</p>
+<pre tabindex="0"><code>非常好！那么，第三个问题：
+
+RSA加密的安全性主要依赖于哪种数学难题？为什么这种难题如此重要？</code></pre><p>Human:</p>
+<pre tabindex="0"><code>大素数分解难题，RSA密码体制的安全性依赖于这个难题</code></pre><p>AI:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">正确！第四个问题：
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">在RSA算法中，密钥生成的过程通常涉及哪些步骤？请简要描述。</span></span></code></pre></div><p>Human:</p>
+<pre tabindex="0"><code>随机大素数的选取和随机数的选取</code></pre><p>AI:</p>
+<pre tabindex="0"><code>你提到了关键步骤，但可以更具体一些。第五个问题：
+
+在RSA的密钥生成过程中，选择的两个大素数通常会进行哪些具体的操作以生成公钥和私钥？</code></pre><p>Human:</p>
+<pre tabindex="0"><code>随机选一个和pq乘积的欧拉函数互质的数作为公钥，其逆元为私钥</code></pre><p>AI：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">很好，描述得很准确！第六个问题：
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">在RSA算法中，加密和解密的数学运算分别是什么？请用公式表示。</span></span></code></pre></div><p>Human：</p>
+<pre tabindex="0"><code>c=pow(m,e,n)
+m=pow(c,d,n)</code></pre><p>AI：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">很好！你对公式的表达很准确。第七个问题：
+</span></span><span class="line"><span class="cl">在RSA算法中，如何确保加密和解密过程中的安全性，特别是在选择大素数时应该注意哪些因素？</span></span></code></pre></div><p>Human：</p>
+<pre tabindex="0"><code>你的回答是？</code></pre><p>AI：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">在RSA算法中，为了确保加密和解密过程的安全性，在选择大素数时需要注意以下几个因素：
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">1.</span> <span class="gs">**素数的大小**</span>：选择足够大的素数（一般至少2048位），以使得通过分解模数n（即p*q）来获得私钥变得非常困难。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">2.</span> <span class="gs">**随机性**</span>：大素数应通过高质量的随机数生成器生成，确保其不可预测性，避免攻击者通过预测算法获得密钥。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">3.</span> <span class="gs">**素数的性质**</span>：在选择素数时，应该避免使用一些已知的弱素数，例如梅森素数、费马素数等，攻击者可能利用这些特性进行攻击。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">4.</span> <span class="gs">**验证素数的质性**</span>：使用有效的质性测试（如米勒-拉宾测试）来验证所选数字的素性，确保不会选择合成数。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">5.</span> <span class="gs">**密钥长度**</span>：随着计算能力的提高，应定期更新密钥长度以保持安全性。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">通过以上方法，可以有效提升RSA加密算法的安全性。你有什么看法或者补充吗？</span></span></code></pre></div><p>Human：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">针对我RSA知识点，我理解了吗</span></span></code></pre></div><p>AI：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">根据我们的对话来看，你对RSA加密算法的理解非常扎实。你能够清晰地阐述以下几个关键点：
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">1.</span> <span class="gs">**密钥结构**</span>：你知道RSA使用公钥和私钥的结构。
+</span></span><span class="line"><span class="cl"><span class="k">2.</span> <span class="gs">**公钥与私钥的作用**</span>：你能准确描述公钥用于加密而私钥用于解密的功能。
+</span></span><span class="line"><span class="cl"><span class="k">3.</span> <span class="gs">**安全性基础**</span>：你理解RSA的安全性依赖于大素数分解难题。
+</span></span><span class="line"><span class="cl"><span class="k">4.</span> <span class="gs">**密钥生成过程**</span>：你提到了随机选择大素数和公钥的生成。
+</span></span><span class="line"><span class="cl"><span class="k">5.</span> <span class="gs">**加密与解密公式**</span>：你能够用公式准确表示RSA的加密与解密过程。
+</span></span><span class="line"><span class="cl"><span class="k">6.</span> <span class="gs">**安全性注意事项**</span>：你能够识别在选择大素数时应注意的几个因素。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">如果你还有其他方面的疑问或者需要更深入的理解，随时可以问我！你觉得自己在哪些地方还有需要进一步巩固的知识吗？</span></span></code></pre></div><h3 id="学习实践过程遇到的问题与解决方式ai-驱动优先使用ai工具解决问题" class="heading-element"><span>学习实践过程遇到的问题与解决方式（AI 驱动，优先使用AI工具解决问题）</span>
+  <a href="#%e5%ad%a6%e4%b9%a0%e5%ae%9e%e8%b7%b5%e8%bf%87%e7%a8%8b%e9%81%87%e5%88%b0%e7%9a%84%e9%97%ae%e9%a2%98%e4%b8%8e%e8%a7%a3%e5%86%b3%e6%96%b9%e5%bc%8fai-%e9%a9%b1%e5%8a%a8%e4%bc%98%e5%85%88%e4%bd%bf%e7%94%a8ai%e5%b7%a5%e5%85%b7%e8%a7%a3%e5%86%b3%e9%97%ae%e9%a2%98" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>Q:SM2的安全性依靠什么保障</p>
+<p>A:</p>
+<p>SM2的安全性主要依靠以下几个方面的保障：</p>
+<ol>
+<li>
+<p><strong>椭圆曲线离散对数问题（ECDLP）</strong>：<br>
+SM2基于椭圆曲线密码学，核心的安全性依赖于椭圆曲线离散对数问题的难解性。在椭圆曲线中，已知点 ( P ) 和点 ( Q = kP ) 的情况下，求出整数 ( k ) 是计算上极其困难的，即使对于大规模计算资源而言也是如此。这使得破解 SM2 的加密和签名方案变得非常困难。</p>
+</li>
+<li>
+<p><strong>随机数的质量</strong>：<br>
+SM2 的安全性依赖于生成的随机数的质量。特别是在签名生成过程中，随机数 ( k ) 必须是不可预测的且是高质量的。如果 ( k ) 被泄露或是生成方式存在问题，攻击者可以通过已知的签名推断出私钥，从而破坏整个系统的安全性。因此，使用高质量的真随机数生成器（TRNG）是保障 SM2 安全性的重要一环。</p>
+</li>
+<li>
+<p><strong>参数选择</strong>：<br>
+SM2 使用的椭圆曲线参数是经过精心设计和选择的。中国国家密码管理局推荐的椭圆曲线参数符合安全标准，能够有效防止已知的攻击方法（如弱曲线攻击、复合数曲线攻击等）。</p>
+</li>
+<li>
+<p><strong>抗量子计算攻击（目前）</strong>：<br>
+尽管量子计算机对基于传统离散对数问题的密码算法（如 RSA 和 DH）构成威胁，但对椭圆曲线密码学的攻击仍需要相对更大规模的量子计算资源（如 Shor 算法的应用）。因此，在目前的技术条件下，SM2 被认为比传统公钥算法更具抗量子攻击能力。</p>
+</li>
+<li>
+<p><strong>安全认证与标准化</strong>：<br>
+SM2 是中国国家密码管理局批准的国家标准（GB/T 32918），并且被广泛应用于国密系统中，其安全性已通过大量的实践验证和评估。同时，SM2 经过了严密的数学分析与安全认证，符合国际密码学的标准和安全需求。</p>
+</li>
+</ol>
+<p>总体而言，SM2 的安全性主要依赖于椭圆曲线离散对数问题的复杂性、随机数的质量、参数的安全性设计，以及其在国家和国际上的标准化与实践应用。</p>
+<h3 id="作业提交要求" class="heading-element"><span>作业提交要求</span>
+  <a href="#%e4%bd%9c%e4%b8%9a%e6%8f%90%e4%ba%a4%e8%a6%81%e6%b1%82" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li>提交Markdown文件,文档命名“学号姓名《密码系统设计》.md” .</li>
+<li>提交Markdown文件转为 PDF,文档命名“学号姓名《密码系统设计》第 X 周.pdf”</li>
+<li>提交代码托管链接（可选）：学号姓名 gitee(github) 链接</li>
+<li>内容质量高有加分</li>
+</ul>
+<p>参考链接：</p>
+<ul>
+<li>
+<p>AI工具</p>
+<ul>
+<li><a href="https://chatgpt.com/"target="_blank" rel="external nofollow noopener noreferrer">ChatGPT</a></li>
+<li><a href="https://kimi.moonshot.cn/"target="_blank" rel="external nofollow noopener noreferrer">Kimi.ai - 帮你看更大的世界 (moonshot.cn)</a></li>
+</ul>
+</li>
+<li>
+<p>图书</p>
+<ul>
+<li>《Window C/C++加密解密实战》</li>
+<li>《Head.First.C》</li>
+</ul>
+</li>
+</ul></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2024-09-29 11:11:56">更新于 2024-09-29&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="http://localhost:1313/posts/homework/%E7%AC%AC%E5%9B%9B%E5%91%A8%E9%A2%84%E4%B9%A0%E4%BD%9C%E4%B8%9A/" data-title="第四周预习报告" data-hashtags=""><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/homework/%E7%AC%AC%E5%9B%9B%E5%91%A8%E9%A2%84%E4%B9%A0%E4%BD%9C%E4%B8%9A/" data-hashtag=""><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/homework/%E7%AC%AC%E5%9B%9B%E5%91%A8%E9%A2%84%E4%B9%A0%E4%BD%9C%E4%B8%9A/" data-title="第四周预习报告"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div>
+
+  <div class="post-nav"><a href="/posts/homework/%E7%AC%AC%E4%B8%89%E5%91%A8%E9%A2%84%E4%B9%A0%E4%BD%9C%E4%B8%9A/" class="post-nav-item" rel="prev" title="第三周预习报告"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>第三周预习报告</a>
+      <a href="/posts/homework/gdb%E8%B0%83%E8%AF%95/" class="post-nav-item" rel="next" title="课上测试：gdb 调试">课上测试：gdb 调试<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'Ov23liW0JOcKBwRTF7ju',
+    clientSecret: 'db041648453aff3481de88718df93613d1398b5b',
+    repo: '1006487432.github.io',
+    owner: '1006487432',
+    admin: ['1006487432'],
+    id: location.pathname.substr(0,50), 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.127.0"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.8-RC"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">瞻鹤</a></span></div><div class="footer-line visitor">
+          <span id="busuanzi_container_site_uv" title='总访客数'><i class="fa-regular fa-user fa-fw" aria-hidden="true"></i>&nbsp;<span id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span><span id="busuanzi_container_site_pv" class="footer-divider" title='总访问量'><i class="fa-regular fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span>
+        </div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><a href="https://github.com/1006487432/1006487432.github.io" title="View source on GitHub"target="_blank" rel="external nofollow" class="github-corner right d-none-mobile"><svg viewBox="0 0 250 250" aria-hidden="true" width="56" height="56"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><div id="mask"></div><div class="reading-progress-bar" style="left: 0;top: 0;"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    window.mermaid = mermaid;
+    window.mermaid.themes = ["default","dark"];
+  </script><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async defer></script><script src="/js/flyfish.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.3.8-RC"};</script><script src="/js/theme.min.js" defer></script><script src="/js/custom.min.js" defer></script></body>
+</html>
