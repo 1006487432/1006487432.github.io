@@ -2,7 +2,7 @@
 
 title: 课上测试：SM3算法测试
 subtitle:
-date: 2024-10-08T10:11:56+08:00
+date: 2024-10-15T11:45:56+08:00
 draft: false
 author:
   name: 瞻鹤
@@ -127,3 +127,4 @@ SM3(stdin)= 2476052a1213e11aa81f31920528336963fb2bd5d8f247bc4c40c7112e24ae4f
 ~~~
 
 结果一致
+
