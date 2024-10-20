@@ -1,0 +1,101 @@
+commit 479cc202f91ed1c0614a29bad9a1b8d42e79513c
+Author: zhanhe <he-zhan@outlook.com>
+Date:   Sun Oct 20 11:41:54 2024 +0800
+
+    sm4-enc
+
+commit b04ba2668dc8e780c00c5e5f24bcb505abd2985c
+Author: zhanhe <he-zhan@outlook.com>
+Date:   Sun Oct 20 11:11:18 2024 +0800
+
+    sm2-sig-send
+
+commit 5ae93ecbd9a0a81ce8259ed2840ca8aaae011f9a
+Author: zhanhe <he-zhan@outlook.com>
+Date:   Sun Oct 20 11:10:34 2024 +0800
+
+    sm2-enc
+
+commit 195b2863aadf9b9a2ae30d425fe03b8aa5716fce
+Author: zhanhe <he-zhan@outlook.com>
+Date:   Sun Oct 20 11:09:30 2024 +0800
+
+    sm4-enc
+
+commit c4e55bcd4d335fd92fba735801917b77e2f13f20
+Author: zhanhe <he-zhan@outlook.com>
+Date:   Sun Oct 20 11:05:28 2024 +0800
+
+    gen_sm4_keyandiv
+
+commit 0d04a281854e83e60e502a1c179625ea41f7ab46
+Author: zhanhe <he-zhan@outlook.com>
+Date:   Sun Oct 20 11:03:30 2024 +0800
+
+    gen_sm2_key
+
+commit 644ab49d53d90ef1740532551986849313ba6936
+Author: zhanhe <he-zhan@outlook.com>
+Date:   Sun Oct 20 10:28:41 2024 +0800
+
+    gmssl-sm4
+
+commit a0a6b38e44aa12008672831debef50a75722bd8a
+Author: zhanhe <he-zhan@outlook.com>
+Date:   Sat Oct 19 19:56:26 2024 +0800
+
+    sm3
+
+commit 23db8c066ef7c6aa5ab50d0d84504577ccafae22
+Author: zhanhe <he-zhan@outlook.com>
+Date:   Sat Oct 19 19:39:27 2024 +0800
+
+    sm2_all
+
+commit 9d378f037b6adf9fcfd9e6d22fad5236e87f40c7
+Author: zhanhe <he-zhan@outlook.com>
+Date:   Sat Oct 19 18:29:21 2024 +0800
+
+    gmssl_key
+
+commit 95fd178caf176d5f7ff2b5aad0d6f774078d5235
+Author: zhanhe <he-zhan@outlook.com>
+Date:   Sat Oct 19 16:57:18 2024 +0800
+
+    sm4
+
+commit 407885c0b022200ad28c1a1a24121ea5f8ab42bb
+Author: zhanhe <he-zhan@outlook.com>
+Date:   Sat Oct 19 16:29:05 2024 +0800
+
+    sm3-hmac
+
+commit 4830c0a4f3ece20d95d2d1e1f514575f06a5ff08
+Author: zhanhe <he-zhan@outlook.com>
+Date:   Sat Oct 19 16:23:57 2024 +0800
+
+    sm3_hash
+
+commit 3a7a0843a947ae079fe225e45168cae2e19f98f0
+Author: zhanhe <he-zhan@outlook.com>
+Date:   Sat Oct 19 16:02:09 2024 +0800
+
+    sm2_ver
+
+commit d533a769b3952e2aacda372c2473d3756f7ef81f
+Author: zhanhe <he-zhan@outlook.com>
+Date:   Sat Oct 19 15:59:00 2024 +0800
+
+    sm2_Verify
+
+commit 985200f91efad7ce635059768a53b0551df953d1
+Author: zhanhe <he-zhan@outlook.com>
+Date:   Sat Oct 19 15:23:35 2024 +0800
+
+    sm2_dec
+
+commit 94579548627ede48a08b8ba6ea47a260f0ad33a4
+Author: zhanhe <he-zhan@outlook.com>
+Date:   Sat Oct 19 14:51:17 2024 +0800
+
+    sm2_enc
